@@ -59,5 +59,15 @@ namespace LaundrySystem.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap watercolor_paint_wet_ink_dry_cleaning_laundry_logo_customer_symbol_png_clipart {
+            get {
+                object obj = ResourceManager.GetObject("watercolor-paint-wet-ink-dry-cleaning-laundry-logo-customer-symbol-png-clipart", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

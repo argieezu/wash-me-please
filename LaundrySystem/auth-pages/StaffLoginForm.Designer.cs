@@ -1,6 +1,6 @@
 ﻿namespace LaundrySystem
 {
-    partial class Form1
+    partial class StaffLoginForm
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffLoginForm));
             panel3 = new Panel();
             btnStaffLogin = new Button();
             txtbxStaffPassword = new TextBox();
@@ -115,14 +115,15 @@
             pictureBox1.TabIndex = 4;
             pictureBox1.TabStop = false;
             // 
-            // Form1
+            // StaffLoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(299, 255);
             Controls.Add(panel3);
-            Name = "Form1";
+            Name = "StaffLoginForm";
             Text = "Staff Login";
+            Load += StaffLoginForm_Load;
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

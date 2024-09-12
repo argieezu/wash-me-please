@@ -1,4 +1,5 @@
-﻿using LaundrySystem.pages;
+﻿using LaundrySystem.auth_pages;
+using LaundrySystem.pages;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -98,7 +99,7 @@ namespace LaundrySystem
         {
        
             this.Close();
-            Form1 login = new Form1();
+            CustomerLoginForm login = new CustomerLoginForm();
             login.Show();
         }
     }
