@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerDashboard));
             panel1 = new Panel();
             button1 = new Button();
-            button4 = new Button();
             btnDashboard = new Button();
             btnCategory = new Button();
             btnRelease = new Button();
@@ -53,7 +52,6 @@
             // 
             panel1.BackColor = SystemColors.GradientActiveCaption;
             panel1.Controls.Add(button1);
-            panel1.Controls.Add(button4);
             panel1.Controls.Add(btnDashboard);
             panel1.Controls.Add(btnCategory);
             panel1.Controls.Add(btnRelease);
@@ -77,16 +75,6 @@
             button1.Text = "Logout ni ya";
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
-            // 
-            // button4
-            // 
-            button4.BackColor = SystemColors.GradientInactiveCaption;
-            button4.Location = new Point(12, 440);
-            button4.Name = "button4";
-            button4.Size = new Size(153, 50);
-            button4.TabIndex = 6;
-            button4.Text = "MAMA MO BLUE";
-            button4.UseVisualStyleBackColor = false;
             // 
             // btnDashboard
             // 
@@ -155,39 +143,41 @@
             // 
             // upperPanel
             // 
+            upperPanel.BackColor = SystemColors.GradientActiveCaption;
             upperPanel.Controls.Add(lblNamePages);
             upperPanel.Dock = DockStyle.Top;
             upperPanel.Location = new Point(178, 0);
             upperPanel.Name = "upperPanel";
-            upperPanel.Size = new Size(602, 89);
+            upperPanel.Size = new Size(760, 89);
             upperPanel.TabIndex = 3;
             upperPanel.Paint += upperPanel_Paint;
             // 
             // lblNamePages
             // 
             lblNamePages.AutoSize = true;
-            lblNamePages.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNamePages.Location = new Point(64, 32);
+            lblNamePages.Font = new Font("Segoe UI Black", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNamePages.Location = new Point(29, 22);
             lblNamePages.Name = "lblNamePages";
-            lblNamePages.Size = new Size(66, 25);
+            lblNamePages.Size = new Size(84, 32);
             lblNamePages.TabIndex = 0;
             lblNamePages.Text = "Home";
             lblNamePages.Click += lblNamePages_Click;
             // 
             // panel3
             // 
+            panel3.BackColor = SystemColors.GradientInactiveCaption;
             panel3.Controls.Add(pictureBox2);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(178, 89);
             panel3.Name = "panel3";
-            panel3.Size = new Size(602, 488);
+            panel3.Size = new Size(760, 488);
             panel3.TabIndex = 4;
             panel3.Paint += panel3_Paint;
             // 
             // pictureBox2
             // 
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(139, 71);
+            pictureBox2.Location = new Point(215, 71);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new Size(342, 320);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -199,12 +189,13 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(780, 577);
+            ClientSize = new Size(938, 577);
             Controls.Add(panel3);
             Controls.Add(upperPanel);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "CustomerDashboard";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Dashboard";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
@@ -223,7 +214,6 @@
         private Button btnRelease;
         private Button btnTransaction;
         private Button btnAccount;
-        private Button button4;
         private Button btnCategory;
         private Button button1;
         private Panel panel3;

@@ -16,5 +16,10 @@ namespace LaundrySystem.pages
         {
             InitializeComponent();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
