@@ -39,8 +39,6 @@
             btnCustomerLogin = new Button();
             btnRegisterNow = new Button();
             label4 = new Label();
-            label5 = new Label();
-            btnStaffLogin = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -87,6 +85,7 @@
             bxbxtPasswordCustomer.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             bxbxtPasswordCustomer.Location = new Point(336, 163);
             bxbxtPasswordCustomer.Name = "bxbxtPasswordCustomer";
+            bxbxtPasswordCustomer.PasswordChar = '*';
             bxbxtPasswordCustomer.Size = new Size(192, 29);
             bxbxtPasswordCustomer.TabIndex = 5;
             // 
@@ -132,9 +131,9 @@
             btnRegisterNow.FlatAppearance.BorderSize = 0;
             btnRegisterNow.FlatStyle = FlatStyle.Flat;
             btnRegisterNow.ForeColor = Color.Blue;
-            btnRegisterNow.Location = new Point(430, 319);
+            btnRegisterNow.Location = new Point(445, 319);
             btnRegisterNow.Name = "btnRegisterNow";
-            btnRegisterNow.Size = new Size(121, 23);
+            btnRegisterNow.Size = new Size(83, 23);
             btnRegisterNow.TabIndex = 8;
             btnRegisterNow.Text = "Register now";
             btnRegisterNow.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -150,37 +149,12 @@
             label4.TabIndex = 9;
             label4.Text = "Don't have account?";
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Location = new Point(383, 394);
-            label5.Name = "label5";
-            label5.Size = new Size(31, 15);
-            label5.TabIndex = 11;
-            label5.Text = "Staff";
-            // 
-            // btnStaffLogin
-            // 
-            btnStaffLogin.FlatAppearance.BorderSize = 0;
-            btnStaffLogin.FlatStyle = FlatStyle.Flat;
-            btnStaffLogin.ForeColor = Color.Blue;
-            btnStaffLogin.Location = new Point(396, 390);
-            btnStaffLogin.Name = "btnStaffLogin";
-            btnStaffLogin.Size = new Size(121, 23);
-            btnStaffLogin.TabIndex = 10;
-            btnStaffLogin.Text = "Login now";
-            btnStaffLogin.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnStaffLogin.UseVisualStyleBackColor = true;
-            btnStaffLogin.Click += btnStaffLogin_Click_1;
-            // 
             // CustomerLoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(584, 450);
-            Controls.Add(label5);
-            Controls.Add(btnStaffLogin);
             Controls.Add(label4);
             Controls.Add(btnRegisterNow);
             Controls.Add(btnCustomerLogin);
@@ -211,7 +185,5 @@
         private Button btnCustomerLogin;
         private Button btnRegisterNow;
         private Label label4;
-        private Label label5;
-        private Button btnStaffLogin;
     }
 }

@@ -34,6 +34,7 @@ namespace LaundrySystem
             dashboardForm.TopLevel = false;
             dashboardForm.FormBorderStyle = FormBorderStyle.None;
             dashboardForm.Dock = DockStyle.Fill;
+            lblNamePages.Text = "Dashboard";
             panel3.Controls.Clear();
             panel3.Controls.Add(dashboardForm);
             dashboardForm.Show();
@@ -47,6 +48,7 @@ namespace LaundrySystem
             accountForm.TopLevel = false;
             accountForm.FormBorderStyle = FormBorderStyle.None;
             accountForm.Dock = DockStyle.Fill;
+            lblNamePages.Text = "Account";
             panel3.Controls.Clear();
             panel3.Controls.Add(accountForm);
             accountForm.Show();
@@ -61,7 +63,7 @@ namespace LaundrySystem
             transactionForm.TopLevel = false;
             transactionForm.FormBorderStyle = FormBorderStyle.None;
             transactionForm.Dock = DockStyle.Fill;
-
+            lblNamePages.Text = "Transaction";
             panel3.Controls.Clear();
             panel3.Controls.Add(transactionForm);
             transactionForm.Show();
@@ -76,6 +78,7 @@ namespace LaundrySystem
             releaseForm.TopLevel = false;
             releaseForm.FormBorderStyle = FormBorderStyle.None;
             releaseForm.Dock = DockStyle.Fill;
+            lblNamePages.Text = "Release";
             panel3.Controls.Clear();
             panel3.Controls.Add(releaseForm);
             releaseForm.Show();
@@ -83,13 +86,12 @@ namespace LaundrySystem
 
         private void btnCategory_Click(object sender, EventArgs e)
         {
-            // Create an instance of the Category form
             Category categoryForm = new Category();
 
-            // Display the Category form in panel3
             categoryForm.TopLevel = false;
             categoryForm.FormBorderStyle = FormBorderStyle.None;
             categoryForm.Dock = DockStyle.Fill;
+            lblNamePages.Text = "Category";
             panel3.Controls.Clear();
             panel3.Controls.Add(categoryForm);
             categoryForm.Show();
@@ -97,10 +99,20 @@ namespace LaundrySystem
 
         private void button1_Click(object sender, EventArgs e)
         {
-       
+
             this.Close();
             CustomerLoginForm login = new CustomerLoginForm();
             login.Show();
+        }
+
+        private void upperPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblNamePages_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

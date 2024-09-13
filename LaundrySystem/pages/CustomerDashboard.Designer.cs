@@ -38,10 +38,15 @@
             btnTransaction = new Button();
             btnAccount = new Button();
             pictureBox1 = new PictureBox();
-            panel2 = new Panel();
+            upperPanel = new Panel();
+            lblNamePages = new Label();
             panel3 = new Panel();
+            pictureBox2 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            upperPanel.SuspendLayout();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -148,22 +153,46 @@
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
             // 
-            // panel2
+            // upperPanel
             // 
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(178, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(602, 89);
-            panel2.TabIndex = 3;
+            upperPanel.Controls.Add(lblNamePages);
+            upperPanel.Dock = DockStyle.Top;
+            upperPanel.Location = new Point(178, 0);
+            upperPanel.Name = "upperPanel";
+            upperPanel.Size = new Size(602, 89);
+            upperPanel.TabIndex = 3;
+            upperPanel.Paint += upperPanel_Paint;
+            // 
+            // lblNamePages
+            // 
+            lblNamePages.AutoSize = true;
+            lblNamePages.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblNamePages.Location = new Point(64, 32);
+            lblNamePages.Name = "lblNamePages";
+            lblNamePages.Size = new Size(66, 25);
+            lblNamePages.TabIndex = 0;
+            lblNamePages.Text = "Home";
+            lblNamePages.Click += lblNamePages_Click;
             // 
             // panel3
             // 
+            panel3.Controls.Add(pictureBox2);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(178, 89);
             panel3.Name = "panel3";
             panel3.Size = new Size(602, 488);
             panel3.TabIndex = 4;
             panel3.Paint += panel3_Paint;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(139, 71);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(342, 320);
+            pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
+            pictureBox2.TabIndex = 1;
+            pictureBox2.TabStop = false;
             // 
             // CustomerDashboard
             // 
@@ -172,13 +201,17 @@
             BackColor = Color.White;
             ClientSize = new Size(780, 577);
             Controls.Add(panel3);
-            Controls.Add(panel2);
+            Controls.Add(upperPanel);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "CustomerDashboard";
             Text = "Dashboard";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            upperPanel.ResumeLayout(false);
+            upperPanel.PerformLayout();
+            panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
         }
 
@@ -186,7 +219,7 @@
         private PictureBox pictureBox1;
         private Panel panel1;
         private Button btnDashboard;
-        private Panel panel2;
+        private Panel upperPanel;
         private Button btnRelease;
         private Button btnTransaction;
         private Button btnAccount;
@@ -194,5 +227,7 @@
         private Button btnCategory;
         private Button button1;
         private Panel panel3;
+        private Label lblNamePages;
+        private PictureBox pictureBox2;
     }
 }

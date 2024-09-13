@@ -24,5 +24,10 @@ namespace LaundrySystem.auth_pages
             this.Hide();
             ins.ShowDialog();
         }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

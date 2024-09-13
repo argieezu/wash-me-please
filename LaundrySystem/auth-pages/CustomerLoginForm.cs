@@ -30,13 +30,7 @@ namespace LaundrySystem.auth_pages
 
         }
 
-        private void btnStaffLogin_Click_1(object sender, EventArgs e)
-        {
-            StaffLoginForm ins = new StaffLoginForm();
-            ins.MdiParent = this.MdiParent;
-            this.Hide();
-            ins.ShowDialog();
-        }
+   
 
         private void btnRegisterNow_Click(object sender, EventArgs e)
         {
