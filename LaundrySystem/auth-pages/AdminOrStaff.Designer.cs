@@ -66,6 +66,8 @@
             // btnAdminRouteLogin
             // 
             btnAdminRouteLogin.BackColor = Color.RosyBrown;
+            btnAdminRouteLogin.FlatAppearance.BorderSize = 0;
+            btnAdminRouteLogin.FlatStyle = FlatStyle.Flat;
             btnAdminRouteLogin.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnAdminRouteLogin.Location = new Point(69, -1);
             btnAdminRouteLogin.Name = "btnAdminRouteLogin";
@@ -109,6 +111,8 @@
             // btnStaffRouteLogin
             // 
             btnStaffRouteLogin.BackColor = Color.IndianRed;
+            btnStaffRouteLogin.FlatAppearance.BorderSize = 0;
+            btnStaffRouteLogin.FlatStyle = FlatStyle.Flat;
             btnStaffRouteLogin.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnStaffRouteLogin.Location = new Point(66, 0);
             btnStaffRouteLogin.Name = "btnStaffRouteLogin";
