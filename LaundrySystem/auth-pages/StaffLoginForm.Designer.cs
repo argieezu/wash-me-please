@@ -1,6 +1,6 @@
 ﻿namespace LaundrySystem.auth_pages
 {
-    partial class CustomerLoginForm
+    partial class StaffLoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerLoginForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffLoginForm));
             pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();

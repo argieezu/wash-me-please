@@ -74,19 +74,19 @@
             // 
             // panel1
             // 
-            panel1.BackColor = SystemColors.GradientActiveCaption;
+            panel1.BackColor = SystemColors.GradientInactiveCaption;
             panel1.Controls.Add(label1);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(850, 50);
+            panel1.Size = new Size(744, 50);
             panel1.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(352, 10);
+            label1.Location = new Point(310, 9);
             label1.Name = "label1";
             label1.Size = new Size(123, 25);
             label1.TabIndex = 0;
@@ -360,7 +360,7 @@
             AutoScaleDimensions = new SizeF(8F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientInactiveCaption;
-            ClientSize = new Size(850, 509);
+            ClientSize = new Size(744, 449);
             Controls.Add(textBox4);
             Controls.Add(label10);
             Controls.Add(panel10);

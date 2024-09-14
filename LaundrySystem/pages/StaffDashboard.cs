@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace LaundrySystem
 {
-    public partial class CustomerDashboard : Form
+    public partial class StaffDashboard : Form
     {
-        public CustomerDashboard()
+        public StaffDashboard()
         {
             InitializeComponent();
         }
@@ -101,7 +101,7 @@ namespace LaundrySystem
         {
 
             this.Close();
-            CustomerLoginForm login = new CustomerLoginForm();
+            StaffLoginForm login = new StaffLoginForm();
             login.Show();
         }
 
@@ -111,6 +111,11 @@ namespace LaundrySystem
         }
 
         private void lblNamePages_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

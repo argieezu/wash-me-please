@@ -1,6 +1,6 @@
 ﻿namespace LaundrySystem
 {
-    partial class CustomerDashboard
+    partial class StaffDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerDashboard));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StaffDashboard));
             panel1 = new Panel();
             button1 = new Button();
             btnDashboard = new Button();
@@ -63,6 +63,7 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(178, 577);
             panel1.TabIndex = 2;
+            panel1.Paint += panel1_Paint;
             // 
             // button1
             // 
@@ -184,7 +185,7 @@
             pictureBox2.TabIndex = 1;
             pictureBox2.TabStop = false;
             // 
-            // CustomerDashboard
+            // StaffDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -194,7 +195,7 @@
             Controls.Add(upperPanel);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "CustomerDashboard";
+            Name = "StaffDashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Dashboard";
             panel1.ResumeLayout(false);

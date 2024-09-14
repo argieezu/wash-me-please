@@ -10,19 +10,18 @@ using System.Windows.Forms;
 
 namespace LaundrySystem.auth_pages
 {
-    public partial class CustomerRegisterForm : Form
+    public partial class StaffRegisterForm : Form
     {
-        public CustomerRegisterForm()
+        public StaffRegisterForm()
         {
             InitializeComponent();
         }
 
         private void btnLoginNow_Click(object sender, EventArgs e)
         {
-            CustomerLoginForm ins = new CustomerLoginForm();
-            ins.MdiParent = this.MdiParent;
+            StaffLoginForm StaffLogin = new StaffLoginForm();          
             this.Hide();
-            ins.ShowDialog();
+            StaffLogin.ShowDialog();
         }
 
         private void label5_Click(object sender, EventArgs e)

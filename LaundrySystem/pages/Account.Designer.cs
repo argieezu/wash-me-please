@@ -33,6 +33,7 @@
             // 
             // panel1
             // 
+            panel1.AutoSize = true;
             panel1.BackColor = Color.White;
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
@@ -44,11 +45,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             ClientSize = new Size(744, 449);
             Controls.Add(panel1);
             Name = "Account";
             Text = "Account";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
