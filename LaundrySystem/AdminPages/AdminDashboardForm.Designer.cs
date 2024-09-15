@@ -1,6 +1,6 @@
 ﻿namespace LaundrySystem.AdminPages
 {
-    partial class AdminDashboard
+    partial class AdminDashboardForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,40 +29,29 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            panel2 = new Panel();
             SuspendLayout();
             // 
             // panel1
             // 
-            panel1.Dock = DockStyle.Left;
+            panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(178, 538);
+            panel1.Size = new Size(838, 437);
             panel1.TabIndex = 0;
             // 
-            // panel2
-            // 
-            panel2.Dock = DockStyle.Top;
-            panel2.Location = new Point(178, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(744, 89);
-            panel2.TabIndex = 1;
-            // 
-            // AdminDashboard
+            // AdminDashboardForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(922, 538);
-            Controls.Add(panel2);
+            ClientSize = new Size(838, 437);
             Controls.Add(panel1);
-            Name = "AdminDashboard";
-            Text = "AdminDashboard";
+            Name = "AdminDashboardForm";
+            Text = "AdminDashboardForm";
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel panel1;
-        private Panel panel2;
     }
 }

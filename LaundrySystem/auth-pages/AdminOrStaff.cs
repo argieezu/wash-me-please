@@ -31,7 +31,7 @@ namespace LaundrySystem.auth_pages
 
         private void btnAdminRouteLogin_Click(object sender, EventArgs e)
         {
-            StaffLoginForm loginAdmin = new StaffLoginForm();
+            AdminLoginForm loginAdmin = new AdminLoginForm();
             this.Hide();
             loginAdmin.ShowDialog();
         }

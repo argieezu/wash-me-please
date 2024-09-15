@@ -45,7 +45,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(-55, 20);
+            pictureBox1.Location = new Point(-52, -8);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(606, 389);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -149,12 +149,12 @@
             label4.TabIndex = 9;
             label4.Text = "Don't have account?";
             // 
-            // CustomerLoginForm
+            // StaffLoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
-            ClientSize = new Size(584, 450);
+            ClientSize = new Size(550, 381);
             Controls.Add(label4);
             Controls.Add(btnRegisterNow);
             Controls.Add(btnCustomerLogin);
@@ -165,7 +165,9 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
-            Name = "CustomerLoginForm";
+            FormBorderStyle = FormBorderStyle.None;
+            Name = "StaffLoginForm";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "CustomerLoginForm";
             Load += CustomerLoginForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace LaundrySystem.AdminPages
 {
-    public partial class CreateAccount: Form
+    public partial class StaffAccountForm: Form
     {
-        public CreateAccount()
+        public StaffAccountForm()
         {
             InitializeComponent();
         }
