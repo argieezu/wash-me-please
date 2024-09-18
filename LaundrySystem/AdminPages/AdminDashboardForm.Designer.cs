@@ -140,11 +140,6 @@
         private GroupBox groupBox1;
         private Label label1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
-       
-        private Guna.Charts.WinForms.GunaLineDataset gunaLineDataset1;
-        private Guna.Charts.WinForms.GunaPieDataset gunaPieDataset1;
-        private Guna.Charts.WinForms.GunaHorizontalBarDataset gunaHorizontalBarDataset1;
-        private Guna.Charts.WinForms.GunaChart gunaChart2;
         private DataGridView dataGridView2;
         private DataGridView dataGridView1;
         private BindingSource bindingSource1;
