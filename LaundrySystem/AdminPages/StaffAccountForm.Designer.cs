@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            btnDeletStaffAdmin = new Button();
             btnEditStaffAdmin = new Button();
+            button1 = new Button();
+            btnDeletStaffAdmin = new Button();
             btnNewStaffAdmin = new Button();
             dataGridView1 = new DataGridView();
             label1 = new Label();
             btnSearchStaff = new Button();
             textBox1 = new TextBox();
-            button1 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
@@ -52,16 +52,6 @@
             panel1.Size = new Size(838, 437);
             panel1.TabIndex = 0;
             // 
-            // btnDeletStaffAdmin
-            // 
-            btnDeletStaffAdmin.BackColor = Color.FromArgb(255, 128, 128);
-            btnDeletStaffAdmin.Location = new Point(749, 181);
-            btnDeletStaffAdmin.Name = "btnDeletStaffAdmin";
-            btnDeletStaffAdmin.Size = new Size(75, 32);
-            btnDeletStaffAdmin.TabIndex = 13;
-            btnDeletStaffAdmin.Text = "Delete";
-            btnDeletStaffAdmin.UseVisualStyleBackColor = false;
-            // 
             // btnEditStaffAdmin
             // 
             btnEditStaffAdmin.BackColor = Color.MediumTurquoise;
@@ -72,6 +62,26 @@
             btnEditStaffAdmin.Text = "Edit";
             btnEditStaffAdmin.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.MediumTurquoise;
+            button1.Location = new Point(749, 105);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 32);
+            button1.TabIndex = 12;
+            button1.Text = "Edit";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // btnDeletStaffAdmin
+            // 
+            btnDeletStaffAdmin.BackColor = Color.FromArgb(255, 128, 128);
+            btnDeletStaffAdmin.Location = new Point(749, 181);
+            btnDeletStaffAdmin.Name = "btnDeletStaffAdmin";
+            btnDeletStaffAdmin.Size = new Size(75, 32);
+            btnDeletStaffAdmin.TabIndex = 13;
+            btnDeletStaffAdmin.Text = "Delete";
+            btnDeletStaffAdmin.UseVisualStyleBackColor = false;
+            // 
             // btnNewStaffAdmin
             // 
             btnNewStaffAdmin.BackColor = Color.FromArgb(255, 224, 192);
@@ -81,6 +91,7 @@
             btnNewStaffAdmin.TabIndex = 11;
             btnNewStaffAdmin.Text = "Add";
             btnNewStaffAdmin.UseVisualStyleBackColor = false;
+            btnNewStaffAdmin.Click += btnNewStaffAdmin_Click;
             // 
             // dataGridView1
             // 
@@ -119,16 +130,6 @@
             textBox1.TabIndex = 7;
             textBox1.Text = "Search Staff";
             // 
-            // button1
-            // 
-            button1.BackColor = Color.MediumTurquoise;
-            button1.Location = new Point(749, 105);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 32);
-            button1.TabIndex = 12;
-            button1.Text = "Edit";
-            button1.UseVisualStyleBackColor = false;
-            // 
             // StaffAccountForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -143,6 +144,7 @@
             Controls.Add(panel1);
             Name = "StaffAccountForm";
             Text = "CreateAccount";
+            Load += StaffAccountForm_Load;
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);

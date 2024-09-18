@@ -24,10 +24,17 @@ namespace LaundrySystem.AdminPages
 
         private void button2_Click(object sender, EventArgs e)
         {
-            
-            CustomerFormAdmin newform = new CustomerFormAdmin();
-            newform.ShowDialog();
-            this.Show();
+
+            this.Close();
+        }
+
+        private void buttonUploadImage_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();  
+            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            {
+                pictureBoxImageProfile.Image = new Bitmap(openFileDialog.FileName);
+            }
         }
     }
 }

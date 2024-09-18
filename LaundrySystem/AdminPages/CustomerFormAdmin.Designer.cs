@@ -59,7 +59,7 @@
             // btnDeleteCustomerAdmin
             // 
             btnDeleteCustomerAdmin.BackColor = Color.FromArgb(255, 128, 128);
-            btnDeleteCustomerAdmin.Location = new Point(751, 174);
+            btnDeleteCustomerAdmin.Location = new Point(751, 380);
             btnDeleteCustomerAdmin.Name = "btnDeleteCustomerAdmin";
             btnDeleteCustomerAdmin.Size = new Size(75, 32);
             btnDeleteCustomerAdmin.TabIndex = 6;

@@ -31,8 +31,6 @@ namespace LaundrySystem.AdminPages
         }
 
 
-
-
         private void dataGridViewDisplayCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

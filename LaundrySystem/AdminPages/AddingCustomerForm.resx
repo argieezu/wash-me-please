@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!--
-    Microsoft ResX Schema 
+    Microsoft ResX Schema
 
     Version 2.0
 
@@ -48,7 +48,7 @@
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-    
+
     mimetype: application/x-microsoft.net.object.soap.base64
     value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
@@ -173,13 +173,24 @@
   </metadata>
   <data name="button2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAAKwAAACsAYYJNNQAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAAA2klEQVRIS7XWPQrCQBiE4ehJvIB/vde3EGy0sRHs/ak8QHxHDYTdidnsxoGncFi+gVRWdV1nI3Mc
-        sMXMvnFliu/xK/RD9vadK/uQ8LhcMI3ehkUf4o4/sbHvXdmFDDoutnTI4ONiyxDJOi62bCPZx8WWDVJ0
-        XGwppPi4+HKk4xIXVTXBCcXHJS7+PfAuP5/ohuIRWwoZZcSWDbJA0Ygt24hG7sgasWWILJE1YkuHZI3Y
-        sgtZYdCILX8hGnkgaSQqUhA3crZvXZmCrNEe2dl3rkxFNHJEx9+WunoBZJVYMWFGRWMAAAAASUVORK5C
-        YII=
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAB
+        XAAAAVwBIJKt8wAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAADNSURBVEhLvZbb
+        CcJAFETXf6uyFHuwDX99V2Mt1rGewVwQmWSTDdcD58NhmQHNw1Jr7RY2eMQX7uwZF85xKH+gPsiDPefC
+        lqDy+1Asn7i1Z104Jaj8hs1yacMxYVG5tKETVH7F2eXShr9CV7m04beg8gsuLpc2DEHlZ+wqlzaUsLpc
+        +vBTfsJV5dKHpeyH4lXl0od/GMj9iiTk/cgh5F2mIWgk50YLQSM5j4oQukZsOCZoJOdxHcKiERu2BI3k
+        vDJD0EjOSz8EjUz8banlDYyAcFgrhWxsAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="buttonUploadImage.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAA
+        cgAAAHIBsYahGgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFDSURBVDhPjdM7
+        LwVBHIbxdWvc4lIoJUIiQSUSjUZCQkSLUq1AImqfgYJvoFH4Du6hQk3cEqEQJZXn2Z2ROc6exJv8cv4z
+        e+ayO7tZSdrRh9FgCDGdQWlmcIkvPOEquICDuvCC+1BXxMHP4bfBjpIc4hj+z7oiruxg04TlwDrGXWwF
+        HXbEtMFtx5V3cBRs25EkTlCRfjwUZZ5TuJtZnNiRZCGoiE/5tijzLOEzWLSjRvbQY/F3AlPruAawgUk4
+        Jj/isgnKMo837OIO7xhG1QT1mMBI3iqyBo9vLG9lWTc+MG7Dh/hoQQZxjms4YB8HuEEv0njdN/b3GDfh
+        tlZQB1/pdayiFWka4ZiWvEVe4Sr5jP/IHM6KsogPyC159s5eK15zsN/ElB1ppuH9f8PJ4scU2ee2Xblq
+        cBrvK/2cI/uakSTLfgA+rERCRbtROQAAAABJRU5ErkJggg==
 </value>
   </data>
 </root>

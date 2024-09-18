@@ -29,15 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddingCustomerForm));
-            button1 = new Button();
+            btnAddNewCustomer = new Button();
             label1 = new Label();
             pictureBoxImageProfile = new PictureBox();
             txtbxUsername = new TextBox();
-            txtbxBirthday = new TextBox();
             label2 = new Label();
             label3 = new Label();
             comboBoxGender = new ComboBox();
-            label4 = new Label();
             label5 = new Label();
             txtbxAddress = new TextBox();
             label6 = new Label();
@@ -48,24 +46,26 @@
             txtbxEmail = new TextBox();
             openFileDialog1 = new OpenFileDialog();
             button2 = new Button();
+            dateTimePickerBirthdate = new DateTimePicker();
+            buttonUploadImage = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBoxImageProfile).BeginInit();
             SuspendLayout();
             // 
-            // button1
+            // btnAddNewCustomer
             // 
-            button1.BackColor = Color.FromArgb(255, 224, 192);
-            button1.Location = new Point(427, 264);
-            button1.Name = "button1";
-            button1.Size = new Size(147, 42);
-            button1.TabIndex = 0;
-            button1.Text = "Add";
-            button1.UseVisualStyleBackColor = false;
+            btnAddNewCustomer.BackColor = Color.FromArgb(255, 224, 192);
+            btnAddNewCustomer.Location = new Point(427, 264);
+            btnAddNewCustomer.Name = "btnAddNewCustomer";
+            btnAddNewCustomer.Size = new Size(147, 42);
+            btnAddNewCustomer.TabIndex = 0;
+            btnAddNewCustomer.Text = "Add";
+            btnAddNewCustomer.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(50, 116);
+            label1.Location = new Point(27, 120);
             label1.Name = "label1";
             label1.Size = new Size(86, 20);
             label1.TabIndex = 1;
@@ -84,24 +84,16 @@
             // txtbxUsername
             // 
             txtbxUsername.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtbxUsername.Location = new Point(147, 113);
+            txtbxUsername.Location = new Point(119, 113);
             txtbxUsername.Name = "txtbxUsername";
-            txtbxUsername.Size = new Size(205, 27);
+            txtbxUsername.Size = new Size(233, 27);
             txtbxUsername.TabIndex = 7;
-            // 
-            // txtbxBirthday
-            // 
-            txtbxBirthday.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtbxBirthday.Location = new Point(147, 146);
-            txtbxBirthday.Name = "txtbxBirthday";
-            txtbxBirthday.Size = new Size(205, 27);
-            txtbxBirthday.TabIndex = 9;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(56, 149);
+            label2.Location = new Point(33, 149);
             label2.Name = "label2";
             label2.Size = new Size(80, 20);
             label2.TabIndex = 8;
@@ -111,7 +103,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(68, 182);
+            label3.Location = new Point(42, 181);
             label3.Name = "label3";
             label3.Size = new Size(67, 20);
             label3.TabIndex = 10;
@@ -119,22 +111,13 @@
             // 
             // comboBoxGender
             // 
+            comboBoxGender.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBoxGender.FormattingEnabled = true;
             comboBoxGender.Items.AddRange(new object[] { "Male", "Female", "Email", "Transgender" });
-            comboBoxGender.Location = new Point(147, 183);
+            comboBoxGender.Location = new Point(119, 178);
             comboBoxGender.Name = "comboBoxGender";
-            comboBoxGender.Size = new Size(205, 23);
+            comboBoxGender.Size = new Size(233, 28);
             comboBoxGender.TabIndex = 12;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(474, 182);
-            label4.Name = "label4";
-            label4.Size = new Size(52, 20);
-            label4.TabIndex = 13;
-            label4.Text = "Profile";
             // 
             // label5
             // 
@@ -149,9 +132,9 @@
             // txtbxAddress
             // 
             txtbxAddress.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtbxAddress.Location = new Point(147, 212);
+            txtbxAddress.Location = new Point(119, 212);
             txtbxAddress.Name = "txtbxAddress";
-            txtbxAddress.Size = new Size(205, 27);
+            txtbxAddress.Size = new Size(233, 27);
             txtbxAddress.TabIndex = 16;
             // 
             // label6
@@ -166,16 +149,16 @@
             // txtbxContactNo
             // 
             txtbxContactNo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtbxContactNo.Location = new Point(147, 245);
+            txtbxContactNo.Location = new Point(119, 245);
             txtbxContactNo.Name = "txtbxContactNo";
-            txtbxContactNo.Size = new Size(205, 27);
+            txtbxContactNo.Size = new Size(233, 27);
             txtbxContactNo.TabIndex = 18;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(42, 248);
+            label7.Location = new Point(12, 248);
             label7.Name = "label7";
             label7.Size = new Size(94, 20);
             label7.TabIndex = 17;
@@ -185,7 +168,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(65, 215);
+            label8.Location = new Point(38, 215);
             label8.Name = "label8";
             label8.Size = new Size(71, 20);
             label8.TabIndex = 19;
@@ -195,7 +178,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(82, 282);
+            label9.Location = new Point(52, 282);
             label9.Name = "label9";
             label9.Size = new Size(54, 20);
             label9.TabIndex = 20;
@@ -204,9 +187,9 @@
             // txtbxEmail
             // 
             txtbxEmail.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtbxEmail.Location = new Point(147, 279);
+            txtbxEmail.Location = new Point(119, 279);
             txtbxEmail.Name = "txtbxEmail";
-            txtbxEmail.Size = new Size(205, 27);
+            txtbxEmail.Size = new Size(233, 27);
             txtbxEmail.TabIndex = 21;
             // 
             // openFileDialog1
@@ -215,13 +198,37 @@
             // 
             // button2
             // 
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
             button2.Image = (Image)resources.GetObject("button2.Image");
             button2.Location = new Point(12, 12);
             button2.Name = "button2";
-            button2.Size = new Size(33, 32);
+            button2.Size = new Size(26, 27);
             button2.TabIndex = 22;
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
+            // 
+            // dateTimePickerBirthdate
+            // 
+            dateTimePickerBirthdate.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateTimePickerBirthdate.Location = new Point(119, 145);
+            dateTimePickerBirthdate.Name = "dateTimePickerBirthdate";
+            dateTimePickerBirthdate.Size = new Size(233, 27);
+            dateTimePickerBirthdate.TabIndex = 23;
+            // 
+            // buttonUploadImage
+            // 
+            buttonUploadImage.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonUploadImage.Image = (Image)resources.GetObject("buttonUploadImage.Image");
+            buttonUploadImage.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonUploadImage.Location = new Point(441, 178);
+            buttonUploadImage.Name = "buttonUploadImage";
+            buttonUploadImage.Size = new Size(119, 32);
+            buttonUploadImage.TabIndex = 24;
+            buttonUploadImage.Text = "Upload image";
+            buttonUploadImage.TextAlign = ContentAlignment.MiddleRight;
+            buttonUploadImage.UseVisualStyleBackColor = true;
+            buttonUploadImage.Click += buttonUploadImage_Click;
             // 
             // AddingCustomerForm
             // 
@@ -229,6 +236,8 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
             ClientSize = new Size(626, 342);
+            Controls.Add(buttonUploadImage);
+            Controls.Add(dateTimePickerBirthdate);
             Controls.Add(button2);
             Controls.Add(txtbxEmail);
             Controls.Add(label9);
@@ -238,15 +247,13 @@
             Controls.Add(txtbxAddress);
             Controls.Add(label6);
             Controls.Add(label5);
-            Controls.Add(label4);
             Controls.Add(comboBoxGender);
             Controls.Add(label3);
-            Controls.Add(txtbxBirthday);
             Controls.Add(label2);
             Controls.Add(txtbxUsername);
             Controls.Add(pictureBoxImageProfile);
             Controls.Add(label1);
-            Controls.Add(button1);
+            Controls.Add(btnAddNewCustomer);
             FormBorderStyle = FormBorderStyle.None;
             Name = "AddingCustomerForm";
             Text = "AddingCustomerForm";
@@ -258,15 +265,13 @@
 
         #endregion
 
-        private Button button1;
+        private Button btnAddNewCustomer;
         private Label label1;
         private PictureBox pictureBoxImageProfile;
         private TextBox txtbxUsername;
-        private TextBox txtbxBirthday;
         private Label label2;
         private Label label3;
         private ComboBox comboBoxGender;
-        private Label label4;
         private Label label5;
         private TextBox txtbxAddress;
         private Label label6;
@@ -277,5 +282,7 @@
         private TextBox txtbxEmail;
         private OpenFileDialog openFileDialog1;
         private Button button2;
+        private DateTimePicker dateTimePickerBirthdate;
+        private Button buttonUploadImage;
     }
 }

@@ -210,6 +210,7 @@
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "AdminHomePage";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "AdminDashboard";
             panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

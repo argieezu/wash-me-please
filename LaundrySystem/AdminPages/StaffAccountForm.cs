@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace LaundrySystem.AdminPages
 {
-    public partial class StaffAccountForm: Form
+    public partial class StaffAccountForm : Form
     {
         public StaffAccountForm()
         {
             InitializeComponent();
+        }
+
+        private void btnNewStaffAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StaffAccountForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
