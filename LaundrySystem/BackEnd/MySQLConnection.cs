@@ -84,7 +84,7 @@ namespace LaundrySystem.BackEnd
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        // Add parameters
+                        // add parameters
                         cmd.Parameters.AddWithValue("p_fullname", fullname);
                         cmd.Parameters.AddWithValue("p_birthdate", birthdate);
                         cmd.Parameters.AddWithValue("p_gender", gender);

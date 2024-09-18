@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             panel1 = new Panel();
             btnDeleteCustomerAdmin = new Button();
             btnEditCustomerAdmin = new Button();
@@ -36,6 +37,7 @@
             label1 = new Label();
             btnSearchCustomer = new Button();
             textBox1 = new TextBox();
+     
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewDisplayCustomer).BeginInit();
             SuspendLayout();
@@ -125,6 +127,10 @@
             textBox1.TabIndex = 0;
             textBox1.Text = "Search Customer";
             // 
+            // OnTimerTick
+            // 
+       
+            // 
             // CustomerFormAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -150,5 +156,6 @@
         private Button btnEditCustomerAdmin;
         private Button btnNewCustomerAdmin;
         private DataGridView dataGridViewDisplayCustomer;
+ 
     }
 }
