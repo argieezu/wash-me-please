@@ -32,12 +32,12 @@
             btnDeleteCustomerAdmin = new Button();
             btnEditCustomerAdmin = new Button();
             btnNewCustomerAdmin = new Button();
-            dataGridView1 = new DataGridView();
+            dataGridViewDisplayCustomer = new DataGridView();
             label1 = new Label();
             btnSearchCustomer = new Button();
             textBox1 = new TextBox();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDisplayCustomer).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -46,7 +46,7 @@
             panel1.Controls.Add(btnDeleteCustomerAdmin);
             panel1.Controls.Add(btnEditCustomerAdmin);
             panel1.Controls.Add(btnNewCustomerAdmin);
-            panel1.Controls.Add(dataGridView1);
+            panel1.Controls.Add(dataGridViewDisplayCustomer);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(btnSearchCustomer);
             panel1.Controls.Add(textBox1);
@@ -85,14 +85,16 @@
             btnNewCustomerAdmin.TabIndex = 4;
             btnNewCustomerAdmin.Text = "Add";
             btnNewCustomerAdmin.UseVisualStyleBackColor = false;
+            btnNewCustomerAdmin.Click += btnNewCustomerAdmin_Click;
             // 
-            // dataGridView1
+            // dataGridViewDisplayCustomer
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(29, 98);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(716, 314);
-            dataGridView1.TabIndex = 3;
+            dataGridViewDisplayCustomer.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewDisplayCustomer.Location = new Point(29, 98);
+            dataGridViewDisplayCustomer.Name = "dataGridViewDisplayCustomer";
+            dataGridViewDisplayCustomer.Size = new Size(716, 314);
+            dataGridViewDisplayCustomer.TabIndex = 3;
+            dataGridViewDisplayCustomer.CellContentClick += dataGridViewDisplayCustomer_CellContentClick;
             // 
             // label1
             // 
@@ -131,9 +133,10 @@
             Controls.Add(panel1);
             Name = "CustomerFormAdmin";
             Text = "CustomerFormAdmin";
+            Load += CustomerFormAdmin_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDisplayCustomer).EndInit();
             ResumeLayout(false);
         }
 
@@ -146,6 +149,6 @@
         private Button btnDeleteCustomerAdmin;
         private Button btnEditCustomerAdmin;
         private Button btnNewCustomerAdmin;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewDisplayCustomer;
     }
 }
