@@ -18,7 +18,6 @@ namespace LaundrySystem.BackEnd
         public string username;
         public string password;
         public string port;
-
         public MySqlConnection conLaundry;
         public MySqlCommand slqCommand;
         public string strConnection;
@@ -27,12 +26,8 @@ namespace LaundrySystem.BackEnd
 
         public bool fncConnectToDatabase()
         {
-            string DisplayAllCustomer = "prcDisplayMe";
             try
             {
-                MySqlCommand cmd = new MySqlCommand(DisplayAllCustomer,conLaundry);
-                cmd.CommandType = CommandType.StoredProcedure;
-
                 servername = "localhost";
                 databasename = "laundry";
                 username = "root";
@@ -63,9 +58,10 @@ namespace LaundrySystem.BackEnd
                 }
             } catch (Exception err)
             {
-                MessageBox.Show("Error Message ya" + err.Message);
+                MessageBox.Show("Error Message RATATOWE " + err.Message);
             } return false;
         }
+
         public void checkDatabaseConnection()
         {
             if (fncConnectToDatabase().Equals("False"))
@@ -77,6 +73,81 @@ namespace LaundrySystem.BackEnd
                 //ratatowe
             }
         }
-    
+        public void AddCustomer(string fullname, DateTime birthdate, string gender, string address, string contactNo, string email, string photo)
+        {
+            try
+            {
+                if (fncConnectToDatabase())
+                {
+                    using (MySqlTransaction transaction = conLaundry.BeginTransaction())
+                    using (MySqlCommand cmd = new MySqlCommand("procAddCustomer", conLaundry, transaction))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        // Add parameters
+                        cmd.Parameters.AddWithValue("p_fullname", fullname);
+                        cmd.Parameters.AddWithValue("p_birthdate", birthdate);
+                        cmd.Parameters.AddWithValue("p_gender", gender);
+                        cmd.Parameters.AddWithValue("p_address", address);
+                        cmd.Parameters.AddWithValue("p_contactno", contactNo);
+                        cmd.Parameters.AddWithValue("p_emailadd", email);
+                        cmd.Parameters.AddWithValue("p_cust_photo", photo);
+
+                        // Execute the stored procedure
+                        cmd.ExecuteNonQuery();
+
+                        // Commit the transaction
+                        transaction.Commit();
+                    }
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Failed to add customer: " + err.Message);
+            }
+            finally
+            {
+                if (conLaundry.State == ConnectionState.Open)
+                {
+                    conLaundry.Close();
+                }
+            }
+        }
+        public DataTable GetAllCustomers()
+        {
+            DataTable dataTable = new DataTable();
+
+            try
+            {
+                if (fncConnectToDatabase())
+                {
+                    using (MySqlCommand cmd = new MySqlCommand("prcDisplayAllCustomer", conLaundry))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(dataTable);
+                        }
+                    }
+                }
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Failed to retrieve customer data: " + err.Message);
+            }
+            finally
+            {
+                if (conLaundry.State == ConnectionState.Open)
+                {
+                    conLaundry.Close();
+                }
+            }
+
+            return dataTable;
+        }
+
+
+
     }
 }

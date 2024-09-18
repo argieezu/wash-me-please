@@ -81,8 +81,18 @@ namespace LaundrySystem.AdminPages
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Close();
+            DialogResult result = MessageBox.Show
+                ("Are you sure you want to log out?",
+                "Confirm Logout",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.Close(); 
+            }   
         }
+
 
         private void panel3_Paint(object sender, PaintEventArgs e)
         {

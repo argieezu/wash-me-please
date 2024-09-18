@@ -40,9 +40,12 @@
             panel2 = new Panel();
             lblHomePageAdmin = new Label();
             panel3 = new Panel();
+            pictureBox1 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -69,6 +72,7 @@
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
             button1.Location = new Point(11, 491);
             button1.Name = "button1";
@@ -85,10 +89,11 @@
             btnStaffAdmin.FlatAppearance.BorderSize = 0;
             btnStaffAdmin.FlatStyle = FlatStyle.Flat;
             btnStaffAdmin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnStaffAdmin.Image = (Image)resources.GetObject("btnStaffAdmin.Image");
             btnStaffAdmin.ImageAlign = ContentAlignment.MiddleLeft;
-            btnStaffAdmin.Location = new Point(11, 390);
+            btnStaffAdmin.Location = new Point(13, 342);
             btnStaffAdmin.Name = "btnStaffAdmin";
-            btnStaffAdmin.Size = new Size(154, 49);
+            btnStaffAdmin.Size = new Size(160, 49);
             btnStaffAdmin.TabIndex = 5;
             btnStaffAdmin.Text = "Staff";
             btnStaffAdmin.UseVisualStyleBackColor = false;
@@ -101,10 +106,11 @@
             btnTransactionAdmin.FlatAppearance.BorderSize = 0;
             btnTransactionAdmin.FlatStyle = FlatStyle.Flat;
             btnTransactionAdmin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTransactionAdmin.Image = (Image)resources.GetObject("btnTransactionAdmin.Image");
             btnTransactionAdmin.ImageAlign = ContentAlignment.MiddleLeft;
-            btnTransactionAdmin.Location = new Point(11, 335);
+            btnTransactionAdmin.Location = new Point(9, 287);
             btnTransactionAdmin.Name = "btnTransactionAdmin";
-            btnTransactionAdmin.Size = new Size(154, 49);
+            btnTransactionAdmin.Size = new Size(168, 49);
             btnTransactionAdmin.TabIndex = 4;
             btnTransactionAdmin.Text = "Transaction";
             btnTransactionAdmin.UseVisualStyleBackColor = false;
@@ -117,10 +123,11 @@
             btnGarmentsAdmin.FlatAppearance.BorderSize = 0;
             btnGarmentsAdmin.FlatStyle = FlatStyle.Flat;
             btnGarmentsAdmin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnGarmentsAdmin.Image = (Image)resources.GetObject("btnGarmentsAdmin.Image");
             btnGarmentsAdmin.ImageAlign = ContentAlignment.MiddleLeft;
-            btnGarmentsAdmin.Location = new Point(11, 280);
+            btnGarmentsAdmin.Location = new Point(11, 232);
             btnGarmentsAdmin.Name = "btnGarmentsAdmin";
-            btnGarmentsAdmin.Size = new Size(154, 49);
+            btnGarmentsAdmin.Size = new Size(158, 49);
             btnGarmentsAdmin.TabIndex = 3;
             btnGarmentsAdmin.Text = "Garments";
             btnGarmentsAdmin.UseVisualStyleBackColor = false;
@@ -133,10 +140,11 @@
             btnCustomerAdmin.FlatAppearance.BorderSize = 0;
             btnCustomerAdmin.FlatStyle = FlatStyle.Flat;
             btnCustomerAdmin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCustomerAdmin.Image = (Image)resources.GetObject("btnCustomerAdmin.Image");
             btnCustomerAdmin.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCustomerAdmin.Location = new Point(11, 225);
+            btnCustomerAdmin.Location = new Point(11, 177);
             btnCustomerAdmin.Name = "btnCustomerAdmin";
-            btnCustomerAdmin.Size = new Size(154, 49);
+            btnCustomerAdmin.Size = new Size(160, 49);
             btnCustomerAdmin.TabIndex = 2;
             btnCustomerAdmin.Text = "Customer";
             btnCustomerAdmin.UseVisualStyleBackColor = false;
@@ -149,10 +157,11 @@
             btnDashboardAdmin.FlatAppearance.BorderSize = 0;
             btnDashboardAdmin.FlatStyle = FlatStyle.Flat;
             btnDashboardAdmin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDashboardAdmin.Image = (Image)resources.GetObject("btnDashboardAdmin.Image");
             btnDashboardAdmin.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDashboardAdmin.Location = new Point(11, 170);
+            btnDashboardAdmin.Location = new Point(11, 122);
             btnDashboardAdmin.Name = "btnDashboardAdmin";
-            btnDashboardAdmin.Size = new Size(154, 49);
+            btnDashboardAdmin.Size = new Size(166, 49);
             btnDashboardAdmin.TabIndex = 1;
             btnDashboardAdmin.Text = "Dashboard";
             btnDashboardAdmin.UseVisualStyleBackColor = false;
@@ -162,9 +171,9 @@
             // 
             pictureBox2.BackColor = Color.FromArgb(255, 192, 128);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(-1, 0);
+            pictureBox2.Location = new Point(-1, -1);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(179, 164);
+            pictureBox2.Size = new Size(178, 99);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
@@ -177,7 +186,7 @@
             panel2.Dock = DockStyle.Top;
             panel2.Location = new Point(178, 0);
             panel2.Name = "panel2";
-            panel2.Size = new Size(854, 62);
+            panel2.Size = new Size(854, 99);
             panel2.TabIndex = 1;
             // 
             // lblHomePageAdmin
@@ -193,12 +202,22 @@
             // panel3
             // 
             panel3.BackColor = Color.White;
+            panel3.Controls.Add(pictureBox1);
             panel3.Dock = DockStyle.Fill;
-            panel3.Location = new Point(178, 62);
+            panel3.Location = new Point(178, 99);
             panel3.Name = "panel3";
-            panel3.Size = new Size(854, 476);
+            panel3.Size = new Size(854, 439);
             panel3.TabIndex = 2;
             panel3.Paint += panel3_Paint;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(178, 111);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(489, 194);
+            pictureBox1.TabIndex = 0;
+            pictureBox1.TabStop = false;
             // 
             // AdminHomePage
             // 
@@ -216,6 +235,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -232,5 +253,6 @@
         private Button button1;
         private Label lblHomePageAdmin;
         private Panel panel3;
+        private PictureBox pictureBox1;
     }
 }

@@ -32,7 +32,7 @@
             btnAddNewCustomer = new Button();
             label1 = new Label();
             pictureBoxImageProfile = new PictureBox();
-            txtbxUsername = new TextBox();
+            txtbxFullName = new TextBox();
             label2 = new Label();
             label3 = new Label();
             comboBoxGender = new ComboBox();
@@ -60,6 +60,7 @@
             btnAddNewCustomer.TabIndex = 0;
             btnAddNewCustomer.Text = "Add";
             btnAddNewCustomer.UseVisualStyleBackColor = false;
+            btnAddNewCustomer.Click += btnAddNewCustomer_Click;
             // 
             // label1
             // 
@@ -74,20 +75,21 @@
             // pictureBoxImageProfile
             // 
             pictureBoxImageProfile.Image = (Image)resources.GetObject("pictureBoxImageProfile.Image");
-            pictureBoxImageProfile.Location = new Point(427, 29);
+            pictureBoxImageProfile.Location = new Point(427, 12);
             pictureBoxImageProfile.Name = "pictureBoxImageProfile";
             pictureBoxImageProfile.Size = new Size(147, 140);
             pictureBoxImageProfile.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBoxImageProfile.TabIndex = 6;
             pictureBoxImageProfile.TabStop = false;
             // 
-            // txtbxUsername
+            // txtbxFullName
             // 
-            txtbxUsername.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtbxUsername.Location = new Point(119, 113);
-            txtbxUsername.Name = "txtbxUsername";
-            txtbxUsername.Size = new Size(233, 27);
-            txtbxUsername.TabIndex = 7;
+            txtbxFullName.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtbxFullName.Location = new Point(119, 113);
+            txtbxFullName.Name = "txtbxFullName";
+            txtbxFullName.Size = new Size(233, 27);
+            txtbxFullName.TabIndex = 7;
+            txtbxFullName.TextChanged += txtbxFullName_TextChanged;
             // 
             // label2
             // 
@@ -118,12 +120,13 @@
             comboBoxGender.Name = "comboBoxGender";
             comboBoxGender.Size = new Size(233, 28);
             comboBoxGender.TabIndex = 12;
+            comboBoxGender.SelectedIndexChanged += comboBoxGender_SelectedIndexChanged;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(147, 29);
+            label5.Location = new Point(119, 9);
             label5.Name = "label5";
             label5.Size = new Size(187, 37);
             label5.TabIndex = 14;
@@ -153,6 +156,7 @@
             txtbxContactNo.Name = "txtbxContactNo";
             txtbxContactNo.Size = new Size(233, 27);
             txtbxContactNo.TabIndex = 18;
+            txtbxContactNo.TextChanged += txtbxContactNo_TextChanged;
             // 
             // label7
             // 
@@ -191,6 +195,7 @@
             txtbxEmail.Name = "txtbxEmail";
             txtbxEmail.Size = new Size(233, 27);
             txtbxEmail.TabIndex = 21;
+            txtbxEmail.TextChanged += txtbxEmail_TextChanged;
             // 
             // openFileDialog1
             // 
@@ -201,9 +206,9 @@
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
             button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.Location = new Point(12, 12);
+            button2.Location = new Point(16, 12);
             button2.Name = "button2";
-            button2.Size = new Size(26, 27);
+            button2.Size = new Size(22, 26);
             button2.TabIndex = 22;
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
@@ -215,13 +220,14 @@
             dateTimePickerBirthdate.Name = "dateTimePickerBirthdate";
             dateTimePickerBirthdate.Size = new Size(233, 27);
             dateTimePickerBirthdate.TabIndex = 23;
+            dateTimePickerBirthdate.ValueChanged += dateTimePickerBirthdate_ValueChanged;
             // 
             // buttonUploadImage
             // 
             buttonUploadImage.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonUploadImage.Image = (Image)resources.GetObject("buttonUploadImage.Image");
             buttonUploadImage.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonUploadImage.Location = new Point(441, 178);
+            buttonUploadImage.Location = new Point(441, 169);
             buttonUploadImage.Name = "buttonUploadImage";
             buttonUploadImage.Size = new Size(119, 32);
             buttonUploadImage.TabIndex = 24;
@@ -235,7 +241,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.White;
-            ClientSize = new Size(626, 342);
+            ClientSize = new Size(611, 338);
             Controls.Add(buttonUploadImage);
             Controls.Add(dateTimePickerBirthdate);
             Controls.Add(button2);
@@ -250,7 +256,7 @@
             Controls.Add(comboBoxGender);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(txtbxUsername);
+            Controls.Add(txtbxFullName);
             Controls.Add(pictureBoxImageProfile);
             Controls.Add(label1);
             Controls.Add(btnAddNewCustomer);
@@ -268,7 +274,7 @@
         private Button btnAddNewCustomer;
         private Label label1;
         private PictureBox pictureBoxImageProfile;
-        private TextBox txtbxUsername;
+        private TextBox txtbxFullName;
         private Label label2;
         private Label label3;
         private ComboBox comboBoxGender;

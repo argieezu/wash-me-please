@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LaundrySystem.BackEnd;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -30,11 +31,75 @@ namespace LaundrySystem.AdminPages
 
         private void buttonUploadImage_Click(object sender, EventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();  
-            if(openFileDialog.ShowDialog() == DialogResult.OK)
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
                 pictureBoxImageProfile.Image = new Bitmap(openFileDialog.FileName);
             }
+        }
+
+
+
+        private void dateTimePickerBirthdate_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxGender_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbxContactNo_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtbxEmail_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddNewCustomer_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                // Collect values from the form
+                string fullname = txtbxFullName.Text;
+                DateTime birthdate = dateTimePickerBirthdate.Value;
+                string gender = comboBoxGender.SelectedItem.ToString();
+                string address = txtbxAddress.Text;
+                string contactNo = txtbxContactNo.Text;
+                string email = txtbxEmail.Text;
+                string photo = pictureBoxImageProfile.Image != null ? ConvertImageToBase64(pictureBoxImageProfile.Image) : null;
+
+                // Create an instance of MySqlProcedure class and call the AddCustomer method
+                MySqlProcedure mySqlProcedure = new MySqlProcedure();
+                mySqlProcedure.AddCustomer(fullname, birthdate, gender, address, contactNo, email, photo);
+
+                MessageBox.Show("Customer added successfully!");
+            }
+            catch (Exception err)
+            {
+                MessageBox.Show("Failed to add customer: " + err.Message);
+            }
+            this.Close();
+        }
+
+        // Helper function to convert image to base64 string
+        private string ConvertImageToBase64(Image image)
+        {
+            using (var ms = new System.IO.MemoryStream())
+            {
+                image.Save(ms, image.RawFormat);
+                byte[] imageBytes = ms.ToArray();
+                return Convert.ToBase64String(imageBytes);
+            }
+        }
+
+        private void txtbxFullName_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
