@@ -37,7 +37,7 @@ namespace LaundrySystem.BackEnd
                 databasename = "laundry";
                 username = "root";
                 password = "";
-                port = "3360";
+                port = "3306";
 
 
                 //implement connection
@@ -66,5 +66,17 @@ namespace LaundrySystem.BackEnd
                 MessageBox.Show("Error Message ya" + err.Message);
             } return false;
         }
+        public void checkDatabaseConnection()
+        {
+            if (fncConnectToDatabase().Equals("False"))
+            {
+                conLaundry.Open();
+            }
+            else
+            {
+                //ratatowe
+            }
+        }
+    
     }
 }

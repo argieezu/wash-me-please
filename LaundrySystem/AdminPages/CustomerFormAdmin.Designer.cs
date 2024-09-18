@@ -55,7 +55,6 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(838, 437);
             panel1.TabIndex = 0;
-            panel1.Paint += panel1_Paint;
             // 
             // btnDeleteCustomerAdmin
             // 
@@ -86,6 +85,7 @@
             btnNewCustomerAdmin.TabIndex = 4;
             btnNewCustomerAdmin.Text = "Add";
             btnNewCustomerAdmin.UseVisualStyleBackColor = false;
+            btnNewCustomerAdmin.Click += btnNewCustomerAdmin_Click;
             // 
             // dataGridViewDisplayCustomer
             // 

@@ -47,7 +47,7 @@
             // 
             // panel1
             // 
-            panel1.BackColor = Color.White;
+            panel1.BackColor = Color.FromArgb(255, 224, 192);
             panel1.BorderStyle = BorderStyle.FixedSingle;
             panel1.Controls.Add(button1);
             panel1.Controls.Add(btnStaffAdmin);
@@ -160,18 +160,18 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.BackColor = Color.White;
+            pictureBox2.BackColor = Color.FromArgb(255, 192, 128);
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(3, 0);
+            pictureBox2.Location = new Point(-1, 0);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(175, 151);
+            pictureBox2.Size = new Size(179, 164);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox2.TabIndex = 0;
             pictureBox2.TabStop = false;
             // 
             // panel2
             // 
-            panel2.BackColor = Color.White;
+            panel2.BackColor = Color.FromArgb(255, 224, 192);
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(lblHomePageAdmin);
             panel2.Dock = DockStyle.Top;
@@ -198,6 +198,7 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(854, 476);
             panel3.TabIndex = 2;
+            panel3.Paint += panel3_Paint;
             // 
             // AdminHomePage
             // 
