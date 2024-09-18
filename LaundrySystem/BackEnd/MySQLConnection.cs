@@ -21,7 +21,7 @@ namespace LaundrySystem.BackEnd
         public MySqlConnection conLaundry;
         public MySqlCommand slqCommand;
         public string strConnection;
-        
+
 
 
         public bool fncConnectToDatabase()
@@ -146,6 +146,46 @@ namespace LaundrySystem.BackEnd
 
             return dataTable;
         }
+
+
+        //public DataTable SearchCustomer(string searchQuery)
+        //{
+        //    DataTable dataTable = new DataTable();
+
+        //    try
+        //    {
+        //        if (fncConnectToDatabase())
+        //        {
+        //            // SQL query or stored procedure to search for customers
+        //            using (MySqlCommand cmd = new MySqlCommand("procSearchCustomers", conLaundry))
+        //            {
+        //                cmd.CommandType = CommandType.StoredProcedure;
+
+        //                // Add parameter to the stored procedure
+        //                cmd.Parameters.AddWithValue("p_searchQuery", "%" + searchQuery + "%");
+
+        //                using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+        //                {
+        //                    adapter.Fill(dataTable);
+        //                }
+        //            }
+        //        }
+        //    }
+        //    catch (Exception err)
+        //    {
+        //        MessageBox.Show("Failed to search customers: " + err.Message);
+        //    }
+        //    finally
+        //    {
+        //        if (conLaundry.State == ConnectionState.Open)
+        //        {
+        //            conLaundry.Close();
+        //        }
+        //    }
+
+        //    return dataTable;
+        //}
+    
 
 
 

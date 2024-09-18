@@ -73,7 +73,6 @@ namespace LaundrySystem.AdminPages
                 string email = txtbxEmail.Text;
                 string photo = pictureBoxImageProfile.Image != null ? ConvertImageToBase64(pictureBoxImageProfile.Image) : null;
 
-                // Create an instance of MySqlProcedure class and call the AddCustomer method
                 MySqlProcedure mySqlProcedure = new MySqlProcedure();
                 mySqlProcedure.AddCustomer(fullname, birthdate, gender, address, contactNo, email, photo);
 
@@ -86,7 +85,6 @@ namespace LaundrySystem.AdminPages
             this.Close();
         }
 
-        // Helper function to convert image to base64 string
         private string ConvertImageToBase64(Image image)
         {
             using (var ms = new System.IO.MemoryStream())

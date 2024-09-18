@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             panel1 = new Panel();
             btnDeleteCustomerAdmin = new Button();
             btnEditCustomerAdmin = new Button();
@@ -36,8 +35,7 @@
             dataGridViewDisplayCustomer = new DataGridView();
             label1 = new Label();
             btnSearchCustomer = new Button();
-            textBox1 = new TextBox();
-     
+            textBoxSearchCustomer = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewDisplayCustomer).BeginInit();
             SuspendLayout();
@@ -51,7 +49,7 @@
             panel1.Controls.Add(dataGridViewDisplayCustomer);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(btnSearchCustomer);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(textBoxSearchCustomer);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -117,19 +115,17 @@
             btnSearchCustomer.TabIndex = 1;
             btnSearchCustomer.Text = "Search";
             btnSearchCustomer.UseVisualStyleBackColor = false;
+            btnSearchCustomer.Click += btnSearchCustomer_Click;
             // 
-            // textBox1
+            // textBoxSearchCustomer
             // 
-            textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(29, 53);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(429, 25);
-            textBox1.TabIndex = 0;
-            textBox1.Text = "Search Customer";
-            // 
-            // OnTimerTick
-            // 
-       
+            textBoxSearchCustomer.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxSearchCustomer.Location = new Point(29, 53);
+            textBoxSearchCustomer.Name = "textBoxSearchCustomer";
+            textBoxSearchCustomer.Size = new Size(429, 25);
+            textBoxSearchCustomer.TabIndex = 0;
+            textBoxSearchCustomer.Text = "Search Customer";
+            textBoxSearchCustomer.TextChanged += textBoxSearchCustomer_TextChanged;
             // 
             // CustomerFormAdmin
             // 
@@ -151,7 +147,7 @@
         private Panel panel1;
         private Label label1;
         private Button btnSearchCustomer;
-        private TextBox textBox1;
+        private TextBox textBoxSearchCustomer;
         private Button btnDeleteCustomerAdmin;
         private Button btnEditCustomerAdmin;
         private Button btnNewCustomerAdmin;

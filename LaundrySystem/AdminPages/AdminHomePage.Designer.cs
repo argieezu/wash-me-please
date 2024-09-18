@@ -192,10 +192,10 @@
             // lblHomePageAdmin
             // 
             lblHomePageAdmin.AutoSize = true;
-            lblHomePageAdmin.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblHomePageAdmin.Location = new Point(41, 17);
+            lblHomePageAdmin.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblHomePageAdmin.Location = new Point(39, 28);
             lblHomePageAdmin.Name = "lblHomePageAdmin";
-            lblHomePageAdmin.Size = new Size(66, 25);
+            lblHomePageAdmin.Size = new Size(95, 37);
             lblHomePageAdmin.TabIndex = 0;
             lblHomePageAdmin.Text = "Home";
             // 

@@ -34,14 +34,14 @@ namespace LaundrySystem.AdminPages
         private void InitializeTimer()
         {
             refreshTimer = new System.Windows.Forms.Timer();
-            refreshTimer.Interval = 3000; 
+            refreshTimer.Interval = 3000;
             refreshTimer.Tick += new EventHandler(OnTimerTick);
             refreshTimer.Start();
         }
 
         private void OnTimerTick(object sender, EventArgs e)
         {
-            DisplayAllCustomers(); 
+            DisplayAllCustomers();
         }
 
         private void DisplayAllCustomers()
@@ -54,7 +54,7 @@ namespace LaundrySystem.AdminPages
             }
             else
             {
-                dataGridViewDisplayCustomer.DataSource = null; 
+                dataGridViewDisplayCustomer.DataSource = null;
             }
         }
 
@@ -66,7 +66,17 @@ namespace LaundrySystem.AdminPages
 
         private void dataGridViewDisplayCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
+        }
+
+        private void textBoxSearchCustomer_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnSearchCustomer_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
