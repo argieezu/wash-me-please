@@ -65,6 +65,7 @@
             btnDeleteCustomerAdmin.TabIndex = 6;
             btnDeleteCustomerAdmin.Text = "Delete";
             btnDeleteCustomerAdmin.UseVisualStyleBackColor = false;
+            btnDeleteCustomerAdmin.Click += btnDeleteCustomerAdmin_Click;
             // 
             // btnEditCustomerAdmin
             // 

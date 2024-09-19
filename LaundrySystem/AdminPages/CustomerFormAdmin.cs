@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Windows.Forms;
-using LaundrySystem.BackEnd; 
+using LaundrySystem.BackEnd;
 
 namespace LaundrySystem.AdminPages
 {
@@ -22,7 +22,6 @@ namespace LaundrySystem.AdminPages
 
             if (mySqlProcedure.fncConnectToDatabase())
             {
-                // Fetch all customers and display in the DataGridView
                 DisplayAllCustomers();
             }
             else
@@ -31,6 +30,7 @@ namespace LaundrySystem.AdminPages
             }
         }
 
+        //  refresh timer for customer data so that it will auto display the new customer in datagrid
         private void InitializeTimer()
         {
             refreshTimer = new System.Windows.Forms.Timer();
@@ -39,29 +39,84 @@ namespace LaundrySystem.AdminPages
             refreshTimer.Start();
         }
 
+
         private void OnTimerTick(object sender, EventArgs e)
         {
             DisplayAllCustomers();
         }
 
+        //  fetch and display all customers in the datagrid
         private void DisplayAllCustomers()
         {
-            DataTable customerData = mySqlProcedure.GetAllCustomers();
+            try
+            {
+                GetAllCustomer getAllCustomer = new GetAllCustomer();
 
-            if (customerData != null && customerData.Rows.Count > 0)
-            {
-                dataGridViewDisplayCustomer.DataSource = customerData;
+                DataTable customerData = getAllCustomer.GetAllCustomers();
+
+                if (customerData != null && customerData.Rows.Count > 0)
+                {
+                    dataGridViewDisplayCustomer.DataSource = customerData;
+                }
+                else
+                {
+                    dataGridViewDisplayCustomer.DataSource = null;
+                    MessageBox.Show("No customer data found.");
+                }
             }
-            else
+            catch (Exception ex)
             {
-                dataGridViewDisplayCustomer.DataSource = null;
+                MessageBox.Show(ex.Message);
             }
         }
+
 
         private void btnNewCustomerAdmin_Click(object sender, EventArgs e)
         {
             AddingCustomerForm addingcustomer = new AddingCustomerForm();
-            addingcustomer.ShowDialog();
+            if (addingcustomer.ShowDialog() == DialogResult.OK)
+            {
+
+                DisplayAllCustomers();
+            }
+        }
+
+
+        private void textBoxSearchCustomer_TextChanged(object sender, EventArgs e)
+        {
+            string searchText = textBoxSearchCustomer.Text;
+            if (!string.IsNullOrEmpty(searchText))
+            {
+                SearchCustomer(searchText);
+            }
+            else
+            {
+                DisplayAllCustomers();
+            }
+        }
+
+        // Method to search for customers based on the search term
+        private void SearchCustomer(string searchText)
+        {
+            SearchCustomers searchCustomers = new SearchCustomers();
+            try
+            {
+                DataTable searchResult = searchCustomers.Search(searchText);
+
+                if (searchResult != null && searchResult.Rows.Count > 0)
+                {
+                    dataGridViewDisplayCustomer.DataSource = searchResult;
+                }
+                else
+                {
+                    MessageBox.Show("No matching customer found.");
+                    DisplayAllCustomers();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error during search: " + ex.Message);
+            }
         }
 
         private void dataGridViewDisplayCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -69,14 +124,16 @@ namespace LaundrySystem.AdminPages
 
         }
 
-        private void textBoxSearchCustomer_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
 
         private void btnSearchCustomer_Click(object sender, EventArgs e)
         {
-           
+            string searchText = textBoxSearchCustomer.Text;
+            SearchCustomer(searchText);
+        }
+
+        private void btnDeleteCustomerAdmin_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

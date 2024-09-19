@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace LaundrySystem.AdminPages
 {
     public partial class AddingCustomerForm : Form
@@ -16,6 +17,7 @@ namespace LaundrySystem.AdminPages
         public AddingCustomerForm()
         {
             InitializeComponent();
+            
         }
 
         private void AddingCustomerForm_Load(object sender, EventArgs e)
@@ -73,8 +75,9 @@ namespace LaundrySystem.AdminPages
                 string email = txtbxEmail.Text;
                 string photo = pictureBoxImageProfile.Image != null ? ConvertImageToBase64(pictureBoxImageProfile.Image) : null;
 
-                MySqlProcedure mySqlProcedure = new MySqlProcedure();
-                mySqlProcedure.AddCustomer(fullname, birthdate, gender, address, contactNo, email, photo);
+                // Use the AddCustomer class
+                AddCustomer addCustomer = new AddCustomer();
+                addCustomer.AddCustomerToDatabase(fullname, birthdate, gender, address, contactNo, email, photo);
 
                 MessageBox.Show("Customer added successfully!");
             }
@@ -84,6 +87,7 @@ namespace LaundrySystem.AdminPages
             }
             this.Close();
         }
+
 
         private string ConvertImageToBase64(Image image)
         {
