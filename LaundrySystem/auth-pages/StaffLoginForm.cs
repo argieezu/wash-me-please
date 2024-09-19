@@ -29,7 +29,7 @@ namespace LaundrySystem.auth_pages
 
         }
 
-   
+
 
         private void btnRegisterNow_Click(object sender, EventArgs e)
         {
@@ -37,6 +37,13 @@ namespace LaundrySystem.auth_pages
             this.Hide();
             StaffRegister.ShowDialog();
 
+        }
+
+        private void buttonStaffBackToAdminOrStaff_Click(object sender, EventArgs e)
+        {
+            AdminOrStaff adminOrStaff = new AdminOrStaff();
+            adminOrStaff.Show();
+            this.Close();
         }
     }
 }

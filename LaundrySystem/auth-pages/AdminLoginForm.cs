@@ -24,5 +24,17 @@ namespace LaundrySystem.auth_pages
             this.Hide();
             adminhomepage.Show();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonBackToAdminOrStaff_Click(object sender, EventArgs e)
+        {
+            AdminOrStaff adminOrStaff = new AdminOrStaff();
+            adminOrStaff.Show();
+            this.Close();
+        }
     }
 }

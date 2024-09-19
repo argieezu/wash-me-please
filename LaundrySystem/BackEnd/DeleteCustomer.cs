@@ -1,33 +1,41 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
+using MySql.Data.MySqlClient;
 using System.Windows.Forms;
 
 namespace LaundrySystem.BackEnd
 {
     internal class DeleteCustomer
     {
-        private MySqlProcedure _mySqlProcedure;
+        private MySqlProcedure mySqlProcedure;
 
         // Constructor to initialize MySqlProcedure
         public DeleteCustomer()
         {
-            _mySqlProcedure = new MySqlProcedure();
+            mySqlProcedure = new MySqlProcedure();
         }
 
-        // Method to delete a customer from the database
+        //  delete a customer from the database
         public void DeleteCustomerById(int customerId)
         {
             try
             {
-                if (_mySqlProcedure.fncConnectToDatabase())
+                if (mySqlProcedure.fncConnectToDatabase())
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("prcDeleteCustomer", _mySqlProcedure.conLaundry))
+                    using (MySqlCommand cmd = new MySqlCommand("prcDeleteCustomer", mySqlProcedure.conLaundry))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("customerId", customerId);
 
-                        cmd.ExecuteNonQuery();
-                        MessageBox.Show("Customer deleted successfully!");
+                        int rowsAffected = cmd.ExecuteNonQuery();
+
+                        if (rowsAffected > 0)
+                        {
+                            MessageBox.Show("Customer deleted successfully!");
+                        }
+                        else
+                        {
+                            MessageBox.Show("No customer found with the given ID.");
+                        }
                     }
                 }
             }
@@ -37,7 +45,7 @@ namespace LaundrySystem.BackEnd
             }
             finally
             {
-                _mySqlProcedure.checkDatabaseConnection();
+                mySqlProcedure.checkDatabaseConnection();
             }
         }
     }

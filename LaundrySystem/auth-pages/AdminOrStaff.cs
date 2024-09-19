@@ -35,5 +35,10 @@ namespace LaundrySystem.auth_pages
             this.Hide();
             loginAdmin.ShowDialog();
         }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -67,16 +67,16 @@
             // 
             // button1
             // 
-            button1.BackColor = Color.FromArgb(255, 128, 128);
+            button1.BackColor = Color.FromArgb(255, 224, 192);
             button1.FlatAppearance.BorderColor = Color.FromArgb(255, 192, 128);
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.Image = (Image)resources.GetObject("button1.Image");
             button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(11, 491);
+            button1.Location = new Point(3, 491);
             button1.Name = "button1";
-            button1.Size = new Size(154, 34);
+            button1.Size = new Size(174, 34);
             button1.TabIndex = 6;
             button1.Text = "Logout";
             button1.UseVisualStyleBackColor = false;
@@ -91,9 +91,9 @@
             btnStaffAdmin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnStaffAdmin.Image = (Image)resources.GetObject("btnStaffAdmin.Image");
             btnStaffAdmin.ImageAlign = ContentAlignment.MiddleLeft;
-            btnStaffAdmin.Location = new Point(13, 342);
+            btnStaffAdmin.Location = new Point(3, 342);
             btnStaffAdmin.Name = "btnStaffAdmin";
-            btnStaffAdmin.Size = new Size(160, 49);
+            btnStaffAdmin.Size = new Size(174, 49);
             btnStaffAdmin.TabIndex = 5;
             btnStaffAdmin.Text = "Staff";
             btnStaffAdmin.UseVisualStyleBackColor = false;
@@ -108,9 +108,9 @@
             btnTransactionAdmin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnTransactionAdmin.Image = (Image)resources.GetObject("btnTransactionAdmin.Image");
             btnTransactionAdmin.ImageAlign = ContentAlignment.MiddleLeft;
-            btnTransactionAdmin.Location = new Point(9, 287);
+            btnTransactionAdmin.Location = new Point(3, 287);
             btnTransactionAdmin.Name = "btnTransactionAdmin";
-            btnTransactionAdmin.Size = new Size(168, 49);
+            btnTransactionAdmin.Size = new Size(174, 49);
             btnTransactionAdmin.TabIndex = 4;
             btnTransactionAdmin.Text = "Transaction";
             btnTransactionAdmin.UseVisualStyleBackColor = false;
@@ -125,9 +125,9 @@
             btnGarmentsAdmin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnGarmentsAdmin.Image = (Image)resources.GetObject("btnGarmentsAdmin.Image");
             btnGarmentsAdmin.ImageAlign = ContentAlignment.MiddleLeft;
-            btnGarmentsAdmin.Location = new Point(11, 232);
+            btnGarmentsAdmin.Location = new Point(3, 232);
             btnGarmentsAdmin.Name = "btnGarmentsAdmin";
-            btnGarmentsAdmin.Size = new Size(158, 49);
+            btnGarmentsAdmin.Size = new Size(174, 49);
             btnGarmentsAdmin.TabIndex = 3;
             btnGarmentsAdmin.Text = "Garments";
             btnGarmentsAdmin.UseVisualStyleBackColor = false;
@@ -142,9 +142,9 @@
             btnCustomerAdmin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCustomerAdmin.Image = (Image)resources.GetObject("btnCustomerAdmin.Image");
             btnCustomerAdmin.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCustomerAdmin.Location = new Point(11, 177);
+            btnCustomerAdmin.Location = new Point(3, 177);
             btnCustomerAdmin.Name = "btnCustomerAdmin";
-            btnCustomerAdmin.Size = new Size(160, 49);
+            btnCustomerAdmin.Size = new Size(174, 49);
             btnCustomerAdmin.TabIndex = 2;
             btnCustomerAdmin.Text = "Customer";
             btnCustomerAdmin.UseVisualStyleBackColor = false;
@@ -159,9 +159,9 @@
             btnDashboardAdmin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDashboardAdmin.Image = (Image)resources.GetObject("btnDashboardAdmin.Image");
             btnDashboardAdmin.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDashboardAdmin.Location = new Point(11, 122);
+            btnDashboardAdmin.Location = new Point(3, 122);
             btnDashboardAdmin.Name = "btnDashboardAdmin";
-            btnDashboardAdmin.Size = new Size(166, 49);
+            btnDashboardAdmin.Size = new Size(174, 49);
             btnDashboardAdmin.TabIndex = 1;
             btnDashboardAdmin.Text = "Dashboard";
             btnDashboardAdmin.UseVisualStyleBackColor = false;

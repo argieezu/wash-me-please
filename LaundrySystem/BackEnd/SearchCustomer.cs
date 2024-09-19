@@ -31,11 +31,11 @@ namespace LaundrySystem.BackEnd
                         OR contactno LIKE @searchText
                         OR emailadd LIKE @searchText;";
 
-                    using (MySqlCommand cmd = new MySqlCommand(prcSearchCustomers, mySqlProcedure.conLaundry))
+                    using (MySqlCommand Command = new MySqlCommand(prcSearchCustomers, mySqlProcedure.conLaundry))
                     {
-                        cmd.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
+                        Command.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
 
-                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(Command))
                         {
                             adapter.Fill(customerTable);
                         }

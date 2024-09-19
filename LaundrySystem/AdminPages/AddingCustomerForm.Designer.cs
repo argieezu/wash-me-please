@@ -53,10 +53,13 @@
             // 
             // btnAddNewCustomer
             // 
-            btnAddNewCustomer.BackColor = Color.FromArgb(255, 224, 192);
-            btnAddNewCustomer.Location = new Point(427, 264);
+            btnAddNewCustomer.BackColor = Color.FromArgb(192, 255, 192);
+            btnAddNewCustomer.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnAddNewCustomer.Image = Properties.Resources.add_user;
+            btnAddNewCustomer.ImageAlign = ContentAlignment.MiddleLeft;
+            btnAddNewCustomer.Location = new Point(441, 279);
             btnAddNewCustomer.Name = "btnAddNewCustomer";
-            btnAddNewCustomer.Size = new Size(147, 42);
+            btnAddNewCustomer.Size = new Size(119, 33);
             btnAddNewCustomer.TabIndex = 0;
             btnAddNewCustomer.Text = "Add";
             btnAddNewCustomer.UseVisualStyleBackColor = false;
@@ -224,6 +227,7 @@
             // 
             // buttonUploadImage
             // 
+            buttonUploadImage.BackColor = Color.FromArgb(255, 224, 192);
             buttonUploadImage.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonUploadImage.Image = (Image)resources.GetObject("buttonUploadImage.Image");
             buttonUploadImage.ImageAlign = ContentAlignment.MiddleLeft;
@@ -233,7 +237,7 @@
             buttonUploadImage.TabIndex = 24;
             buttonUploadImage.Text = "Upload image";
             buttonUploadImage.TextAlign = ContentAlignment.MiddleRight;
-            buttonUploadImage.UseVisualStyleBackColor = true;
+            buttonUploadImage.UseVisualStyleBackColor = false;
             buttonUploadImage.Click += buttonUploadImage_Click;
             // 
             // AddingCustomerForm

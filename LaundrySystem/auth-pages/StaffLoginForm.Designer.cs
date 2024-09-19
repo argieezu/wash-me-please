@@ -39,6 +39,7 @@
             btnCustomerLogin = new Button();
             btnRegisterNow = new Button();
             label4 = new Label();
+            buttonStaffBackToAdminOrStaff = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -149,12 +150,25 @@
             label4.TabIndex = 9;
             label4.Text = "Don't have account?";
             // 
+            // buttonStaffBackToAdminOrStaff
+            // 
+            buttonStaffBackToAdminOrStaff.FlatAppearance.BorderSize = 0;
+            buttonStaffBackToAdminOrStaff.FlatStyle = FlatStyle.Flat;
+            buttonStaffBackToAdminOrStaff.Image = (Image)resources.GetObject("buttonStaffBackToAdminOrStaff.Image");
+            buttonStaffBackToAdminOrStaff.Location = new Point(12, 12);
+            buttonStaffBackToAdminOrStaff.Name = "buttonStaffBackToAdminOrStaff";
+            buttonStaffBackToAdminOrStaff.Size = new Size(22, 26);
+            buttonStaffBackToAdminOrStaff.TabIndex = 24;
+            buttonStaffBackToAdminOrStaff.UseVisualStyleBackColor = true;
+            buttonStaffBackToAdminOrStaff.Click += buttonStaffBackToAdminOrStaff_Click;
+            // 
             // StaffLoginForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(550, 381);
+            Controls.Add(buttonStaffBackToAdminOrStaff);
             Controls.Add(label4);
             Controls.Add(btnRegisterNow);
             Controls.Add(btnCustomerLogin);
@@ -187,5 +201,6 @@
         private Button btnCustomerLogin;
         private Button btnRegisterNow;
         private Label label4;
+        private Button buttonStaffBackToAdminOrStaff;
     }
 }

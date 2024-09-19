@@ -133,7 +133,58 @@ namespace LaundrySystem.AdminPages
 
         private void btnDeleteCustomerAdmin_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (dataGridViewDisplayCustomer.SelectedRows.Count > 0)
+                {
+                    DataGridViewRow selectedRow = dataGridViewDisplayCustomer.SelectedRows[0];
 
+                    if (selectedRow.Cells.Count > 0)
+                    {
+                        int customerId;
+
+                        if (int.TryParse(selectedRow.Cells[0].Value.ToString(), out customerId))
+                        {
+                            DialogResult dialogResult = MessageBox.Show(
+                                "Are you sure you want to delete this customer?",
+                                "Confirm Deletion",
+                                MessageBoxButtons.YesNo,
+                                MessageBoxIcon.Warning
+                            );
+
+                            if (dialogResult == DialogResult.Yes)
+                            {
+                                DeleteCustomer deleteCustomer = new DeleteCustomer();
+                                deleteCustomer.DeleteCustomerById(customerId);
+
+                                DisplayAllCustomers();
+                            }
+                            else
+                            {
+                                MessageBox.Show("Customer deletion cancelled.");
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid customer ID.");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selected row does not contain any data.");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Select a customer to delete.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
+
+
     }
 }

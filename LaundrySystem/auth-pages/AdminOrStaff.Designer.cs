@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminOrStaff));
             btnAdminRouteLogin = new Button();
             panel3 = new Panel();
+            panel1 = new Panel();
             btnStaffRouteLogin = new Button();
             panel3.SuspendLayout();
             SuspendLayout();
@@ -55,6 +56,8 @@
             // panel3
             // 
             panel3.BackColor = Color.FromArgb(255, 224, 192);
+            panel3.BorderStyle = BorderStyle.Fixed3D;
+            panel3.Controls.Add(panel1);
             panel3.Controls.Add(btnAdminRouteLogin);
             panel3.Controls.Add(btnStaffRouteLogin);
             panel3.Dock = DockStyle.Fill;
@@ -62,6 +65,15 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(534, 181);
             panel3.TabIndex = 2;
+            panel3.Paint += panel3_Paint;
+            // 
+            // panel1
+            // 
+            panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Location = new Point(271, 32);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(1, 118);
+            panel1.TabIndex = 2;
             // 
             // btnStaffRouteLogin
             // 
@@ -98,5 +110,6 @@
         private Panel panel3;
         private Button btnAdminRouteLogin;
         private Button btnStaffRouteLogin;
+        private Panel panel1;
     }
 }

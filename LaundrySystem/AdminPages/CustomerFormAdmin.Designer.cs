@@ -59,9 +59,11 @@
             // btnDeleteCustomerAdmin
             // 
             btnDeleteCustomerAdmin.BackColor = Color.FromArgb(255, 128, 128);
+            btnDeleteCustomerAdmin.Image = Properties.Resources.bin__1_;
+            btnDeleteCustomerAdmin.ImageAlign = ContentAlignment.MiddleLeft;
             btnDeleteCustomerAdmin.Location = new Point(751, 380);
             btnDeleteCustomerAdmin.Name = "btnDeleteCustomerAdmin";
-            btnDeleteCustomerAdmin.Size = new Size(75, 32);
+            btnDeleteCustomerAdmin.Size = new Size(84, 32);
             btnDeleteCustomerAdmin.TabIndex = 6;
             btnDeleteCustomerAdmin.Text = "Delete";
             btnDeleteCustomerAdmin.UseVisualStyleBackColor = false;
@@ -69,20 +71,24 @@
             // 
             // btnEditCustomerAdmin
             // 
-            btnEditCustomerAdmin.BackColor = Color.MediumTurquoise;
+            btnEditCustomerAdmin.BackColor = Color.FromArgb(255, 255, 192);
+            btnEditCustomerAdmin.Image = Properties.Resources.edit;
+            btnEditCustomerAdmin.ImageAlign = ContentAlignment.MiddleLeft;
             btnEditCustomerAdmin.Location = new Point(751, 136);
             btnEditCustomerAdmin.Name = "btnEditCustomerAdmin";
-            btnEditCustomerAdmin.Size = new Size(75, 32);
+            btnEditCustomerAdmin.Size = new Size(84, 32);
             btnEditCustomerAdmin.TabIndex = 5;
             btnEditCustomerAdmin.Text = "Edit";
             btnEditCustomerAdmin.UseVisualStyleBackColor = false;
             // 
             // btnNewCustomerAdmin
             // 
-            btnNewCustomerAdmin.BackColor = Color.FromArgb(255, 224, 192);
+            btnNewCustomerAdmin.BackColor = Color.FromArgb(192, 255, 192);
+            btnNewCustomerAdmin.Image = Properties.Resources.add_user;
+            btnNewCustomerAdmin.ImageAlign = ContentAlignment.MiddleLeft;
             btnNewCustomerAdmin.Location = new Point(751, 98);
             btnNewCustomerAdmin.Name = "btnNewCustomerAdmin";
-            btnNewCustomerAdmin.Size = new Size(75, 32);
+            btnNewCustomerAdmin.Size = new Size(84, 32);
             btnNewCustomerAdmin.TabIndex = 4;
             btnNewCustomerAdmin.Text = "Add";
             btnNewCustomerAdmin.UseVisualStyleBackColor = false;
@@ -91,9 +97,9 @@
             // dataGridViewDisplayCustomer
             // 
             dataGridViewDisplayCustomer.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewDisplayCustomer.Location = new Point(29, 98);
+            dataGridViewDisplayCustomer.Location = new Point(12, 98);
             dataGridViewDisplayCustomer.Name = "dataGridViewDisplayCustomer";
-            dataGridViewDisplayCustomer.Size = new Size(716, 314);
+            dataGridViewDisplayCustomer.Size = new Size(733, 314);
             dataGridViewDisplayCustomer.TabIndex = 3;
             dataGridViewDisplayCustomer.CellContentClick += dataGridViewDisplayCustomer_CellContentClick;
             // 
@@ -101,7 +107,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(29, 9);
+            label1.Location = new Point(12, 9);
             label1.Name = "label1";
             label1.Size = new Size(139, 30);
             label1.TabIndex = 2;
@@ -109,10 +115,12 @@
             // 
             // btnSearchCustomer
             // 
-            btnSearchCustomer.BackColor = Color.FromArgb(255, 224, 192);
+            btnSearchCustomer.BackColor = Color.FromArgb(192, 255, 255);
+            btnSearchCustomer.Image = Properties.Resources.loupe;
+            btnSearchCustomer.ImageAlign = ContentAlignment.MiddleLeft;
             btnSearchCustomer.Location = new Point(464, 53);
             btnSearchCustomer.Name = "btnSearchCustomer";
-            btnSearchCustomer.Size = new Size(75, 27);
+            btnSearchCustomer.Size = new Size(85, 27);
             btnSearchCustomer.TabIndex = 1;
             btnSearchCustomer.Text = "Search";
             btnSearchCustomer.UseVisualStyleBackColor = false;
@@ -121,9 +129,9 @@
             // textBoxSearchCustomer
             // 
             textBoxSearchCustomer.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBoxSearchCustomer.Location = new Point(29, 53);
+            textBoxSearchCustomer.Location = new Point(12, 53);
             textBoxSearchCustomer.Name = "textBoxSearchCustomer";
-            textBoxSearchCustomer.Size = new Size(429, 25);
+            textBoxSearchCustomer.Size = new Size(446, 25);
             textBoxSearchCustomer.TabIndex = 0;
             textBoxSearchCustomer.Text = "Search Customer";
             textBoxSearchCustomer.TextChanged += textBoxSearchCustomer_TextChanged;
