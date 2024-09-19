@@ -201,7 +201,7 @@
             // 
             // panel3
             // 
-            panel3.BackColor = Color.White;
+            panel3.BackColor = Color.FromArgb(255, 224, 192);
             panel3.Controls.Add(pictureBox1);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(178, 99);
