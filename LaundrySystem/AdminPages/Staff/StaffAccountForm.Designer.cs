@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btnDeletStaffAdmin = new Button();
             btnEditStaffAdmin = new Button();
             button1 = new Button();
-            btnDeletStaffAdmin = new Button();
             btnNewStaffAdmin = new Button();
             dataGridViewStaff = new DataGridView();
             label1 = new Label();
@@ -52,6 +52,18 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(838, 437);
             panel1.TabIndex = 0;
+
+            // 
+            // btnDeletStaffAdmin
+            // 
+            btnDeletStaffAdmin.BackColor = Color.FromArgb(255, 128, 128);
+            btnDeletStaffAdmin.Location = new Point(749, 387);
+            btnDeletStaffAdmin.Name = "btnDeletStaffAdmin";
+            btnDeletStaffAdmin.Size = new Size(75, 32);
+            btnDeletStaffAdmin.TabIndex = 13;
+            btnDeletStaffAdmin.Text = "Delete";
+            btnDeletStaffAdmin.UseVisualStyleBackColor = false;
+            btnDeletStaffAdmin.Click += btnDeletStaffAdmin_Click;
             // 
             // btnEditStaffAdmin
             // 
@@ -73,17 +85,6 @@
             button1.TabIndex = 12;
             button1.Text = "Edit";
             button1.UseVisualStyleBackColor = false;
-            // 
-            // btnDeletStaffAdmin
-            // 
-            btnDeletStaffAdmin.BackColor = Color.FromArgb(255, 128, 128);
-            btnDeletStaffAdmin.Location = new Point(749, 387);
-            btnDeletStaffAdmin.Name = "btnDeletStaffAdmin";
-            btnDeletStaffAdmin.Size = new Size(75, 32);
-            btnDeletStaffAdmin.TabIndex = 13;
-            btnDeletStaffAdmin.Text = "Delete";
-            btnDeletStaffAdmin.UseVisualStyleBackColor = false;
-            btnDeletStaffAdmin.Click += btnDeletStaffAdmin_Click;
             // 
             // btnNewStaffAdmin
             // 

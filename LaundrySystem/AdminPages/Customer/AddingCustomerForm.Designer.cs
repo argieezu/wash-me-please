@@ -48,6 +48,7 @@
             button2 = new Button();
             dateTimePickerBirthdate = new DateTimePicker();
             buttonUploadImage = new Button();
+            panel1 = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBoxImageProfile).BeginInit();
             SuspendLayout();
             // 
@@ -240,6 +241,16 @@
             buttonUploadImage.UseVisualStyleBackColor = false;
             buttonUploadImage.Click += buttonUploadImage_Click;
             // 
+            // panel1
+            // 
+            panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(611, 338);
+            panel1.TabIndex = 25;
+            panel1.Paint += panel1_Paint;
+            // 
             // AddingCustomerForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -264,6 +275,7 @@
             Controls.Add(pictureBoxImageProfile);
             Controls.Add(label1);
             Controls.Add(btnAddNewCustomer);
+            Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "AddingCustomerForm";
             Text = "AddingCustomerForm";
@@ -294,5 +306,6 @@
         private Button button2;
         private DateTimePicker dateTimePickerBirthdate;
         private Button buttonUploadImage;
+        private Panel panel1;
     }
 }

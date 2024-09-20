@@ -17,7 +17,7 @@ namespace LaundrySystem.AdminPages
         public AddingCustomerForm()
         {
             InitializeComponent();
-            
+
         }
 
         private void AddingCustomerForm_Load(object sender, EventArgs e)
@@ -100,6 +100,11 @@ namespace LaundrySystem.AdminPages
         }
 
         private void txtbxFullName_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
