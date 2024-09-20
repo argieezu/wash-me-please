@@ -33,17 +33,18 @@
             button1 = new Button();
             btnDeletStaffAdmin = new Button();
             btnNewStaffAdmin = new Button();
-            dataGridView1 = new DataGridView();
+            dataGridViewStaff = new DataGridView();
             label1 = new Label();
             btnSearchStaff = new Button();
             textBox1 = new TextBox();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewStaff).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(btnDeletStaffAdmin);
             panel1.Controls.Add(btnEditStaffAdmin);
             panel1.Controls.Add(button1);
             panel1.Dock = DockStyle.Fill;
@@ -61,6 +62,7 @@
             btnEditStaffAdmin.TabIndex = 12;
             btnEditStaffAdmin.Text = "Edit";
             btnEditStaffAdmin.UseVisualStyleBackColor = false;
+            btnEditStaffAdmin.Click += btnEditStaffAdmin_Click;
             // 
             // button1
             // 
@@ -75,12 +77,13 @@
             // btnDeletStaffAdmin
             // 
             btnDeletStaffAdmin.BackColor = Color.FromArgb(255, 128, 128);
-            btnDeletStaffAdmin.Location = new Point(749, 181);
+            btnDeletStaffAdmin.Location = new Point(749, 387);
             btnDeletStaffAdmin.Name = "btnDeletStaffAdmin";
             btnDeletStaffAdmin.Size = new Size(75, 32);
             btnDeletStaffAdmin.TabIndex = 13;
             btnDeletStaffAdmin.Text = "Delete";
             btnDeletStaffAdmin.UseVisualStyleBackColor = false;
+            btnDeletStaffAdmin.Click += btnDeletStaffAdmin_Click;
             // 
             // btnNewStaffAdmin
             // 
@@ -93,13 +96,15 @@
             btnNewStaffAdmin.UseVisualStyleBackColor = false;
             btnNewStaffAdmin.Click += btnNewStaffAdmin_Click;
             // 
-            // dataGridView1
+            // dataGridViewStaff
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(27, 105);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(716, 314);
-            dataGridView1.TabIndex = 10;
+            dataGridViewStaff.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewStaff.Location = new Point(27, 105);
+            dataGridViewStaff.Name = "dataGridViewStaff";
+            dataGridViewStaff.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewStaff.Size = new Size(716, 314);
+            dataGridViewStaff.TabIndex = 10;
+            dataGridViewStaff.CellContentClick += dataGridViewStaff_CellContentClick;
             // 
             // label1
             // 
@@ -135,9 +140,8 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(838, 437);
-            Controls.Add(btnDeletStaffAdmin);
             Controls.Add(btnNewStaffAdmin);
-            Controls.Add(dataGridView1);
+            Controls.Add(dataGridViewStaff);
             Controls.Add(label1);
             Controls.Add(btnSearchStaff);
             Controls.Add(textBox1);
@@ -146,7 +150,7 @@
             Text = "CreateAccount";
             Load += StaffAccountForm_Load;
             panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewStaff).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -157,7 +161,7 @@
         private Button btnDeletStaffAdmin;
         private Button btnEditStaffAdmin;
         private Button btnNewStaffAdmin;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewStaff;
         private Label label1;
         private Button btnSearchStaff;
         private TextBox textBox1;

@@ -26,5 +26,20 @@ namespace LaundrySystem.AdminPages
         {
 
         }
+
+        private void btnDeletStaffAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridViewStaff_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void btnEditStaffAdmin_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

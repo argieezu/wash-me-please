@@ -99,6 +99,7 @@
             dataGridViewDisplayCustomer.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewDisplayCustomer.Location = new Point(12, 98);
             dataGridViewDisplayCustomer.Name = "dataGridViewDisplayCustomer";
+            dataGridViewDisplayCustomer.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewDisplayCustomer.Size = new Size(733, 314);
             dataGridViewDisplayCustomer.TabIndex = 3;
             dataGridViewDisplayCustomer.CellContentClick += dataGridViewDisplayCustomer_CellContentClick;

@@ -6,23 +6,21 @@ namespace LaundrySystem.BackEnd
 {
     internal class AddCustomer
     {
-        private MySqlProcedure _mySqlProcedure;
+        private MySqlProcedure mySqlProcedure;
 
-        // Constructor to initialize MySqlProcedure
         public AddCustomer()
         {
-            _mySqlProcedure = new MySqlProcedure();
+            mySqlProcedure = new MySqlProcedure();
         }
 
-        // Method to add a new customer
         public void AddCustomerToDatabase(string fullname, DateTime birthdate, string gender, string address, string contactNo, string email, string photo)
         {
             try
             {
-                if (_mySqlProcedure.fncConnectToDatabase())
+                if (mySqlProcedure.fncConnectToDatabase())
                 {
-                    using (MySqlTransaction transaction = _mySqlProcedure.conLaundry.BeginTransaction())
-                    using (MySqlCommand cmd = new MySqlCommand("procAddCustomer", _mySqlProcedure.conLaundry, transaction))
+                    using (MySqlTransaction transaction = mySqlProcedure.conLaundry.BeginTransaction())
+                    using (MySqlCommand cmd = new MySqlCommand("procAddCustomer", mySqlProcedure.conLaundry, transaction))
                     {
                         cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
@@ -45,7 +43,7 @@ namespace LaundrySystem.BackEnd
             }
             finally
             {
-                _mySqlProcedure.checkDatabaseConnection();
+                mySqlProcedure.checkDatabaseConnection();
             }
         }
     }

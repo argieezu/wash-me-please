@@ -35,8 +35,8 @@
             txtbxPasswordAdmin = new TextBox();
             label3 = new Label();
             panel1 = new Panel();
-            label1 = new Label();
             buttonBackToAdminOrStaff = new Button();
+            label1 = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -52,13 +52,13 @@
             // 
             // btnLoginAdminToHomePage
             // 
-            btnLoginAdminToHomePage.BackColor = Color.FromArgb(255, 192, 128);
-            btnLoginAdminToHomePage.FlatAppearance.BorderSize = 2;
+            btnLoginAdminToHomePage.BackColor = Color.FromArgb(192, 255, 255);
+            btnLoginAdminToHomePage.FlatAppearance.BorderSize = 0;
             btnLoginAdminToHomePage.FlatStyle = FlatStyle.Flat;
             btnLoginAdminToHomePage.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLoginAdminToHomePage.Location = new Point(139, 191);
+            btnLoginAdminToHomePage.Location = new Point(139, 212);
             btnLoginAdminToHomePage.Name = "btnLoginAdminToHomePage";
-            btnLoginAdminToHomePage.Size = new Size(231, 53);
+            btnLoginAdminToHomePage.Size = new Size(231, 46);
             btnLoginAdminToHomePage.TabIndex = 3;
             btnLoginAdminToHomePage.Text = "Login";
             btnLoginAdminToHomePage.UseVisualStyleBackColor = false;
@@ -107,16 +107,6 @@
             panel1.Size = new Size(474, 272);
             panel1.TabIndex = 7;
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(22, 96);
-            label1.Name = "label1";
-            label1.Size = new Size(111, 25);
-            label1.TabIndex = 8;
-            label1.Text = "Username :";
-            // 
             // buttonBackToAdminOrStaff
             // 
             buttonBackToAdminOrStaff.FlatAppearance.BorderSize = 0;
@@ -128,6 +118,16 @@
             buttonBackToAdminOrStaff.TabIndex = 23;
             buttonBackToAdminOrStaff.UseVisualStyleBackColor = true;
             buttonBackToAdminOrStaff.Click += buttonBackToAdminOrStaff_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(22, 96);
+            label1.Name = "label1";
+            label1.Size = new Size(111, 25);
+            label1.TabIndex = 8;
+            label1.Text = "Username :";
             // 
             // AdminLoginForm
             // 
