@@ -46,13 +46,15 @@
             panel1.BackColor = Color.White;
             panel1.Controls.Add(btnDeletStaffAdmin);
             panel1.Controls.Add(btnEditStaffAdmin);
+            panel1.Controls.Add(btnSearchStaff);
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(textBox1);
             panel1.Controls.Add(button1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
             panel1.Size = new Size(838, 437);
             panel1.TabIndex = 0;
-
             // 
             // btnDeletStaffAdmin
             // 
@@ -100,10 +102,10 @@
             // dataGridViewStaff
             // 
             dataGridViewStaff.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewStaff.Location = new Point(27, 105);
+            dataGridViewStaff.Location = new Point(12, 91);
             dataGridViewStaff.Name = "dataGridViewStaff";
             dataGridViewStaff.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewStaff.Size = new Size(716, 314);
+            dataGridViewStaff.Size = new Size(731, 328);
             dataGridViewStaff.TabIndex = 10;
             dataGridViewStaff.CellContentClick += dataGridViewStaff_CellContentClick;
             // 
@@ -111,7 +113,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(27, 16);
+            label1.Location = new Point(12, 9);
             label1.Name = "label1";
             label1.Size = new Size(92, 30);
             label1.TabIndex = 9;
@@ -120,7 +122,7 @@
             // btnSearchStaff
             // 
             btnSearchStaff.BackColor = Color.FromArgb(255, 224, 192);
-            btnSearchStaff.Location = new Point(462, 60);
+            btnSearchStaff.Location = new Point(447, 60);
             btnSearchStaff.Name = "btnSearchStaff";
             btnSearchStaff.Size = new Size(75, 27);
             btnSearchStaff.TabIndex = 8;
@@ -130,7 +132,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(27, 60);
+            textBox1.Location = new Point(12, 60);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(429, 25);
             textBox1.TabIndex = 7;
@@ -143,17 +145,14 @@
             ClientSize = new Size(838, 437);
             Controls.Add(btnNewStaffAdmin);
             Controls.Add(dataGridViewStaff);
-            Controls.Add(label1);
-            Controls.Add(btnSearchStaff);
-            Controls.Add(textBox1);
             Controls.Add(panel1);
             Name = "StaffAccountForm";
             Text = "CreateAccount";
             Load += StaffAccountForm_Load;
             panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewStaff).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion

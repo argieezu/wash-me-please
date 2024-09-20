@@ -15,6 +15,14 @@ namespace LaundrySystem.AdminPages
             InitializeComponent();
             InitializeTimer();
         }
+        //  refresh timer for customer data so that it will auto display the new customer in datagrid
+        private void InitializeTimer()
+        {
+            refreshTimer = new System.Windows.Forms.Timer();
+            refreshTimer.Interval = 3000;
+            refreshTimer.Tick += new EventHandler(OnTimerTick);
+            refreshTimer.Start();
+        }
 
         private void CustomerFormAdmin_Load(object sender, EventArgs e)
         {
@@ -30,28 +38,16 @@ namespace LaundrySystem.AdminPages
             }
         }
 
-        //  refresh timer for customer data so that it will auto display the new customer in datagrid
-        private void InitializeTimer()
-        {
-            refreshTimer = new System.Windows.Forms.Timer();
-            refreshTimer.Interval = 3000;
-            refreshTimer.Tick += new EventHandler(OnTimerTick);
-            refreshTimer.Start();
-        }
-
-
         private void OnTimerTick(object sender, EventArgs e)
         {
             DisplayAllCustomers();
         }
 
-        //  fetch and display all customers in the datagrid
         private void DisplayAllCustomers()
         {
             try
             {
                 GetAllCustomer getAllCustomer = new GetAllCustomer();
-
                 DataTable customerData = getAllCustomer.GetAllCustomers();
 
                 if (customerData != null && customerData.Rows.Count > 0)

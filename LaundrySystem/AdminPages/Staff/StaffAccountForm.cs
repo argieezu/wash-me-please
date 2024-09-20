@@ -9,48 +9,51 @@ namespace LaundrySystem.AdminPages
     public partial class StaffAccountForm : Form
     {
         private System.Windows.Forms.Timer refreshTimer;
+        private MySqlProcedure mySqlProcedure;
 
         public StaffAccountForm()
         {
             InitializeComponent();
-            InitializeTimer();
+      
         }
 
-        private void InitializeTimer()
+        private void StaffAccountForm_Load(object sender, EventArgs e)
         {
-            refreshTimer = new System.Windows.Forms.Timer();
-            refreshTimer.Interval = 3000; 
-            refreshTimer.Tick += new EventHandler(OnTimerTick);
-            refreshTimer.Start();
-        }
+            mySqlProcedure = new MySqlProcedure();
 
-        private void OnTimerTick(object sender, EventArgs e)
-        {
-            DisplayAllStaff();
+            if (mySqlProcedure.fncConnectToDatabase())
+            {
+                DisplayAllStaff();
+            }
+            else
+            {
+                MessageBox.Show("Failed to connect to the database.");
+            }
         }
 
         private void DisplayAllStaff()
         {
             try
             {
-                GetAllStaff getAllStaff = new GetAllStaff();
-                DataTable staffData = getAllStaff.GetAllStaffs();
+                GetAllStaff getAllCustomer = new GetAllStaff();
+                DataTable customerData = getAllCustomer.GetAllStaffs();
 
-                if (staffData != null && staffData.Rows.Count > 0)
+                if (customerData != null && customerData.Rows.Count > 0)
                 {
-                    dataGridViewStaff.DataSource = staffData; 
+                    dataGridViewStaff.DataSource = customerData;
                 }
                 else
                 {
-                    dataGridViewStaff.DataSource = null; 
-                    MessageBox.Show("No staff data found.");
+                    dataGridViewStaff.DataSource = null;
+                    MessageBox.Show("No customer data found.");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Failed to retrieve staff data: " + ex.Message);
+                MessageBox.Show(ex.Message);
             }
         }
+
 
         private void btnNewStaffAdmin_Click(object sender, EventArgs e)
         {
@@ -59,11 +62,6 @@ namespace LaundrySystem.AdminPages
             {
                 DisplayAllStaff(); 
             }
-        }
-
-        private void StaffAccountForm_Load(object sender, EventArgs e)
-        {
-            DisplayAllStaff();
         }
 
         private void btnDeletStaffAdmin_Click(object sender, EventArgs e)

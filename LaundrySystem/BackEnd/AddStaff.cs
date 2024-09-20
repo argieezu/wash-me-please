@@ -13,7 +13,7 @@ namespace LaundrySystem.BackEnd
             mySqlProcedure = new MySqlProcedure();
         }
 
-        public void AddStaffToDatabase(string fullname, DateTime birthdate, string gender, string address, string contactNo, string email,  string username, string password)
+        public void AddStaffToDatabase(string fullname, DateTime birthdate, string gender, string address, string contactNo, string emailadd,  string username, string PASSWORD)
         {
             try
             {
@@ -31,9 +31,9 @@ namespace LaundrySystem.BackEnd
                         cmd.Parameters.AddWithValue("p_gender", gender);
                         cmd.Parameters.AddWithValue("p_address", address);
                         cmd.Parameters.AddWithValue("p_contactno", contactNo);
-                        cmd.Parameters.AddWithValue("p_emailadd", email);
+                        cmd.Parameters.AddWithValue("p_emailadd", emailadd);
                         cmd.Parameters.AddWithValue("p_username", username);
-                        cmd.Parameters.AddWithValue("p_password", password);
+                        cmd.Parameters.AddWithValue("p_password", PASSWORD);
 
                         cmd.ExecuteNonQuery();
 

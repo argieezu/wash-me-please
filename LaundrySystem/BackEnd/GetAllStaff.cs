@@ -9,13 +9,11 @@ namespace LaundrySystem.BackEnd
     {
         private MySqlProcedure mySqlProcedure;
 
-        // Constructor to initialize MySqlProcedure
         public GetAllStaff()
         {
             mySqlProcedure = new MySqlProcedure();
         }
 
-        // Method to get all customers
         public DataTable GetAllStaffs()
         {
             DataTable dataTable = new DataTable();
@@ -34,6 +32,10 @@ namespace LaundrySystem.BackEnd
                         }
                     }
                 }
+                else
+                {
+                    MessageBox.Show("Failed to connect to database.");
+                }
             }
             catch (Exception err)
             {
@@ -47,4 +49,5 @@ namespace LaundrySystem.BackEnd
             return dataTable;
         }
     }
+
 }

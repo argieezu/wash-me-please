@@ -119,7 +119,7 @@
             btnSearchCustomer.BackColor = Color.FromArgb(192, 255, 255);
             btnSearchCustomer.Image = Properties.Resources.loupe;
             btnSearchCustomer.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSearchCustomer.Location = new Point(464, 53);
+            btnSearchCustomer.Location = new Point(464, 65);
             btnSearchCustomer.Name = "btnSearchCustomer";
             btnSearchCustomer.Size = new Size(85, 27);
             btnSearchCustomer.TabIndex = 1;
@@ -130,7 +130,7 @@
             // textBoxSearchCustomer
             // 
             textBoxSearchCustomer.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBoxSearchCustomer.Location = new Point(12, 53);
+            textBoxSearchCustomer.Location = new Point(12, 65);
             textBoxSearchCustomer.Name = "textBoxSearchCustomer";
             textBoxSearchCustomer.Size = new Size(446, 25);
             textBoxSearchCustomer.TabIndex = 0;
