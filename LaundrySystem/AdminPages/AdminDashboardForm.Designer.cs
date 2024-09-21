@@ -31,23 +31,23 @@
             components = new System.ComponentModel.Container();
             panel1 = new Panel();
             panel12 = new Panel();
+            label7 = new Label();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
             panel2 = new Panel();
-            label6 = new Label();
+            labelRevenue = new Label();
             btnSearchStaff = new Button();
             textBox1 = new TextBox();
-            button4 = new Button();
-            button3 = new Button();
-            button2 = new Button();
+            buttonDashboardTotalStaff = new Button();
+            buttonDashboardTotalCustomer = new Button();
+            buttonDashboardTotalCompletedOrders = new Button();
             label2 = new Label();
-            button1 = new Button();
-            buttonTotalOrderDisplay = new Button();
+            buttonDashboardTotalPendings = new Button();
+            buttonDashboardTotalOrders = new Button();
             label1 = new Label();
             backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             bindingSource1 = new BindingSource(components);
-            label3 = new Label();
-            label4 = new Label();
-            label5 = new Label();
-            label7 = new Label();
             panel1.SuspendLayout();
             panel12.SuspendLayout();
             panel2.SuspendLayout();
@@ -74,12 +74,12 @@
             panel12.Controls.Add(panel2);
             panel12.Controls.Add(btnSearchStaff);
             panel12.Controls.Add(textBox1);
-            panel12.Controls.Add(button4);
-            panel12.Controls.Add(button3);
-            panel12.Controls.Add(button2);
+            panel12.Controls.Add(buttonDashboardTotalStaff);
+            panel12.Controls.Add(buttonDashboardTotalCustomer);
+            panel12.Controls.Add(buttonDashboardTotalCompletedOrders);
             panel12.Controls.Add(label2);
-            panel12.Controls.Add(button1);
-            panel12.Controls.Add(buttonTotalOrderDisplay);
+            panel12.Controls.Add(buttonDashboardTotalPendings);
+            panel12.Controls.Add(buttonDashboardTotalOrders);
             panel12.Controls.Add(label1);
             panel12.Dock = DockStyle.Fill;
             panel12.Location = new Point(0, 0);
@@ -87,32 +87,76 @@
             panel12.Size = new Size(838, 437);
             panel12.TabIndex = 1;
             // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.FromArgb(255, 224, 192);
+            label7.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold);
+            label7.Location = new Point(767, 149);
+            label7.Name = "label7";
+            label7.Size = new Size(27, 32);
+            label7.TabIndex = 17;
+            label7.Text = "0";
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.FromArgb(255, 224, 192);
+            label5.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold);
+            label5.Location = new Point(547, 147);
+            label5.Name = "label5";
+            label5.Size = new Size(27, 32);
+            label5.TabIndex = 16;
+            label5.Text = "0";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.FromArgb(255, 224, 192);
+            label4.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold);
+            label4.Location = new Point(186, 358);
+            label4.Name = "label4";
+            label4.Size = new Size(27, 32);
+            label4.TabIndex = 15;
+            label4.Text = "0";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.FromArgb(255, 224, 192);
+            label3.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold);
+            label3.Location = new Point(186, 255);
+            label3.Name = "label3";
+            label3.Size = new Size(27, 32);
+            label3.TabIndex = 14;
+            label3.Text = "0";
+            // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(255, 224, 192);
             panel2.BorderStyle = BorderStyle.FixedSingle;
-            panel2.Controls.Add(label6);
+            panel2.Controls.Add(labelRevenue);
             panel2.Location = new Point(262, 224);
             panel2.Name = "panel2";
-            panel2.Size = new Size(544, 201);
+            panel2.Size = new Size(564, 201);
             panel2.TabIndex = 13;
             // 
-            // label6
+            // labelRevenue
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.Location = new Point(11, 10);
-            label6.Name = "label6";
-            label6.Size = new Size(68, 20);
-            label6.TabIndex = 0;
-            label6.Text = "Revenue";
+            labelRevenue.AutoSize = true;
+            labelRevenue.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelRevenue.Location = new Point(11, 10);
+            labelRevenue.Name = "labelRevenue";
+            labelRevenue.Size = new Size(68, 20);
+            labelRevenue.TabIndex = 0;
+            labelRevenue.Text = "Revenue";
             // 
             // btnSearchStaff
             // 
             btnSearchStaff.BackColor = Color.FromArgb(255, 224, 192);
             btnSearchStaff.Image = Properties.Resources.loupe;
             btnSearchStaff.ImageAlign = ContentAlignment.MiddleLeft;
-            btnSearchStaff.Location = new Point(737, 30);
+            btnSearchStaff.Location = new Point(737, 32);
             btnSearchStaff.Name = "btnSearchStaff";
             btnSearchStaff.Size = new Size(69, 27);
             btnSearchStaff.TabIndex = 12;
@@ -129,76 +173,78 @@
             textBox1.TabIndex = 11;
             textBox1.Text = "Search anything here...";
             // 
-            // button4
+            // buttonDashboardTotalStaff
             // 
-            button4.BackColor = Color.FromArgb(255, 224, 192);
-            button4.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button4.Location = new Point(603, 115);
-            button4.Name = "button4";
-            button4.Size = new Size(203, 71);
-            button4.TabIndex = 8;
-            button4.Text = "Staff";
-            button4.TextAlign = ContentAlignment.MiddleLeft;
-            button4.UseVisualStyleBackColor = false;
+            buttonDashboardTotalStaff.BackColor = Color.FromArgb(255, 224, 192);
+            buttonDashboardTotalStaff.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonDashboardTotalStaff.Location = new Point(623, 118);
+            buttonDashboardTotalStaff.Name = "buttonDashboardTotalStaff";
+            buttonDashboardTotalStaff.Size = new Size(203, 100);
+            buttonDashboardTotalStaff.TabIndex = 8;
+            buttonDashboardTotalStaff.Text = "Staff";
+            buttonDashboardTotalStaff.TextAlign = ContentAlignment.MiddleLeft;
+            buttonDashboardTotalStaff.UseVisualStyleBackColor = false;
+            buttonDashboardTotalStaff.Click += buttonDashboardTotalStaff_Click;
             // 
-            // button3
+            // buttonDashboardTotalCustomer
             // 
-            button3.BackColor = Color.FromArgb(255, 224, 192);
-            button3.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button3.Location = new Point(394, 115);
-            button3.Name = "button3";
-            button3.Size = new Size(203, 71);
-            button3.TabIndex = 7;
-            button3.Text = "Customer";
-            button3.TextAlign = ContentAlignment.MiddleLeft;
-            button3.UseVisualStyleBackColor = false;
+            buttonDashboardTotalCustomer.BackColor = Color.FromArgb(255, 224, 192);
+            buttonDashboardTotalCustomer.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonDashboardTotalCustomer.Location = new Point(414, 117);
+            buttonDashboardTotalCustomer.Name = "buttonDashboardTotalCustomer";
+            buttonDashboardTotalCustomer.Size = new Size(203, 101);
+            buttonDashboardTotalCustomer.TabIndex = 7;
+            buttonDashboardTotalCustomer.Text = "Customer";
+            buttonDashboardTotalCustomer.TextAlign = ContentAlignment.MiddleLeft;
+            buttonDashboardTotalCustomer.UseVisualStyleBackColor = false;
+            buttonDashboardTotalCustomer.Click += buttonDashboardTotalCustomer_Click;
             // 
-            // button2
+            // buttonDashboardTotalCompletedOrders
             // 
-            button2.BackColor = Color.FromArgb(255, 224, 192);
-            button2.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(24, 224);
-            button2.Name = "button2";
-            button2.Size = new Size(203, 88);
-            button2.TabIndex = 5;
-            button2.Text = "Completed Orders";
-            button2.TextAlign = ContentAlignment.MiddleLeft;
-            button2.UseVisualStyleBackColor = false;
+            buttonDashboardTotalCompletedOrders.BackColor = Color.FromArgb(255, 224, 192);
+            buttonDashboardTotalCompletedOrders.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonDashboardTotalCompletedOrders.Location = new Point(24, 224);
+            buttonDashboardTotalCompletedOrders.Name = "buttonDashboardTotalCompletedOrders";
+            buttonDashboardTotalCompletedOrders.Size = new Size(203, 100);
+            buttonDashboardTotalCompletedOrders.TabIndex = 5;
+            buttonDashboardTotalCompletedOrders.Text = "Completed Orders";
+            buttonDashboardTotalCompletedOrders.TextAlign = ContentAlignment.MiddleLeft;
+            buttonDashboardTotalCompletedOrders.UseVisualStyleBackColor = false;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.BackColor = Color.FromArgb(255, 224, 192);
             label2.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold);
-            label2.Location = new Point(186, 141);
+            label2.Location = new Point(186, 147);
             label2.Name = "label2";
             label2.Size = new Size(27, 32);
             label2.TabIndex = 4;
             label2.Text = "0";
             // 
-            // button1
+            // buttonDashboardTotalPendings
             // 
-            button1.BackColor = Color.FromArgb(255, 224, 192);
-            button1.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button1.Location = new Point(24, 115);
-            button1.Name = "button1";
-            button1.Size = new Size(203, 91);
-            button1.TabIndex = 3;
-            button1.Text = "Pending Orders";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.UseVisualStyleBackColor = false;
+            buttonDashboardTotalPendings.BackColor = Color.FromArgb(255, 224, 192);
+            buttonDashboardTotalPendings.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonDashboardTotalPendings.Location = new Point(24, 115);
+            buttonDashboardTotalPendings.Name = "buttonDashboardTotalPendings";
+            buttonDashboardTotalPendings.Size = new Size(203, 103);
+            buttonDashboardTotalPendings.TabIndex = 3;
+            buttonDashboardTotalPendings.Text = "Pending Orders";
+            buttonDashboardTotalPendings.TextAlign = ContentAlignment.MiddleLeft;
+            buttonDashboardTotalPendings.UseVisualStyleBackColor = false;
             // 
-            // buttonTotalOrderDisplay
+            // buttonDashboardTotalOrders
             // 
-            buttonTotalOrderDisplay.BackColor = Color.FromArgb(255, 224, 192);
-            buttonTotalOrderDisplay.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            buttonTotalOrderDisplay.Location = new Point(24, 333);
-            buttonTotalOrderDisplay.Name = "buttonTotalOrderDisplay";
-            buttonTotalOrderDisplay.Size = new Size(203, 89);
-            buttonTotalOrderDisplay.TabIndex = 1;
-            buttonTotalOrderDisplay.Text = "Total Orders";
-            buttonTotalOrderDisplay.TextAlign = ContentAlignment.MiddleLeft;
-            buttonTotalOrderDisplay.UseVisualStyleBackColor = false;
+            buttonDashboardTotalOrders.BackColor = Color.FromArgb(255, 224, 192);
+            buttonDashboardTotalOrders.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            buttonDashboardTotalOrders.Location = new Point(24, 328);
+            buttonDashboardTotalOrders.Name = "buttonDashboardTotalOrders";
+            buttonDashboardTotalOrders.Size = new Size(203, 94);
+            buttonDashboardTotalOrders.TabIndex = 1;
+            buttonDashboardTotalOrders.Text = "Total Orders";
+            buttonDashboardTotalOrders.TextAlign = ContentAlignment.MiddleLeft;
+            buttonDashboardTotalOrders.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -209,50 +255,6 @@
             label1.Size = new Size(114, 30);
             label1.TabIndex = 0;
             label1.Text = "Dashboard";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.BackColor = Color.FromArgb(255, 224, 192);
-            label3.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold);
-            label3.Location = new Point(186, 249);
-            label3.Name = "label3";
-            label3.Size = new Size(27, 32);
-            label3.TabIndex = 14;
-            label3.Text = "0";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.BackColor = Color.FromArgb(255, 224, 192);
-            label4.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold);
-            label4.Location = new Point(186, 358);
-            label4.Name = "label4";
-            label4.Size = new Size(27, 32);
-            label4.TabIndex = 15;
-            label4.Text = "0";
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.FromArgb(255, 224, 192);
-            label5.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold);
-            label5.Location = new Point(534, 133);
-            label5.Name = "label5";
-            label5.Size = new Size(27, 32);
-            label5.TabIndex = 16;
-            label5.Text = "0";
-            // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.BackColor = Color.FromArgb(255, 224, 192);
-            label7.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold);
-            label7.Location = new Point(748, 134);
-            label7.Name = "label7";
-            label7.Size = new Size(27, 32);
-            label7.TabIndex = 17;
-            label7.Text = "0";
             // 
             // AdminDashboardForm
             // 
@@ -278,16 +280,16 @@
         private Label label1;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private BindingSource bindingSource1;
-        private Button buttonTotalOrderDisplay;
-        private Button button2;
+        private Button buttonDashboardTotalOrders;
+        private Button buttonDashboardTotalCompletedOrders;
         private Label label2;
-        private Button button1;
-        private Button button4;
-        private Button button3;
+        private Button buttonDashboardTotalPendings;
+        private Button buttonDashboardTotalStaff;
+        private Button buttonDashboardTotalCustomer;
         private TextBox textBox1;
         private Panel panel2;
         private Button btnSearchStaff;
-        private Label label6;
+        private Label labelRevenue;
         private Label label7;
         private Label label5;
         private Label label4;

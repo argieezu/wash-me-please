@@ -13,6 +13,21 @@ namespace LaundrySystem.AdminPages
 {
     public partial class AdminHomePage : Form
     {
+        //  property to expose the label
+        public Label HomePageLabel
+        {
+            get { return lblHomePageAdmin; }
+            set { lblHomePageAdmin = value; }
+        }
+
+        //  property to expose the panel
+        public Panel HomePagePanel
+        {
+            get { return panel3; }
+            set { panel3 = value; }
+        }
+
+
         public AdminHomePage()
         {
             InitializeComponent();
@@ -20,7 +35,7 @@ namespace LaundrySystem.AdminPages
 
         private void btnDashboardAdmin_Click(object sender, EventArgs e)
         {
-            AdminDashboardForm dashboardForm = new AdminDashboardForm();
+            AdminDashboardForm dashboardForm = new AdminDashboardForm(this);
             dashboardForm.TopLevel = false;
             dashboardForm.FormBorderStyle = FormBorderStyle.None;
             dashboardForm.Dock = DockStyle.Fill;
