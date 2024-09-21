@@ -31,12 +31,11 @@
             panel1 = new Panel();
             btnDeletStaffAdmin = new Button();
             btnEditStaffAdmin = new Button();
-            button1 = new Button();
+            btnSearchStaff = new Button();
+            label1 = new Label();
+            textBox1 = new TextBox();
             btnNewStaffAdmin = new Button();
             dataGridViewStaff = new DataGridView();
-            label1 = new Label();
-            btnSearchStaff = new Button();
-            textBox1 = new TextBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewStaff).BeginInit();
             SuspendLayout();
@@ -44,12 +43,12 @@
             // panel1
             // 
             panel1.BackColor = Color.White;
+            panel1.Controls.Add(btnNewStaffAdmin);
             panel1.Controls.Add(btnDeletStaffAdmin);
             panel1.Controls.Add(btnEditStaffAdmin);
             panel1.Controls.Add(btnSearchStaff);
             panel1.Controls.Add(label1);
             panel1.Controls.Add(textBox1);
-            panel1.Controls.Add(button1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -59,55 +58,43 @@
             // btnDeletStaffAdmin
             // 
             btnDeletStaffAdmin.BackColor = Color.FromArgb(255, 128, 128);
-            btnDeletStaffAdmin.Location = new Point(749, 387);
+            btnDeletStaffAdmin.Image = Properties.Resources.bin;
+            btnDeletStaffAdmin.ImageAlign = ContentAlignment.MiddleLeft;
+            btnDeletStaffAdmin.Location = new Point(763, 393);
             btnDeletStaffAdmin.Name = "btnDeletStaffAdmin";
-            btnDeletStaffAdmin.Size = new Size(75, 32);
+            btnDeletStaffAdmin.Size = new Size(64, 32);
             btnDeletStaffAdmin.TabIndex = 13;
             btnDeletStaffAdmin.Text = "Delete";
+            btnDeletStaffAdmin.TextAlign = ContentAlignment.MiddleRight;
             btnDeletStaffAdmin.UseVisualStyleBackColor = false;
             btnDeletStaffAdmin.Click += btnDeletStaffAdmin_Click;
             // 
             // btnEditStaffAdmin
             // 
             btnEditStaffAdmin.BackColor = Color.MediumTurquoise;
-            btnEditStaffAdmin.Location = new Point(749, 143);
+            btnEditStaffAdmin.Image = Properties.Resources.edit;
+            btnEditStaffAdmin.ImageAlign = ContentAlignment.MiddleLeft;
+            btnEditStaffAdmin.Location = new Point(763, 136);
             btnEditStaffAdmin.Name = "btnEditStaffAdmin";
-            btnEditStaffAdmin.Size = new Size(75, 32);
+            btnEditStaffAdmin.Size = new Size(64, 32);
             btnEditStaffAdmin.TabIndex = 12;
             btnEditStaffAdmin.Text = "Edit";
+            btnEditStaffAdmin.TextAlign = ContentAlignment.MiddleRight;
             btnEditStaffAdmin.UseVisualStyleBackColor = false;
             btnEditStaffAdmin.Click += btnEditStaffAdmin_Click;
             // 
-            // button1
+            // btnSearchStaff
             // 
-            button1.BackColor = Color.MediumTurquoise;
-            button1.Location = new Point(749, 105);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 32);
-            button1.TabIndex = 12;
-            button1.Text = "Edit";
-            button1.UseVisualStyleBackColor = false;
-            // 
-            // btnNewStaffAdmin
-            // 
-            btnNewStaffAdmin.BackColor = Color.FromArgb(255, 224, 192);
-            btnNewStaffAdmin.Location = new Point(749, 105);
-            btnNewStaffAdmin.Name = "btnNewStaffAdmin";
-            btnNewStaffAdmin.Size = new Size(75, 32);
-            btnNewStaffAdmin.TabIndex = 11;
-            btnNewStaffAdmin.Text = "Add";
-            btnNewStaffAdmin.UseVisualStyleBackColor = false;
-            btnNewStaffAdmin.Click += btnNewStaffAdmin_Click;
-            // 
-            // dataGridViewStaff
-            // 
-            dataGridViewStaff.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewStaff.Location = new Point(12, 91);
-            dataGridViewStaff.Name = "dataGridViewStaff";
-            dataGridViewStaff.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dataGridViewStaff.Size = new Size(731, 328);
-            dataGridViewStaff.TabIndex = 10;
-            dataGridViewStaff.CellContentClick += dataGridViewStaff_CellContentClick;
+            btnSearchStaff.BackColor = Color.FromArgb(255, 224, 192);
+            btnSearchStaff.Image = Properties.Resources.loupe;
+            btnSearchStaff.ImageAlign = ContentAlignment.MiddleLeft;
+            btnSearchStaff.Location = new Point(464, 67);
+            btnSearchStaff.Name = "btnSearchStaff";
+            btnSearchStaff.Size = new Size(69, 27);
+            btnSearchStaff.TabIndex = 8;
+            btnSearchStaff.Text = "Search";
+            btnSearchStaff.TextAlign = ContentAlignment.MiddleRight;
+            btnSearchStaff.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
@@ -119,31 +106,44 @@
             label1.TabIndex = 9;
             label1.Text = "Staff List";
             // 
-            // btnSearchStaff
-            // 
-            btnSearchStaff.BackColor = Color.FromArgb(255, 224, 192);
-            btnSearchStaff.Location = new Point(447, 60);
-            btnSearchStaff.Name = "btnSearchStaff";
-            btnSearchStaff.Size = new Size(75, 27);
-            btnSearchStaff.TabIndex = 8;
-            btnSearchStaff.Text = "Search";
-            btnSearchStaff.UseVisualStyleBackColor = false;
-            // 
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(12, 60);
+            textBox1.Location = new Point(12, 67);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(429, 25);
+            textBox1.Size = new Size(446, 25);
             textBox1.TabIndex = 7;
             textBox1.Text = "Search Staff";
+            // 
+            // btnNewStaffAdmin
+            // 
+            btnNewStaffAdmin.BackColor = Color.FromArgb(255, 224, 192);
+            btnNewStaffAdmin.Image = Properties.Resources.add_user;
+            btnNewStaffAdmin.ImageAlign = ContentAlignment.MiddleLeft;
+            btnNewStaffAdmin.Location = new Point(763, 98);
+            btnNewStaffAdmin.Name = "btnNewStaffAdmin";
+            btnNewStaffAdmin.Size = new Size(64, 32);
+            btnNewStaffAdmin.TabIndex = 11;
+            btnNewStaffAdmin.Text = "Add";
+            btnNewStaffAdmin.TextAlign = ContentAlignment.MiddleRight;
+            btnNewStaffAdmin.UseVisualStyleBackColor = false;
+            btnNewStaffAdmin.Click += btnNewStaffAdmin_Click;
+            // 
+            // dataGridViewStaff
+            // 
+            dataGridViewStaff.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewStaff.Location = new Point(12, 98);
+            dataGridViewStaff.Name = "dataGridViewStaff";
+            dataGridViewStaff.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dataGridViewStaff.Size = new Size(745, 328);
+            dataGridViewStaff.TabIndex = 10;
+            dataGridViewStaff.CellContentClick += dataGridViewStaff_CellContentClick;
             // 
             // StaffAccountForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(838, 437);
-            Controls.Add(btnNewStaffAdmin);
             Controls.Add(dataGridViewStaff);
             Controls.Add(panel1);
             Name = "StaffAccountForm";
@@ -165,6 +165,5 @@
         private Label label1;
         private Button btnSearchStaff;
         private TextBox textBox1;
-        private Button button1;
     }
 }

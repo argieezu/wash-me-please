@@ -27,23 +27,18 @@ namespace LaundrySystem.auth_pages
         private void CustomerLoginForm_Load(object sender, EventArgs e)
         {
 
-        }
-
-
-
-        private void btnRegisterNow_Click(object sender, EventArgs e)
-        {
-            StaffRegisterForm StaffRegister = new StaffRegisterForm();
-            this.Hide();
-            StaffRegister.ShowDialog();
-
-        }
+        } 
 
         private void buttonStaffBackToAdminOrStaff_Click(object sender, EventArgs e)
         {
             AdminOrStaff adminOrStaff = new AdminOrStaff();
             adminOrStaff.Show();
             this.Close();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

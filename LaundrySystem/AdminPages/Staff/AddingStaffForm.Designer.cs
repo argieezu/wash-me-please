@@ -50,6 +50,8 @@
             label4 = new Label();
             textBoxPasswordStaff = new TextBox();
             label10 = new Label();
+            panel1 = new Panel();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // button2
@@ -88,7 +90,7 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label9.Location = new Point(48, 251);
+            label9.Location = new Point(49, 249);
             label9.Name = "label9";
             label9.Size = new Size(54, 20);
             label9.TabIndex = 38;
@@ -98,7 +100,7 @@
             // 
             label8.AutoSize = true;
             label8.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label8.Location = new Point(34, 184);
+            label8.Location = new Point(32, 182);
             label8.Name = "label8";
             label8.Size = new Size(71, 20);
             label8.TabIndex = 37;
@@ -116,7 +118,7 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(8, 217);
+            label7.Location = new Point(9, 215);
             label7.Name = "label7";
             label7.Size = new Size(94, 20);
             label7.TabIndex = 35;
@@ -191,7 +193,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(23, 89);
+            label1.Location = new Point(27, 82);
             label1.Name = "label1";
             label1.Size = new Size(80, 20);
             label1.TabIndex = 26;
@@ -223,7 +225,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(23, 288);
+            label4.Location = new Point(17, 286);
             label4.Name = "label4";
             label4.Size = new Size(86, 20);
             label4.TabIndex = 42;
@@ -241,11 +243,26 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI Semibold", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.Location = new Point(28, 321);
+            label10.Location = new Point(22, 319);
             label10.Name = "label10";
             label10.Size = new Size(81, 20);
             label10.TabIndex = 44;
             label10.Text = "Password :";
+            // 
+            // panel1
+            // 
+            panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(label10);
+            panel1.Controls.Add(label8);
+            panel1.Controls.Add(label7);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(label9);
+            panel1.Dock = DockStyle.Fill;
+            panel1.Location = new Point(0, 0);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(395, 450);
+            panel1.TabIndex = 46;
             // 
             // AddingStaffForm
             // 
@@ -254,16 +271,11 @@
             BackColor = Color.FromArgb(255, 224, 192);
             ClientSize = new Size(395, 450);
             Controls.Add(textBoxPasswordStaff);
-            Controls.Add(label10);
             Controls.Add(textBoxUsernameStaff);
-            Controls.Add(label4);
             Controls.Add(button2);
             Controls.Add(dateTimePickerBirthdateStaff);
             Controls.Add(txtbxEmailSTAFF);
-            Controls.Add(label9);
-            Controls.Add(label8);
             Controls.Add(txtbxContactNoStaff);
-            Controls.Add(label7);
             Controls.Add(txtbxAddressStaff);
             Controls.Add(label6);
             Controls.Add(label5);
@@ -271,11 +283,14 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(txtbxFullNameStaff);
-            Controls.Add(label1);
             Controls.Add(btnAddNewStaff);
+            Controls.Add(panel1);
+            FormBorderStyle = FormBorderStyle.None;
             Name = "AddingStaffForm";
             Text = "AddStaffForm";
             Load += AddingStaffForm_Load;
+            panel1.ResumeLayout(false);
+            panel1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -302,5 +317,6 @@
         private Label label4;
         private TextBox textBoxPasswordStaff;
         private Label label10;
+        private Panel panel1;
     }
 }

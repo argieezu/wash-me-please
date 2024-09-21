@@ -35,10 +35,7 @@
             txtbxUsernameCustomer = new TextBox();
             bxbxtPasswordCustomer = new TextBox();
             label3 = new Label();
-            btnForgotPassword = new Button();
             btnCustomerLogin = new Button();
-            btnRegisterNow = new Button();
-            label4 = new Label();
             buttonStaffBackToAdminOrStaff = new Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -48,16 +45,17 @@
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(-52, -8);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(606, 389);
+            pictureBox1.Size = new Size(606, 316);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 0;
             pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(396, 42);
+            label1.Location = new Point(400, 12);
             label1.Name = "label1";
             label1.Size = new Size(78, 32);
             label1.TabIndex = 1;
@@ -67,7 +65,7 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(238, 123);
+            label2.Location = new Point(238, 91);
             label2.Name = "label2";
             label2.Size = new Size(99, 21);
             label2.TabIndex = 2;
@@ -76,7 +74,7 @@
             // txtbxUsernameCustomer
             // 
             txtbxUsernameCustomer.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtbxUsernameCustomer.Location = new Point(336, 120);
+            txtbxUsernameCustomer.Location = new Point(336, 88);
             txtbxUsernameCustomer.Name = "txtbxUsernameCustomer";
             txtbxUsernameCustomer.Size = new Size(192, 29);
             txtbxUsernameCustomer.TabIndex = 3;
@@ -84,7 +82,7 @@
             // bxbxtPasswordCustomer
             // 
             bxbxtPasswordCustomer.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            bxbxtPasswordCustomer.Location = new Point(336, 163);
+            bxbxtPasswordCustomer.Location = new Point(336, 126);
             bxbxtPasswordCustomer.Name = "bxbxtPasswordCustomer";
             bxbxtPasswordCustomer.PasswordChar = '*';
             bxbxtPasswordCustomer.Size = new Size(192, 29);
@@ -94,24 +92,11 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(243, 166);
+            label3.Location = new Point(243, 129);
             label3.Name = "label3";
             label3.Size = new Size(94, 21);
             label3.TabIndex = 4;
             label3.Text = "Password : ";
-            // 
-            // btnForgotPassword
-            // 
-            btnForgotPassword.FlatAppearance.BorderSize = 0;
-            btnForgotPassword.FlatStyle = FlatStyle.Flat;
-            btnForgotPassword.ForeColor = Color.Blue;
-            btnForgotPassword.Location = new Point(419, 198);
-            btnForgotPassword.Name = "btnForgotPassword";
-            btnForgotPassword.Size = new Size(121, 23);
-            btnForgotPassword.TabIndex = 6;
-            btnForgotPassword.Text = "Forgot Password";
-            btnForgotPassword.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnForgotPassword.UseVisualStyleBackColor = true;
             // 
             // btnCustomerLogin
             // 
@@ -119,36 +104,13 @@
             btnCustomerLogin.FlatAppearance.BorderSize = 0;
             btnCustomerLogin.FlatStyle = FlatStyle.Flat;
             btnCustomerLogin.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCustomerLogin.Location = new Point(336, 247);
+            btnCustomerLogin.Location = new Point(336, 222);
             btnCustomerLogin.Name = "btnCustomerLogin";
-            btnCustomerLogin.Size = new Size(192, 30);
+            btnCustomerLogin.Size = new Size(192, 38);
             btnCustomerLogin.TabIndex = 7;
             btnCustomerLogin.Text = "Login";
             btnCustomerLogin.UseVisualStyleBackColor = false;
             btnCustomerLogin.Click += btnCustomerLogin_Click;
-            // 
-            // btnRegisterNow
-            // 
-            btnRegisterNow.FlatAppearance.BorderSize = 0;
-            btnRegisterNow.FlatStyle = FlatStyle.Flat;
-            btnRegisterNow.ForeColor = Color.Blue;
-            btnRegisterNow.Location = new Point(445, 319);
-            btnRegisterNow.Name = "btnRegisterNow";
-            btnRegisterNow.Size = new Size(83, 23);
-            btnRegisterNow.TabIndex = 8;
-            btnRegisterNow.Text = "Register now";
-            btnRegisterNow.TextImageRelation = TextImageRelation.ImageBeforeText;
-            btnRegisterNow.UseVisualStyleBackColor = true;
-            btnRegisterNow.Click += btnRegisterNow_Click;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(336, 323);
-            label4.Name = "label4";
-            label4.Size = new Size(115, 15);
-            label4.TabIndex = 9;
-            label4.Text = "Don't have account?";
             // 
             // buttonStaffBackToAdminOrStaff
             // 
@@ -167,12 +129,9 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.GradientActiveCaption;
-            ClientSize = new Size(550, 381);
+            ClientSize = new Size(550, 308);
             Controls.Add(buttonStaffBackToAdminOrStaff);
-            Controls.Add(label4);
-            Controls.Add(btnRegisterNow);
             Controls.Add(btnCustomerLogin);
-            Controls.Add(btnForgotPassword);
             Controls.Add(bxbxtPasswordCustomer);
             Controls.Add(label3);
             Controls.Add(txtbxUsernameCustomer);
@@ -197,10 +156,7 @@
         private TextBox txtbxUsernameCustomer;
         private TextBox bxbxtPasswordCustomer;
         private Label label3;
-        private Button btnForgotPassword;
         private Button btnCustomerLogin;
-        private Button btnRegisterNow;
-        private Label label4;
         private Button buttonStaffBackToAdminOrStaff;
     }
 }

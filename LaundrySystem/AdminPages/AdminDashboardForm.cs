@@ -16,5 +16,7 @@ namespace LaundrySystem.AdminPages
         {
             InitializeComponent();
         }
+
+
     }
 }

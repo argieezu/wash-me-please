@@ -121,9 +121,10 @@
             btnSearchCustomer.ImageAlign = ContentAlignment.MiddleLeft;
             btnSearchCustomer.Location = new Point(464, 65);
             btnSearchCustomer.Name = "btnSearchCustomer";
-            btnSearchCustomer.Size = new Size(85, 27);
+            btnSearchCustomer.Size = new Size(71, 27);
             btnSearchCustomer.TabIndex = 1;
             btnSearchCustomer.Text = "Search";
+            btnSearchCustomer.TextAlign = ContentAlignment.MiddleRight;
             btnSearchCustomer.UseVisualStyleBackColor = false;
             btnSearchCustomer.Click += btnSearchCustomer_Click;
             // 
