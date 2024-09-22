@@ -31,9 +31,10 @@ namespace LaundrySystem.AdminPages
         public AdminHomePage()
         {
             InitializeComponent();
+            ShowDashboard();
         }
 
-        private void btnDashboardAdmin_Click(object sender, EventArgs e)
+        private void ShowDashboard()
         {
             AdminDashboardForm dashboardForm = new AdminDashboardForm(this);
             dashboardForm.TopLevel = false;
@@ -43,6 +44,11 @@ namespace LaundrySystem.AdminPages
             panel3.Controls.Clear();
             panel3.Controls.Add(dashboardForm);
             dashboardForm.Show();
+        }
+
+        private void btnDashboardAdmin_Click(object sender, EventArgs e)
+        {
+            ShowDashboard();
         }
 
         private void btnCustomerAdmin_Click(object sender, EventArgs e)
@@ -104,12 +110,17 @@ namespace LaundrySystem.AdminPages
 
             if (result == DialogResult.Yes)
             {
-                this.Close(); 
-            }   
+                this.Close();
+            }
         }
 
 
         private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

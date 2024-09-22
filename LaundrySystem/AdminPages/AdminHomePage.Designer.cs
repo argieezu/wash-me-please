@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminHomePage));
             panel1 = new Panel();
+            btnServicesAdmin = new Button();
             button1 = new Button();
             btnStaffAdmin = new Button();
             btnTransactionAdmin = new Button();
@@ -52,6 +53,7 @@
             // 
             panel1.BackColor = Color.FromArgb(255, 224, 192);
             panel1.BorderStyle = BorderStyle.FixedSingle;
+            panel1.Controls.Add(btnServicesAdmin);
             panel1.Controls.Add(button1);
             panel1.Controls.Add(btnStaffAdmin);
             panel1.Controls.Add(btnTransactionAdmin);
@@ -64,6 +66,22 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(178, 538);
             panel1.TabIndex = 0;
+            // 
+            // btnServicesAdmin
+            // 
+            btnServicesAdmin.BackColor = Color.FromArgb(255, 224, 192);
+            btnServicesAdmin.FlatAppearance.BorderColor = Color.FromArgb(255, 192, 128);
+            btnServicesAdmin.FlatAppearance.BorderSize = 0;
+            btnServicesAdmin.FlatStyle = FlatStyle.Flat;
+            btnServicesAdmin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnServicesAdmin.Image = (Image)resources.GetObject("btnServicesAdmin.Image");
+            btnServicesAdmin.ImageAlign = ContentAlignment.MiddleLeft;
+            btnServicesAdmin.Location = new Point(-1, 379);
+            btnServicesAdmin.Name = "btnServicesAdmin";
+            btnServicesAdmin.Size = new Size(178, 49);
+            btnServicesAdmin.TabIndex = 7;
+            btnServicesAdmin.Text = "Services";
+            btnServicesAdmin.UseVisualStyleBackColor = false;
             // 
             // button1
             // 
@@ -91,9 +109,9 @@
             btnStaffAdmin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnStaffAdmin.Image = (Image)resources.GetObject("btnStaffAdmin.Image");
             btnStaffAdmin.ImageAlign = ContentAlignment.MiddleLeft;
-            btnStaffAdmin.Location = new Point(3, 342);
+            btnStaffAdmin.Location = new Point(-1, 214);
             btnStaffAdmin.Name = "btnStaffAdmin";
-            btnStaffAdmin.Size = new Size(174, 49);
+            btnStaffAdmin.Size = new Size(178, 49);
             btnStaffAdmin.TabIndex = 5;
             btnStaffAdmin.Text = "Staff";
             btnStaffAdmin.UseVisualStyleBackColor = false;
@@ -108,9 +126,9 @@
             btnTransactionAdmin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnTransactionAdmin.Image = (Image)resources.GetObject("btnTransactionAdmin.Image");
             btnTransactionAdmin.ImageAlign = ContentAlignment.MiddleLeft;
-            btnTransactionAdmin.Location = new Point(3, 287);
+            btnTransactionAdmin.Location = new Point(-1, 324);
             btnTransactionAdmin.Name = "btnTransactionAdmin";
-            btnTransactionAdmin.Size = new Size(174, 49);
+            btnTransactionAdmin.Size = new Size(178, 49);
             btnTransactionAdmin.TabIndex = 4;
             btnTransactionAdmin.Text = "Transaction";
             btnTransactionAdmin.UseVisualStyleBackColor = false;
@@ -125,7 +143,7 @@
             btnGarmentsAdmin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnGarmentsAdmin.Image = (Image)resources.GetObject("btnGarmentsAdmin.Image");
             btnGarmentsAdmin.ImageAlign = ContentAlignment.MiddleLeft;
-            btnGarmentsAdmin.Location = new Point(3, 232);
+            btnGarmentsAdmin.Location = new Point(-1, 269);
             btnGarmentsAdmin.Name = "btnGarmentsAdmin";
             btnGarmentsAdmin.Size = new Size(174, 49);
             btnGarmentsAdmin.TabIndex = 3;
@@ -142,7 +160,7 @@
             btnCustomerAdmin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCustomerAdmin.Image = (Image)resources.GetObject("btnCustomerAdmin.Image");
             btnCustomerAdmin.ImageAlign = ContentAlignment.MiddleLeft;
-            btnCustomerAdmin.Location = new Point(3, 177);
+            btnCustomerAdmin.Location = new Point(3, 159);
             btnCustomerAdmin.Name = "btnCustomerAdmin";
             btnCustomerAdmin.Size = new Size(174, 49);
             btnCustomerAdmin.TabIndex = 2;
@@ -159,7 +177,7 @@
             btnDashboardAdmin.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDashboardAdmin.Image = (Image)resources.GetObject("btnDashboardAdmin.Image");
             btnDashboardAdmin.ImageAlign = ContentAlignment.MiddleLeft;
-            btnDashboardAdmin.Location = new Point(3, 122);
+            btnDashboardAdmin.Location = new Point(3, 104);
             btnDashboardAdmin.Name = "btnDashboardAdmin";
             btnDashboardAdmin.Size = new Size(174, 49);
             btnDashboardAdmin.TabIndex = 1;
@@ -188,6 +206,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(854, 99);
             panel2.TabIndex = 1;
+            panel2.Paint += panel2_Paint;
             // 
             // lblHomePageAdmin
             // 
@@ -254,5 +273,6 @@
         private Label lblHomePageAdmin;
         private Panel panel3;
         private PictureBox pictureBox1;
+        private Button btnServicesAdmin;
     }
 }
