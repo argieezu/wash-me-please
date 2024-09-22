@@ -32,6 +32,7 @@
             panel3 = new Panel();
             dataGridViewGarmentsManagement = new DataGridView();
             panel4 = new Panel();
+            comboBox1 = new ComboBox();
             textBox7 = new TextBox();
             label8 = new Label();
             textBox5 = new TextBox();
@@ -53,7 +54,6 @@
             buttonEditGarments = new Button();
             buttonAddGarments = new Button();
             label1 = new Label();
-            comboBox1 = new ComboBox();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewGarmentsManagement).BeginInit();
@@ -92,6 +92,7 @@
             // 
             // dataGridViewGarmentsManagement
             // 
+            dataGridViewGarmentsManagement.BackgroundColor = Color.FromArgb(255, 192, 128);
             dataGridViewGarmentsManagement.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewGarmentsManagement.Location = new Point(22, 191);
             dataGridViewGarmentsManagement.Name = "dataGridViewGarmentsManagement";
@@ -100,7 +101,7 @@
             // 
             // panel4
             // 
-            panel4.BackColor = Color.FromArgb(255, 224, 192);
+            panel4.BackColor = Color.FromArgb(255, 192, 128);
             panel4.BorderStyle = BorderStyle.FixedSingle;
             panel4.Controls.Add(comboBox1);
             panel4.Controls.Add(textBox7);
@@ -115,6 +116,15 @@
             panel4.Name = "panel4";
             panel4.Size = new Size(692, 109);
             panel4.TabIndex = 4;
+            // 
+            // comboBox1
+            // 
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Shirt", "", "Pants", "", "Jacket", "", "Dress", "T-shirt", "", "Shorts", "", "Skirt", "", "Sweater", "", "Blouse", "", "Suit", "", "Coat", "", "", "Towel", "Underwear", "", "Socks", "", "Jeans", "Beddings" });
+            comboBox1.Location = new Point(451, 66);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(172, 23);
+            comboBox1.TabIndex = 8;
             // 
             // textBox7
             // 
@@ -189,6 +199,7 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.FromArgb(255, 192, 192);
             button1.Image = Properties.Resources.bin;
             button1.ImageAlign = ContentAlignment.MiddleLeft;
             button1.Location = new Point(720, 384);
@@ -196,10 +207,11 @@
             button1.Size = new Size(106, 32);
             button1.TabIndex = 3;
             button1.Text = "Delete";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
+            button2.BackColor = Color.FromArgb(192, 255, 255);
             button2.Image = Properties.Resources.edit;
             button2.ImageAlign = ContentAlignment.MiddleLeft;
             button2.Location = new Point(720, 106);
@@ -207,10 +219,11 @@
             button2.Size = new Size(106, 32);
             button2.TabIndex = 2;
             button2.Text = "Edit";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             // 
             // button3
             // 
+            button3.BackColor = Color.FromArgb(192, 255, 192);
             button3.Image = Properties.Resources.add__1_;
             button3.ImageAlign = ContentAlignment.MiddleLeft;
             button3.Location = new Point(720, 66);
@@ -218,7 +231,7 @@
             button3.Size = new Size(106, 32);
             button3.TabIndex = 1;
             button3.Text = "Add";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             // 
             // label6
             // 
@@ -318,15 +331,6 @@
             label1.Size = new Size(273, 32);
             label1.TabIndex = 0;
             label1.Text = "Garments Management";
-            // 
-            // comboBox1
-            // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Shirt", "", "Pants", "", "Jacket", "", "Dress", "T-shirt", "", "Shorts", "", "Skirt", "", "Sweater", "", "Blouse", "", "Suit", "", "Coat", "", "", "Towel", "Underwear", "", "Socks", "", "Jeans", "Beddings" });
-            comboBox1.Location = new Point(451, 66);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(172, 23);
-            comboBox1.TabIndex = 8;
             // 
             // GarmentsFormAdmin
             // 

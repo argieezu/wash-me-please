@@ -71,7 +71,7 @@
             // 
             // btnEditCustomerAdmin
             // 
-            btnEditCustomerAdmin.BackColor = Color.FromArgb(255, 255, 192);
+            btnEditCustomerAdmin.BackColor = Color.FromArgb(192, 255, 255);
             btnEditCustomerAdmin.Image = Properties.Resources.edit;
             btnEditCustomerAdmin.ImageAlign = ContentAlignment.MiddleLeft;
             btnEditCustomerAdmin.Location = new Point(751, 136);
@@ -96,6 +96,7 @@
             // 
             // dataGridViewDisplayCustomer
             // 
+            dataGridViewDisplayCustomer.BackgroundColor = Color.FromArgb(255, 192, 128);
             dataGridViewDisplayCustomer.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewDisplayCustomer.Location = new Point(12, 98);
             dataGridViewDisplayCustomer.Name = "dataGridViewDisplayCustomer";
@@ -116,7 +117,7 @@
             // 
             // btnSearchCustomer
             // 
-            btnSearchCustomer.BackColor = Color.FromArgb(192, 255, 255);
+            btnSearchCustomer.BackColor = Color.FromArgb(255, 224, 192);
             btnSearchCustomer.Image = Properties.Resources.loupe;
             btnSearchCustomer.ImageAlign = ContentAlignment.MiddleLeft;
             btnSearchCustomer.Location = new Point(464, 65);

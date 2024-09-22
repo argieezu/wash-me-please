@@ -90,7 +90,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.BackColor = Color.FromArgb(255, 224, 192);
+            label7.BackColor = Color.FromArgb(255, 192, 128);
             label7.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold);
             label7.Location = new Point(767, 149);
             label7.Name = "label7";
@@ -101,7 +101,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.BackColor = Color.FromArgb(255, 224, 192);
+            label5.BackColor = Color.FromArgb(255, 192, 128);
             label5.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold);
             label5.Location = new Point(547, 147);
             label5.Name = "label5";
@@ -112,7 +112,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.BackColor = Color.FromArgb(255, 224, 192);
+            label4.BackColor = Color.FromArgb(255, 192, 128);
             label4.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold);
             label4.Location = new Point(186, 358);
             label4.Name = "label4";
@@ -123,7 +123,7 @@
             // label3
             // 
             label3.AutoSize = true;
-            label3.BackColor = Color.FromArgb(255, 224, 192);
+            label3.BackColor = Color.FromArgb(255, 192, 128);
             label3.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold);
             label3.Location = new Point(186, 255);
             label3.Name = "label3";
@@ -133,7 +133,7 @@
             // 
             // panel2
             // 
-            panel2.BackColor = Color.FromArgb(255, 224, 192);
+            panel2.BackColor = Color.FromArgb(255, 192, 128);
             panel2.BorderStyle = BorderStyle.FixedSingle;
             panel2.Controls.Add(labelRevenue);
             panel2.Location = new Point(262, 224);
@@ -153,7 +153,7 @@
             // 
             // btnSearchStaff
             // 
-            btnSearchStaff.BackColor = Color.FromArgb(255, 224, 192);
+            btnSearchStaff.BackColor = Color.FromArgb(255, 192, 128);
             btnSearchStaff.Image = Properties.Resources.loupe;
             btnSearchStaff.ImageAlign = ContentAlignment.MiddleLeft;
             btnSearchStaff.Location = new Point(737, 32);
@@ -175,7 +175,7 @@
             // 
             // buttonDashboardTotalStaff
             // 
-            buttonDashboardTotalStaff.BackColor = Color.FromArgb(255, 224, 192);
+            buttonDashboardTotalStaff.BackColor = Color.FromArgb(255, 192, 128);
             buttonDashboardTotalStaff.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonDashboardTotalStaff.Location = new Point(623, 118);
             buttonDashboardTotalStaff.Name = "buttonDashboardTotalStaff";
@@ -188,7 +188,7 @@
             // 
             // buttonDashboardTotalCustomer
             // 
-            buttonDashboardTotalCustomer.BackColor = Color.FromArgb(255, 224, 192);
+            buttonDashboardTotalCustomer.BackColor = Color.FromArgb(255, 192, 128);
             buttonDashboardTotalCustomer.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonDashboardTotalCustomer.Location = new Point(414, 117);
             buttonDashboardTotalCustomer.Name = "buttonDashboardTotalCustomer";
@@ -201,7 +201,7 @@
             // 
             // buttonDashboardTotalCompletedOrders
             // 
-            buttonDashboardTotalCompletedOrders.BackColor = Color.FromArgb(255, 224, 192);
+            buttonDashboardTotalCompletedOrders.BackColor = Color.FromArgb(255, 192, 128);
             buttonDashboardTotalCompletedOrders.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonDashboardTotalCompletedOrders.Location = new Point(24, 224);
             buttonDashboardTotalCompletedOrders.Name = "buttonDashboardTotalCompletedOrders";
@@ -214,7 +214,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.BackColor = Color.FromArgb(255, 224, 192);
+            label2.BackColor = Color.FromArgb(255, 192, 128);
             label2.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold);
             label2.Location = new Point(186, 147);
             label2.Name = "label2";
@@ -224,7 +224,7 @@
             // 
             // buttonDashboardTotalPendings
             // 
-            buttonDashboardTotalPendings.BackColor = Color.FromArgb(255, 224, 192);
+            buttonDashboardTotalPendings.BackColor = Color.FromArgb(255, 192, 128);
             buttonDashboardTotalPendings.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonDashboardTotalPendings.Location = new Point(24, 115);
             buttonDashboardTotalPendings.Name = "buttonDashboardTotalPendings";
@@ -236,7 +236,7 @@
             // 
             // buttonDashboardTotalOrders
             // 
-            buttonDashboardTotalOrders.BackColor = Color.FromArgb(255, 224, 192);
+            buttonDashboardTotalOrders.BackColor = Color.FromArgb(255, 192, 128);
             buttonDashboardTotalOrders.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonDashboardTotalOrders.Location = new Point(24, 328);
             buttonDashboardTotalOrders.Name = "buttonDashboardTotalOrders";

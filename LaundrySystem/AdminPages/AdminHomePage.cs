@@ -100,6 +100,18 @@ namespace LaundrySystem.AdminPages
             staffAccountForm.Show();
         }
 
+        private void btnServicesAdmin_Click(object sender, EventArgs e)
+        {
+            ServicesFormAdmin servicesAdmin = new ServicesFormAdmin();
+            servicesAdmin.TopLevel = false;
+            servicesAdmin.FormBorderStyle = FormBorderStyle.None;
+            servicesAdmin.Dock = DockStyle.Fill;
+            lblHomePageAdmin.Text = "Services";
+            panel3.Controls.Clear();
+            panel3.Controls.Add(servicesAdmin);
+            servicesAdmin.Show();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show
@@ -124,5 +136,7 @@ namespace LaundrySystem.AdminPages
         {
 
         }
+
+       
     }
 }

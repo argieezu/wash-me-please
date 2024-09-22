@@ -82,6 +82,7 @@
             btnServicesAdmin.TabIndex = 7;
             btnServicesAdmin.Text = "Services";
             btnServicesAdmin.UseVisualStyleBackColor = false;
+            btnServicesAdmin.Click += btnServicesAdmin_Click;
             // 
             // button1
             // 

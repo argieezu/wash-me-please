@@ -16,5 +16,10 @@ namespace LaundrySystem.AdminPages
         {
             InitializeComponent();
         }
+
+        private void textBox17_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
