@@ -31,8 +31,8 @@
             components = new System.ComponentModel.Container();
             panel1 = new Panel();
             panel12 = new Panel();
-            label7 = new Label();
-            label5 = new Label();
+            labelStaff = new Label();
+            labelCustomer = new Label();
             label4 = new Label();
             label3 = new Label();
             panel2 = new Panel();
@@ -67,8 +67,8 @@
             // panel12
             // 
             panel12.BackColor = Color.White;
-            panel12.Controls.Add(label7);
-            panel12.Controls.Add(label5);
+            panel12.Controls.Add(labelStaff);
+            panel12.Controls.Add(labelCustomer);
             panel12.Controls.Add(label4);
             panel12.Controls.Add(label3);
             panel12.Controls.Add(panel2);
@@ -87,27 +87,29 @@
             panel12.Size = new Size(838, 437);
             panel12.TabIndex = 1;
             // 
-            // label7
+            // labelStaff
             // 
-            label7.AutoSize = true;
-            label7.BackColor = Color.FromArgb(255, 192, 128);
-            label7.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold);
-            label7.Location = new Point(767, 149);
-            label7.Name = "label7";
-            label7.Size = new Size(27, 32);
-            label7.TabIndex = 17;
-            label7.Text = "0";
+            labelStaff.AutoSize = true;
+            labelStaff.BackColor = Color.FromArgb(255, 192, 128);
+            labelStaff.Font = new Font("Broadway", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelStaff.Location = new Point(767, 149);
+            labelStaff.Name = "labelStaff";
+            labelStaff.Size = new Size(32, 31);
+            labelStaff.TabIndex = 17;
+            labelStaff.Text = "0";
+            labelStaff.Click += labelStaff_Click;
             // 
-            // label5
+            // labelCustomer
             // 
-            label5.AutoSize = true;
-            label5.BackColor = Color.FromArgb(255, 192, 128);
-            label5.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold);
-            label5.Location = new Point(547, 147);
-            label5.Name = "label5";
-            label5.Size = new Size(27, 32);
-            label5.TabIndex = 16;
-            label5.Text = "0";
+            labelCustomer.AutoSize = true;
+            labelCustomer.BackColor = Color.FromArgb(255, 192, 128);
+            labelCustomer.Font = new Font("Broadway", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelCustomer.Location = new Point(557, 150);
+            labelCustomer.Name = "labelCustomer";
+            labelCustomer.Size = new Size(32, 31);
+            labelCustomer.TabIndex = 16;
+            labelCustomer.Text = "0";
+            labelCustomer.Click += labelCustomer_Click;
             // 
             // label4
             // 
@@ -290,8 +292,8 @@
         private Panel panel2;
         private Button btnSearchStaff;
         private Label labelRevenue;
-        private Label label7;
-        private Label label5;
+        private Label labelStaff;
+        private Label labelCustomer;
         private Label label4;
         private Label label3;
     }
