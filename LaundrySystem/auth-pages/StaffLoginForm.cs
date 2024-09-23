@@ -19,16 +19,12 @@ namespace LaundrySystem.auth_pages
 
         private void btnCustomerLogin_Click(object sender, EventArgs e)
         {
-            StaffDashboard Staff = new StaffDashboard();
-            this.Hide();
-            Staff.ShowDialog();
+           
         }
-
         private void CustomerLoginForm_Load(object sender, EventArgs e)
         {
 
         } 
-
         private void buttonStaffBackToAdminOrStaff_Click(object sender, EventArgs e)
         {
             AdminOrStaff adminOrStaff = new AdminOrStaff();
