@@ -19,7 +19,7 @@ namespace LaundrySystem.BackEnd
         public string password;
         public string port;
         public MySqlConnection conLaundry;
-        public MySqlCommand slqCommand;
+        public MySqlCommand sqlCommand;
         public string strConnection;
 
 
@@ -44,10 +44,10 @@ namespace LaundrySystem.BackEnd
                     "Convert Zero Datetime =true";
 
                 conLaundry = new MySqlConnection(strConnection);
-                slqCommand = new MySqlCommand(strConnection, conLaundry);
+                sqlCommand = new MySqlCommand(strConnection, conLaundry);
                 if (conLaundry.State == ConnectionState.Closed)
                 {
-                    slqCommand.Connection = conLaundry;
+                    sqlCommand.Connection = conLaundry;
                     conLaundry.Open();
                     return true;
                 }

@@ -24,11 +24,11 @@ namespace LaundrySystem.BackEnd
             {
                 if (mySqlProcedure.fncConnectToDatabase())
                 {
-                    using (MySqlCommand Command = new MySqlCommand("prcDisplayAllCustomer", mySqlProcedure.conLaundry))
+                    using (MySqlCommand sqlCommand = new MySqlCommand("prcDisplayAllCustomer", mySqlProcedure.conLaundry))
                     {
-                        Command.CommandType = CommandType.StoredProcedure;
+                        sqlCommand.CommandType = CommandType.StoredProcedure;
 
-                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(Command))
+                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(sqlCommand))
                         {
                             adapter.Fill(dataTable);
                         }

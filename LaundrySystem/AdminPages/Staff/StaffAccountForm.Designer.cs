@@ -127,9 +127,9 @@
             textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox1.Location = new Point(12, 67);
             textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Search staff...";
             textBox1.Size = new Size(446, 25);
             textBox1.TabIndex = 7;
-            textBox1.Text = "Search Staff";
             // 
             // dataGridViewStaff
             // 

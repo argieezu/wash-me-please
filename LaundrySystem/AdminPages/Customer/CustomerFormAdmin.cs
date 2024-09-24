@@ -2,6 +2,7 @@
 using System.Data;
 using System.Windows.Forms;
 using LaundrySystem.BackEnd;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace LaundrySystem.AdminPages
 {
@@ -80,40 +81,16 @@ namespace LaundrySystem.AdminPages
 
         private void textBoxSearchCustomer_TextChanged(object sender, EventArgs e)
         {
-            string searchText = textBoxSearchCustomer.Text;
-            if (!string.IsNullOrEmpty(searchText))
-            {
-                SearchCustomer(searchText);
-            }
-            else
-            {
-                DisplayAllCustomers();
-            }
+               
+                CustomerProcedure customerProcedure = new CustomerProcedure();
+
+                // Get the filtered customer data and bind it to the DataGridView
+                dataGridViewDisplayCustomer.DataSource = customerProcedure.getCustomerList(textBoxSearchCustomer.Text.Trim());
+            
         }
 
-        // Method to search for customers based on the search term
-        private void SearchCustomer(string searchText)
-        {
-            SearchCustomers searchCustomers = new SearchCustomers();
-            try
-            {
-                DataTable searchResult = searchCustomers.Search(searchText);
 
-                if (searchResult != null && searchResult.Rows.Count > 0)
-                {
-                    dataGridViewDisplayCustomer.DataSource = searchResult;
-                }
-                else
-                {
-                    MessageBox.Show("No matching customer found.");
-                    DisplayAllCustomers();
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error during search: " + ex.Message);
-            }
-        }
+
 
         private void dataGridViewDisplayCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -123,8 +100,7 @@ namespace LaundrySystem.AdminPages
 
         private void btnSearchCustomer_Click(object sender, EventArgs e)
         {
-            string searchText = textBoxSearchCustomer.Text;
-            SearchCustomer(searchText);
+            
         }
 
         private void btnDeleteCustomerAdmin_Click(object sender, EventArgs e)

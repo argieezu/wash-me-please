@@ -22,23 +22,21 @@ namespace LaundrySystem.BackEnd
                 {
                     // Use a transaction to ensure atomicity
                     using (MySqlTransaction transaction = mySqlProcedure.conLaundry.BeginTransaction())
-                    using (MySqlCommand cmd = new MySqlCommand("procAddStaff", mySqlProcedure.conLaundry, transaction))
+                    using (MySqlCommand sqlCommand = new MySqlCommand("procAddStaff", mySqlProcedure.conLaundry, transaction))
                     {
-                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                        sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
 
-                        cmd.Parameters.AddWithValue("p_fullname", fullname);
-                        cmd.Parameters.AddWithValue("p_birthdate", birthdate);
-                        cmd.Parameters.AddWithValue("p_gender", gender);
-                        cmd.Parameters.AddWithValue("p_address", address);
-                        cmd.Parameters.AddWithValue("p_contactno", contactNo);
-                        cmd.Parameters.AddWithValue("p_emailadd", emailadd);
-                        cmd.Parameters.AddWithValue("p_username", username);
-                        cmd.Parameters.AddWithValue("p_password", PASSWORD);
+                        sqlCommand.Parameters.AddWithValue("p_fullname", fullname);
+                        sqlCommand.Parameters.AddWithValue("p_birthdate", birthdate);
+                        sqlCommand.Parameters.AddWithValue("p_gender", gender);
+                        sqlCommand.Parameters.AddWithValue("p_address", address);
+                        sqlCommand.Parameters.AddWithValue("p_contactno", contactNo);
+                        sqlCommand.Parameters.AddWithValue("p_emailadd", emailadd);
+                        sqlCommand.Parameters.AddWithValue("p_username", username);
+                        sqlCommand.Parameters.AddWithValue("p_password", PASSWORD);
 
-                        cmd.ExecuteNonQuery();
-
+                        sqlCommand.ExecuteNonQuery();
                         transaction.Commit();
-
                         MessageBox.Show("Staff added successfully!");
                     }
                 }

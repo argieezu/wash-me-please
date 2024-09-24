@@ -21,12 +21,12 @@ namespace LaundrySystem.BackEnd
             {
                 if (mySqlProcedure.fncConnectToDatabase())
                 {
-                    using (MySqlCommand cmd = new MySqlCommand("prcDeleteCustomer", mySqlProcedure.conLaundry))
+                    using (MySqlCommand sqlCommand = new MySqlCommand("prcDeleteCustomer", mySqlProcedure.conLaundry))
                     {
-                        cmd.CommandType = System.Data.CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("customerId", customerId);
+                        sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                        sqlCommand.Parameters.AddWithValue("customerId", customerId);
 
-                        int rowsAffected = cmd.ExecuteNonQuery();
+                        int rowsAffected = sqlCommand.ExecuteNonQuery();
 
                         if (rowsAffected > 0)
                         {

@@ -1,57 +1,46 @@
-﻿using MySql.Data.MySqlClient;
+﻿using LaundrySystem.BackEnd;
+using MySql.Data.MySqlClient;
 using System;
 using System.Data;
 using System.Windows.Forms;
 
-namespace LaundrySystem.BackEnd
+namespace LaundrySystem
 {
-    internal class SearchCustomers
+    internal class CustomerProcedure
     {
-        private MySqlProcedure mySqlProcedure;
+        MySqlProcedure sqlProcedure = new MySqlProcedure();
 
-        // Constructor to initialize MySqlProcedure
-        public SearchCustomers()
+        // Method to search and return customers based on fullname
+        public DataTable getCustomerList(string fullname)
         {
-            mySqlProcedure = new MySqlProcedure();
-        }
-
-        public DataTable Search(string searchText)
-        {
-            DataTable customerTable = new DataTable();
-
+            DataTable dataTable = new DataTable();
             try
             {
-      
-                if (mySqlProcedure.fncConnectToDatabase())
+                if (sqlProcedure.fncConnectToDatabase())
                 {
-                    string prcSearchCustomers = @"
-                        SELECT * 
-                        FROM customers 
-                        WHERE fullname LIKE @searchText
-                        OR contactno LIKE @searchText
-                        OR emailadd LIKE @searchText;";
+                    // Initialize the command
+                    sqlProcedure.sqlCommand = new MySqlCommand("prcSearchCustomers", sqlProcedure.conLaundry);
+                    sqlProcedure.sqlCommand.CommandType = CommandType.StoredProcedure;
 
-                    using (MySqlCommand Command = new MySqlCommand(prcSearchCustomers, mySqlProcedure.conLaundry))
-                    {
-                        Command.Parameters.AddWithValue("@searchText", "%" + searchText + "%");
+                    // Clear previous parameters and add new ones
+                    sqlProcedure.sqlCommand.Parameters.Clear();
+                    sqlProcedure.sqlCommand.Parameters.AddWithValue("p_fullname", fullname);
 
-                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(Command))
-                        {
-                            adapter.Fill(customerTable);
-                        }
-                    }
+                    // Execute and fill the DataTable
+                    MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter(sqlProcedure.sqlCommand);
+                    sqlDataAdapter.Fill(dataTable);
                 }
             }
-            catch (Exception ex)
+            catch (Exception e)
             {
-                MessageBox.Show("Error searching for customers: " + ex.Message);
+                MessageBox.Show(e.ToString());
             }
             finally
             {
-                mySqlProcedure.checkDatabaseConnection();
+                sqlProcedure.conLaundry.Close();
             }
 
-            return customerTable;
+            return dataTable;
         }
     }
 }

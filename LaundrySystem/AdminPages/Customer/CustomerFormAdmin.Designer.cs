@@ -134,9 +134,9 @@
             textBoxSearchCustomer.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBoxSearchCustomer.Location = new Point(12, 65);
             textBoxSearchCustomer.Name = "textBoxSearchCustomer";
+            textBoxSearchCustomer.PlaceholderText = "Search customer...";
             textBoxSearchCustomer.Size = new Size(446, 25);
             textBoxSearchCustomer.TabIndex = 0;
-            textBoxSearchCustomer.Text = "Search Customer";
             textBoxSearchCustomer.TextChanged += textBoxSearchCustomer_TextChanged;
             // 
             // CustomerFormAdmin
