@@ -120,7 +120,8 @@ namespace LaundrySystem.AdminPages
                     MessageBox.Show("Select a staff to delete.");
                 }
             }
-            catch (Exception ex) { 
+            catch (Exception ex)
+            {
             }
 
         }
@@ -136,6 +137,29 @@ namespace LaundrySystem.AdminPages
         private void onTimer_Tick(object sender, EventArgs e)
         {
             DisplayAllStaff();
+        }
+
+        private void textBoxSearchStaff_TextChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                SearchStaff staffProcedure = new SearchStaff();
+                DataTable staffData = staffProcedure.getStaffList(textBoxSearchStaff.Text.Trim());
+
+                if (staffData != null && staffData.Rows.Count > 0)
+                {
+                    dataGridViewStaff.DataSource = staffData;
+                }
+                else
+                {
+                    dataGridViewStaff.DataSource = null;
+                    MessageBox.Show("No matching staff found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error while searching: " + ex.Message);
+            }
         }
     }
 }

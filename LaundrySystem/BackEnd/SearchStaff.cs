@@ -1,32 +1,35 @@
-﻿using LaundrySystem.BackEnd;
-using MySql.Data.MySqlClient;
+﻿using MySql.Data.MySqlClient;
 using System;
+using System.Collections.Generic;
 using System.Data;
-using System.Windows.Forms;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace LaundrySystem
+namespace LaundrySystem.BackEnd
 {
-    internal class SearchCustomer
+    internal class SearchStaff
     {
         MySqlProcedure sqlProcedure = new MySqlProcedure();
 
-        public DataTable getCustomerList(string fullname)
+        public DataTable getStaffList(string fullname)
         {
             DataTable dataTable = new DataTable();
+
             try
             {
                 if (sqlProcedure.fncConnectToDatabase())
                 {
-                    sqlProcedure.sqlCommand = new MySqlCommand("prcSearchCustomers", sqlProcedure.conLaundry);
+                    sqlProcedure.sqlCommand = new MySqlCommand("prcSearchStaff", sqlProcedure.conLaundry);
                     sqlProcedure.sqlCommand.CommandType = CommandType.StoredProcedure;
                     sqlProcedure.sqlCommand.Parameters.Clear();
-                    sqlProcedure.sqlCommand.Parameters.AddWithValue("p_fullname", fullname); 
+                    sqlProcedure.sqlCommand.Parameters.AddWithValue("p_fullname", fullname);
 
                     MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter(sqlProcedure.sqlCommand);
                     sqlDataAdapter.Fill(dataTable);
                 }
             }
-            catch (Exception e)
+            catch (Exception e) 
             {
                 MessageBox.Show(e.ToString());
             }
@@ -40,6 +43,5 @@ namespace LaundrySystem
 
             return dataTable;
         }
-
     }
 }

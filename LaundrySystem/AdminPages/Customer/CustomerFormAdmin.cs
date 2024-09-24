@@ -82,7 +82,7 @@ namespace LaundrySystem.AdminPages
         {
             try
             {
-                CustomerProcedure customerProcedure = new CustomerProcedure();
+                SearchCustomer customerProcedure = new SearchCustomer();
                 DataTable customerData = customerProcedure.getCustomerList(textBoxSearchCustomer.Text.Trim());
 
                 if (customerData != null && customerData.Rows.Count > 0)

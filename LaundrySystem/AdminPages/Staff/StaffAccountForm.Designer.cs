@@ -35,7 +35,7 @@
             btnEditStaffAdmin = new Button();
             btnSearchStaff = new Button();
             label1 = new Label();
-            textBox1 = new TextBox();
+            textBoxSearchStaff = new TextBox();
             dataGridViewStaff = new DataGridView();
             onTimer = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
@@ -50,7 +50,7 @@
             panel1.Controls.Add(btnEditStaffAdmin);
             panel1.Controls.Add(btnSearchStaff);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(textBoxSearchStaff);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -122,14 +122,15 @@
             label1.TabIndex = 9;
             label1.Text = "Staff List";
             // 
-            // textBox1
+            // textBoxSearchStaff
             // 
-            textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(12, 67);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "Search staff...";
-            textBox1.Size = new Size(446, 25);
-            textBox1.TabIndex = 7;
+            textBoxSearchStaff.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxSearchStaff.Location = new Point(12, 67);
+            textBoxSearchStaff.Name = "textBoxSearchStaff";
+            textBoxSearchStaff.PlaceholderText = "Search staff...";
+            textBoxSearchStaff.Size = new Size(446, 25);
+            textBoxSearchStaff.TabIndex = 7;
+            textBoxSearchStaff.TextChanged += textBoxSearchStaff_TextChanged;
             // 
             // dataGridViewStaff
             // 
@@ -171,7 +172,7 @@
         private DataGridView dataGridViewStaff;
         private Label label1;
         private Button btnSearchStaff;
-        private TextBox textBox1;
+        private TextBox textBoxSearchStaff;
         private System.Windows.Forms.Timer onTimer;
     }
 }
