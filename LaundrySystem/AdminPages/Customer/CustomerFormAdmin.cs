@@ -67,7 +67,7 @@ namespace LaundrySystem.AdminPages
             }
         }
 
-        // New customer button click handler
+        // New customer button 
         private void btnNewCustomerAdmin_Click(object sender, EventArgs e)
         {
             AddingCustomerForm addingcustomer = new AddingCustomerForm();
