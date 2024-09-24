@@ -103,7 +103,7 @@
             dataGridViewDisplayCustomer.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridViewDisplayCustomer.Size = new Size(733, 314);
             dataGridViewDisplayCustomer.TabIndex = 3;
-            dataGridViewDisplayCustomer.CellContentClick += dataGridViewDisplayCustomer_CellContentClick;
+
             // 
             // label1
             // 
@@ -127,7 +127,7 @@
             btnSearchCustomer.Text = "Search";
             btnSearchCustomer.TextAlign = ContentAlignment.MiddleRight;
             btnSearchCustomer.UseVisualStyleBackColor = false;
-            btnSearchCustomer.Click += btnSearchCustomer_Click;
+
             // 
             // textBoxSearchCustomer
             // 

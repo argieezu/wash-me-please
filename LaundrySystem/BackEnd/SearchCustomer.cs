@@ -10,7 +10,6 @@ namespace LaundrySystem
     {
         MySqlProcedure sqlProcedure = new MySqlProcedure();
 
-        // Method to search and return customers based on fullname
         public DataTable getCustomerList(string fullname)
         {
             DataTable dataTable = new DataTable();
@@ -18,15 +17,11 @@ namespace LaundrySystem
             {
                 if (sqlProcedure.fncConnectToDatabase())
                 {
-                    // Initialize the command
                     sqlProcedure.sqlCommand = new MySqlCommand("prcSearchCustomers", sqlProcedure.conLaundry);
                     sqlProcedure.sqlCommand.CommandType = CommandType.StoredProcedure;
-
-                    // Clear previous parameters and add new ones
                     sqlProcedure.sqlCommand.Parameters.Clear();
-                    sqlProcedure.sqlCommand.Parameters.AddWithValue("p_fullname", fullname);
+                    sqlProcedure.sqlCommand.Parameters.AddWithValue("p_fullname", fullname); 
 
-                    // Execute and fill the DataTable
                     MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter(sqlProcedure.sqlCommand);
                     sqlDataAdapter.Fill(dataTable);
                 }
@@ -37,10 +32,14 @@ namespace LaundrySystem
             }
             finally
             {
-                sqlProcedure.conLaundry.Close();
+                if (sqlProcedure.conLaundry != null && sqlProcedure.conLaundry.State == ConnectionState.Open)
+                {
+                    sqlProcedure.conLaundry.Close();
+                }
             }
 
             return dataTable;
         }
+
     }
 }

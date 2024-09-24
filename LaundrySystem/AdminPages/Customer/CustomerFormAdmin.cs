@@ -2,7 +2,6 @@
 using System.Data;
 using System.Windows.Forms;
 using LaundrySystem.BackEnd;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace LaundrySystem.AdminPages
 {
@@ -16,7 +15,8 @@ namespace LaundrySystem.AdminPages
             InitializeComponent();
             InitializeTimer();
         }
-        //  refresh timer for customer data so that it will auto display the new customer in datagrid
+
+        // Refresh timer
         private void InitializeTimer()
         {
             refreshTimer = new System.Windows.Forms.Timer();
@@ -67,42 +67,42 @@ namespace LaundrySystem.AdminPages
             }
         }
 
-
+        // New customer button click handler
         private void btnNewCustomerAdmin_Click(object sender, EventArgs e)
         {
             AddingCustomerForm addingcustomer = new AddingCustomerForm();
             if (addingcustomer.ShowDialog() == DialogResult.OK)
             {
-
                 DisplayAllCustomers();
             }
         }
 
-
+        // Search customer by name
         private void textBoxSearchCustomer_TextChanged(object sender, EventArgs e)
         {
-               
+            try
+            {
                 CustomerProcedure customerProcedure = new CustomerProcedure();
+                DataTable customerData = customerProcedure.getCustomerList(textBoxSearchCustomer.Text.Trim());
 
-                // Get the filtered customer data and bind it to the DataGridView
-                dataGridViewDisplayCustomer.DataSource = customerProcedure.getCustomerList(textBoxSearchCustomer.Text.Trim());
-            
+                if (customerData != null && customerData.Rows.Count > 0)
+                {
+                    dataGridViewDisplayCustomer.DataSource = customerData;
+                }
+                else
+                {
+                    dataGridViewDisplayCustomer.DataSource = null; 
+                    MessageBox.Show("No matching customer found.");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error while searching: " + ex.Message);
+            }
         }
 
 
-
-
-        private void dataGridViewDisplayCustomer_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-
-        private void btnSearchCustomer_Click(object sender, EventArgs e)
-        {
-            
-        }
-
+        // Deleting selected customer
         private void btnDeleteCustomerAdmin_Click(object sender, EventArgs e)
         {
             try
@@ -131,32 +131,17 @@ namespace LaundrySystem.AdminPages
 
                                 DisplayAllCustomers();
                             }
-                            else
-                            {
-                                MessageBox.Show("Customer deletion cancelled.");
-                            }
+                            
                         }
-                        else
-                        {
-                            MessageBox.Show("Invalid customer ID.");
-                        }
+                        
                     }
-                    else
-                    {
-                        MessageBox.Show("Selected row does not contain any data.");
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Select a customer to delete.");
-                }
+                   
+                } 
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
-
-
     }
 }
