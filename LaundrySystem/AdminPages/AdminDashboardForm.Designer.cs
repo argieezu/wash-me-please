@@ -91,10 +91,10 @@
             // 
             labelStaff.AutoSize = true;
             labelStaff.BackColor = Color.FromArgb(255, 192, 128);
-            labelStaff.Font = new Font("Broadway", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelStaff.Location = new Point(774, 150);
+            labelStaff.Font = new Font("Castellar", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelStaff.Location = new Point(765, 148);
             labelStaff.Name = "labelStaff";
-            labelStaff.Size = new Size(32, 31);
+            labelStaff.Size = new Size(41, 39);
             labelStaff.TabIndex = 17;
             labelStaff.Text = "0";
             labelStaff.Click += labelStaff_Click;
@@ -103,10 +103,10 @@
             // 
             labelCustomer.AutoSize = true;
             labelCustomer.BackColor = Color.FromArgb(255, 192, 128);
-            labelCustomer.Font = new Font("Broadway", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelCustomer.Location = new Point(555, 150);
+            labelCustomer.Font = new Font("Castellar", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            labelCustomer.Location = new Point(550, 149);
             labelCustomer.Name = "labelCustomer";
-            labelCustomer.Size = new Size(32, 31);
+            labelCustomer.Size = new Size(41, 39);
             labelCustomer.TabIndex = 16;
             labelCustomer.Text = "0";
             labelCustomer.Click += labelCustomer_Click;
@@ -155,7 +155,7 @@
             // 
             // btnSearchStaff
             // 
-            btnSearchStaff.BackColor = Color.FromArgb(255, 192, 128);
+            btnSearchStaff.BackColor = Color.FromArgb(192, 255, 192);
             btnSearchStaff.Image = Properties.Resources.loupe;
             btnSearchStaff.ImageAlign = ContentAlignment.MiddleLeft;
             btnSearchStaff.Location = new Point(737, 32);
@@ -171,9 +171,9 @@
             textBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             textBox1.Location = new Point(285, 32);
             textBox1.Name = "textBox1";
+            textBox1.PlaceholderText = "Search anything here...";
             textBox1.Size = new Size(446, 25);
             textBox1.TabIndex = 11;
-            textBox1.Text = "Search anything here...";
             // 
             // buttonDashboardTotalStaff
             // 
@@ -181,9 +181,9 @@
             buttonDashboardTotalStaff.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonDashboardTotalStaff.Image = Properties.Resources.laundry__2_;
             buttonDashboardTotalStaff.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonDashboardTotalStaff.Location = new Point(613, 118);
+            buttonDashboardTotalStaff.Location = new Point(609, 118);
             buttonDashboardTotalStaff.Name = "buttonDashboardTotalStaff";
-            buttonDashboardTotalStaff.Size = new Size(213, 100);
+            buttonDashboardTotalStaff.Size = new Size(217, 101);
             buttonDashboardTotalStaff.TabIndex = 8;
             buttonDashboardTotalStaff.Text = "Staff";
             buttonDashboardTotalStaff.UseVisualStyleBackColor = false;
@@ -195,9 +195,9 @@
             buttonDashboardTotalCustomer.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             buttonDashboardTotalCustomer.Image = Properties.Resources.clothes_hanger__1_;
             buttonDashboardTotalCustomer.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonDashboardTotalCustomer.Location = new Point(398, 118);
+            buttonDashboardTotalCustomer.Location = new Point(386, 118);
             buttonDashboardTotalCustomer.Name = "buttonDashboardTotalCustomer";
-            buttonDashboardTotalCustomer.Size = new Size(209, 101);
+            buttonDashboardTotalCustomer.Size = new Size(217, 101);
             buttonDashboardTotalCustomer.TabIndex = 7;
             buttonDashboardTotalCustomer.Text = "Customer";
             buttonDashboardTotalCustomer.UseVisualStyleBackColor = false;
@@ -253,10 +253,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(24, 23);
+            label1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(24, 22);
             label1.Name = "label1";
-            label1.Size = new Size(114, 30);
+            label1.Size = new Size(147, 37);
             label1.TabIndex = 0;
             label1.Text = "Dashboard";
             // 

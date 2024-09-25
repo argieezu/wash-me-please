@@ -34,8 +34,6 @@
             panel4 = new Panel();
             panel5 = new Panel();
             panel6 = new Panel();
-            textBox27 = new TextBox();
-            label49 = new Label();
             label41 = new Label();
             textBox23 = new TextBox();
             label42 = new Label();
@@ -46,17 +44,18 @@
             comboBox21 = new ComboBox();
             textBox24 = new TextBox();
             label45 = new Label();
-            dateTimePicker6 = new DateTimePicker();
             textBox22 = new TextBox();
-            label46 = new Label();
             comboBox22 = new ComboBox();
             button6 = new Button();
             textBox25 = new TextBox();
             label47 = new Label();
             label48 = new Label();
-            groupBox5 = new GroupBox();
-            textBox26 = new TextBox();
             label40 = new Label();
+            panel7 = new Panel();
+            dateTimePicker6 = new DateTimePicker();
+            label49 = new Label();
+            label46 = new Label();
+            dateTimePicker7 = new DateTimePicker();
             label39 = new Label();
             textBox21 = new TextBox();
             label32 = new Label();
@@ -156,7 +155,7 @@
             panel4.SuspendLayout();
             panel5.SuspendLayout();
             panel6.SuspendLayout();
-            groupBox5.SuspendLayout();
+            panel7.SuspendLayout();
             groupBox4.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -300,8 +299,6 @@
             // panel6
             // 
             panel6.BackColor = Color.FromArgb(255, 224, 192);
-            panel6.Controls.Add(textBox27);
-            panel6.Controls.Add(label49);
             panel6.Controls.Add(label41);
             panel6.Controls.Add(textBox23);
             panel6.Controls.Add(label42);
@@ -312,39 +309,19 @@
             panel6.Controls.Add(comboBox21);
             panel6.Controls.Add(textBox24);
             panel6.Controls.Add(label45);
-            panel6.Controls.Add(dateTimePicker6);
             panel6.Controls.Add(textBox22);
-            panel6.Controls.Add(label46);
             panel6.Controls.Add(comboBox22);
             panel6.Controls.Add(button6);
             panel6.Controls.Add(textBox25);
             panel6.Controls.Add(label47);
             panel6.Controls.Add(label48);
-            panel6.Controls.Add(groupBox5);
             panel6.Controls.Add(label40);
+            panel6.Controls.Add(panel7);
             panel6.Dock = DockStyle.Fill;
             panel6.Location = new Point(0, 0);
             panel6.Name = "panel6";
             panel6.Size = new Size(838, 437);
             panel6.TabIndex = 43;
-            // 
-            // textBox27
-            // 
-            textBox27.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox27.Location = new Point(140, 15);
-            textBox27.Name = "textBox27";
-            textBox27.Size = new Size(167, 25);
-            textBox27.TabIndex = 44;
-            // 
-            // label49
-            // 
-            label49.AutoSize = true;
-            label49.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label49.Location = new Point(23, 18);
-            label49.Name = "label49";
-            label49.Size = new Size(90, 17);
-            label49.TabIndex = 43;
-            label49.Text = "Transaction ID";
             // 
             // label41
             // 
@@ -436,14 +413,6 @@
             label45.TabIndex = 33;
             label45.Text = "PAYMENT :";
             // 
-            // dateTimePicker6
-            // 
-            dateTimePicker6.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker6.Location = new Point(577, 18);
-            dateTimePicker6.Name = "dateTimePicker6";
-            dateTimePicker6.Size = new Size(237, 25);
-            dateTimePicker6.TabIndex = 30;
-            // 
             // textBox22
             // 
             textBox22.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -451,16 +420,6 @@
             textBox22.Name = "textBox22";
             textBox22.Size = new Size(167, 25);
             textBox22.TabIndex = 29;
-            // 
-            // label46
-            // 
-            label46.AutoSize = true;
-            label46.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label46.Location = new Point(529, 18);
-            label46.Name = "label46";
-            label46.Size = new Size(42, 17);
-            label46.TabIndex = 26;
-            label46.Text = "Date :";
             // 
             // comboBox22
             // 
@@ -474,7 +433,7 @@
             // 
             // button6
             // 
-            button6.BackColor = Color.FromArgb(255, 192, 128);
+            button6.BackColor = Color.FromArgb(128, 255, 128);
             button6.FlatAppearance.BorderSize = 0;
             button6.FlatStyle = FlatStyle.Flat;
             button6.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -512,29 +471,6 @@
             label48.TabIndex = 20;
             label48.Text = "Laundry Category";
             // 
-            // groupBox5
-            // 
-            groupBox5.BackColor = Color.FromArgb(255, 192, 128);
-            groupBox5.Controls.Add(textBox26);
-            groupBox5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            groupBox5.Location = new Point(577, 62);
-            groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(237, 301);
-            groupBox5.TabIndex = 19;
-            groupBox5.TabStop = false;
-            groupBox5.Text = "Remarks";
-            // 
-            // textBox26
-            // 
-            textBox26.BackColor = Color.FromArgb(255, 192, 128);
-            textBox26.BorderStyle = BorderStyle.None;
-            textBox26.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox26.Location = new Point(16, 49);
-            textBox26.Name = "textBox26";
-            textBox26.Size = new Size(250, 18);
-            textBox26.TabIndex = 0;
-            textBox26.Text = "none";
-            // 
             // label40
             // 
             label40.AutoSize = true;
@@ -544,6 +480,54 @@
             label40.Size = new Size(107, 17);
             label40.TabIndex = 18;
             label40.Text = "Customer Name ";
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(dateTimePicker6);
+            panel7.Controls.Add(label49);
+            panel7.Controls.Add(label46);
+            panel7.Controls.Add(dateTimePicker7);
+            panel7.Location = new Point(436, 56);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(378, 252);
+            panel7.TabIndex = 45;
+            // 
+            // dateTimePicker6
+            // 
+            dateTimePicker6.Enabled = false;
+            dateTimePicker6.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateTimePicker6.Location = new Point(122, 48);
+            dateTimePicker6.Name = "dateTimePicker6";
+            dateTimePicker6.Size = new Size(237, 25);
+            dateTimePicker6.TabIndex = 30;
+            // 
+            // label49
+            // 
+            label49.AutoSize = true;
+            label49.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label49.Location = new Point(23, 101);
+            label49.Name = "label49";
+            label49.Size = new Size(93, 17);
+            label49.TabIndex = 44;
+            label49.Text = "Date Claimed :";
+            // 
+            // label46
+            // 
+            label46.AutoSize = true;
+            label46.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label46.Location = new Point(27, 54);
+            label46.Name = "label46";
+            label46.Size = new Size(89, 17);
+            label46.TabIndex = 26;
+            label46.Text = "Current Date :";
+            // 
+            // dateTimePicker7
+            // 
+            dateTimePicker7.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateTimePicker7.Location = new Point(125, 95);
+            dateTimePicker7.Name = "dateTimePicker7";
+            dateTimePicker7.Size = new Size(237, 25);
+            dateTimePicker7.TabIndex = 43;
             // 
             // label39
             // 
@@ -691,7 +675,6 @@
             textBox17.Size = new Size(167, 25);
             textBox17.TabIndex = 22;
             textBox17.Text = "0";
-            textBox17.TextChanged += textBox17_TextChanged;
             // 
             // label31
             // 
@@ -1448,8 +1431,8 @@
             panel5.PerformLayout();
             panel6.ResumeLayout(false);
             panel6.PerformLayout();
-            groupBox5.ResumeLayout(false);
-            groupBox5.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
             groupBox3.ResumeLayout(false);
@@ -1563,8 +1546,6 @@
         private TextBox textBox20;
         private Label label38;
         private Panel panel6;
-        private TextBox textBox27;
-        private Label label49;
         private Label label41;
         private TextBox textBox23;
         private Label label42;
@@ -1583,9 +1564,10 @@
         private TextBox textBox25;
         private Label label47;
         private Label label48;
-        private GroupBox groupBox5;
-        private TextBox textBox26;
         private Label label40;
         private Label label39;
+        private Label label49;
+        private DateTimePicker dateTimePicker7;
+        private Panel panel7;
     }
 }
