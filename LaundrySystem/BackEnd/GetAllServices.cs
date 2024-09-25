@@ -5,29 +5,28 @@ using System.Windows.Forms;
 
 namespace LaundrySystem.BackEnd
 {
-    internal class GetAllCustomer
+    internal class GetAllServices
     {
-        private MySqlProcedure mySqlProcedure;
+        private MySqlProcedure sqlProcedure;
 
-        // Constructor to initialize MySqlProcedure
-        public GetAllCustomer()
+        public GetAllServices()
         {
-            mySqlProcedure = new MySqlProcedure();
+            sqlProcedure = new MySqlProcedure();
         }
 
-        // Method to get all customers
-        public DataTable GetAllCustomers()
+        public DataTable GetAllService()
         {
             DataTable dataTable = new DataTable();
 
             try
             {
-                if (mySqlProcedure.fncConnectToDatabase())
+                if (sqlProcedure.fncConnectToDatabase())
                 {
-                    using (MySqlCommand sqlCommand = new MySqlCommand("prcDisplayAllCustomer", mySqlProcedure.conLaundry))
+                    using (MySqlCommand sqlCommand = new MySqlCommand("prcDisplayServices", sqlProcedure.conLaundry))
                     {
                         sqlCommand.CommandType = CommandType.StoredProcedure;
 
+                        // Use MySqlDataAdapter to fill the DataTable with the result set
                         using (MySqlDataAdapter adapter = new MySqlDataAdapter(sqlCommand))
                         {
                             adapter.Fill(dataTable);
@@ -37,13 +36,12 @@ namespace LaundrySystem.BackEnd
             }
             catch (Exception e)
             {
-                MessageBox.Show("Failed to retrieve customer data: " + e.Message);
+                MessageBox.Show("Failed to retrieve services data: " + e.Message);
             }
             finally
             {
-                mySqlProcedure.checkDatabaseConnection();
+                sqlProcedure.checkDatabaseConnection();
             }
-
             return dataTable;
         }
     }

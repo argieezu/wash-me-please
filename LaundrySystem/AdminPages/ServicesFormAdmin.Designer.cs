@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServicesFormAdmin));
             panel1 = new Panel();
+            button2 = new Button();
             button1 = new Button();
             dataGridViewServiceManagement = new DataGridView();
             buttonAddServices = new Button();
@@ -47,7 +48,6 @@
             pictureBox2 = new PictureBox();
             label3 = new Label();
             textBoxPrice = new TextBox();
-            button2 = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewServiceManagement).BeginInit();
             panel4.SuspendLayout();
@@ -76,6 +76,20 @@
             panel1.Size = new Size(852, 398);
             panel1.TabIndex = 0;
             // 
+            // button2
+            // 
+            button2.BackColor = Color.FromArgb(255, 192, 192);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Image = Properties.Resources.bin;
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(745, 351);
+            button2.Name = "button2";
+            button2.Size = new Size(95, 35);
+            button2.TabIndex = 9;
+            button2.Text = "Delete";
+            button2.UseVisualStyleBackColor = false;
+            // 
             // button1
             // 
             button1.BackColor = Color.FromArgb(192, 255, 255);
@@ -97,6 +111,7 @@
             dataGridViewServiceManagement.Name = "dataGridViewServiceManagement";
             dataGridViewServiceManagement.Size = new Size(519, 229);
             dataGridViewServiceManagement.TabIndex = 7;
+            dataGridViewServiceManagement.CellContentClick += dataGridViewServiceManagement_CellContentClick;
             // 
             // buttonAddServices
             // 
@@ -257,20 +272,6 @@
             textBoxPrice.TabIndex = 1;
             textBoxPrice.TextChanged += textBoxPrice_TextChanged;
             // 
-            // button2
-            // 
-            button2.BackColor = Color.FromArgb(255, 192, 192);
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Image = Properties.Resources.bin;
-            button2.ImageAlign = ContentAlignment.MiddleLeft;
-            button2.Location = new Point(745, 351);
-            button2.Name = "button2";
-            button2.Size = new Size(95, 35);
-            button2.TabIndex = 9;
-            button2.Text = "Delete";
-            button2.UseVisualStyleBackColor = false;
-            // 
             // ServicesFormAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -279,6 +280,7 @@
             Controls.Add(panel1);
             Name = "ServicesFormAdmin";
             Text = "ServicesFormAdmin";
+            Load += ServicesFormAdmin_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridViewServiceManagement).EndInit();
