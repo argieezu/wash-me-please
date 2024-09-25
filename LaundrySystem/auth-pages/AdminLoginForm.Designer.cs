@@ -29,36 +29,30 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminLoginForm));
-            label2 = new Label();
             btnLoginAdminToHomePage = new Button();
             txtbxUsernameAdmin = new TextBox();
             txtbxPasswordAdmin = new TextBox();
             label3 = new Label();
             panel1 = new Panel();
             buttonBackToAdminOrStaff = new Button();
-            label1 = new Label();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             SuspendLayout();
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(26, 135);
-            label2.Name = "label2";
-            label2.Size = new Size(107, 25);
-            label2.TabIndex = 2;
-            label2.Text = "Password :";
             // 
             // btnLoginAdminToHomePage
             // 
-            btnLoginAdminToHomePage.BackColor = Color.FromArgb(192, 255, 255);
+            btnLoginAdminToHomePage.BackColor = Color.FromArgb(255, 192, 128);
             btnLoginAdminToHomePage.FlatAppearance.BorderSize = 0;
             btnLoginAdminToHomePage.FlatStyle = FlatStyle.Flat;
             btnLoginAdminToHomePage.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnLoginAdminToHomePage.Location = new Point(139, 212);
+            btnLoginAdminToHomePage.Location = new Point(248, 213);
             btnLoginAdminToHomePage.Name = "btnLoginAdminToHomePage";
-            btnLoginAdminToHomePage.Size = new Size(231, 46);
+            btnLoginAdminToHomePage.Size = new Size(202, 33);
             btnLoginAdminToHomePage.TabIndex = 3;
             btnLoginAdminToHomePage.Text = "Login";
             btnLoginAdminToHomePage.UseVisualStyleBackColor = false;
@@ -67,25 +61,27 @@
             // txtbxUsernameAdmin
             // 
             txtbxUsernameAdmin.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtbxUsernameAdmin.Location = new Point(139, 96);
+            txtbxUsernameAdmin.Location = new Point(251, 93);
             txtbxUsernameAdmin.Name = "txtbxUsernameAdmin";
-            txtbxUsernameAdmin.Size = new Size(231, 29);
+            txtbxUsernameAdmin.PlaceholderText = "username";
+            txtbxUsernameAdmin.Size = new Size(202, 29);
             txtbxUsernameAdmin.TabIndex = 4;
             // 
             // txtbxPasswordAdmin
             // 
             txtbxPasswordAdmin.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txtbxPasswordAdmin.Location = new Point(139, 135);
+            txtbxPasswordAdmin.Location = new Point(248, 141);
             txtbxPasswordAdmin.Name = "txtbxPasswordAdmin";
             txtbxPasswordAdmin.PasswordChar = '*';
-            txtbxPasswordAdmin.Size = new Size(231, 29);
+            txtbxPasswordAdmin.PlaceholderText = "password";
+            txtbxPasswordAdmin.Size = new Size(202, 29);
             txtbxPasswordAdmin.TabIndex = 5;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(154, 18);
+            label3.Location = new Point(231, 10);
             label3.Name = "label3";
             label3.Size = new Size(193, 40);
             label3.TabIndex = 6;
@@ -94,10 +90,11 @@
             // panel1
             // 
             panel1.BorderStyle = BorderStyle.Fixed3D;
+            panel1.Controls.Add(pictureBox3);
+            panel1.Controls.Add(pictureBox2);
+            panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(buttonBackToAdminOrStaff);
-            panel1.Controls.Add(label2);
             panel1.Controls.Add(txtbxPasswordAdmin);
-            panel1.Controls.Add(label1);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(txtbxUsernameAdmin);
             panel1.Controls.Add(btnLoginAdminToHomePage);
@@ -119,15 +116,32 @@
             buttonBackToAdminOrStaff.UseVisualStyleBackColor = true;
             buttonBackToAdminOrStaff.Click += buttonBackToAdminOrStaff_Click;
             // 
-            // label1
+            // pictureBox1
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(22, 96);
-            label1.Name = "label1";
-            label1.Size = new Size(111, 25);
-            label1.TabIndex = 8;
-            label1.Text = "Username :";
+            pictureBox1.Image = Properties.Resources.admin__2_;
+            pictureBox1.Location = new Point(20, 69);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(143, 153);
+            pictureBox1.TabIndex = 24;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.password;
+            pictureBox2.Location = new Point(208, 141);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(34, 32);
+            pictureBox2.TabIndex = 25;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.avatar__1_;
+            pictureBox3.Location = new Point(208, 93);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(37, 30);
+            pictureBox3.TabIndex = 26;
+            pictureBox3.TabStop = false;
             // 
             // AdminLoginForm
             // 
@@ -142,17 +156,21 @@
             Text = "AdminLoginForm";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-        private Label label2;
         private Button btnLoginAdminToHomePage;
         private TextBox txtbxUsernameAdmin;
         private TextBox txtbxPasswordAdmin;
         private Label label3;
         private Panel panel1;
-        private Label label1;
         private Button buttonBackToAdminOrStaff;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
     }
 }

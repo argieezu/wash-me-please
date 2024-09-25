@@ -63,7 +63,7 @@
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
-            panel3.Size = new Size(534, 181);
+            panel3.Size = new Size(538, 181);
             panel3.TabIndex = 2;
             panel3.Paint += panel3_Paint;
             // 
@@ -85,7 +85,7 @@
             btnStaffRouteLogin.ImageAlign = ContentAlignment.MiddleLeft;
             btnStaffRouteLogin.Location = new Point(309, 60);
             btnStaffRouteLogin.Name = "btnStaffRouteLogin";
-            btnStaffRouteLogin.Size = new Size(175, 67);
+            btnStaffRouteLogin.Size = new Size(181, 67);
             btnStaffRouteLogin.TabIndex = 1;
             btnStaffRouteLogin.Text = "Staff";
             btnStaffRouteLogin.TextAlign = ContentAlignment.MiddleRight;
@@ -96,7 +96,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(534, 181);
+            ClientSize = new Size(538, 181);
             Controls.Add(panel3);
             FormBorderStyle = FormBorderStyle.None;
             Name = "AdminOrStaff";
