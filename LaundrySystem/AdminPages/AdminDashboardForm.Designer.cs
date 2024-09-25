@@ -92,7 +92,7 @@
             labelStaff.AutoSize = true;
             labelStaff.BackColor = Color.FromArgb(255, 192, 128);
             labelStaff.Font = new Font("Broadway", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelStaff.Location = new Point(767, 149);
+            labelStaff.Location = new Point(774, 150);
             labelStaff.Name = "labelStaff";
             labelStaff.Size = new Size(32, 31);
             labelStaff.TabIndex = 17;
@@ -104,7 +104,7 @@
             labelCustomer.AutoSize = true;
             labelCustomer.BackColor = Color.FromArgb(255, 192, 128);
             labelCustomer.Font = new Font("Broadway", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            labelCustomer.Location = new Point(557, 150);
+            labelCustomer.Location = new Point(555, 150);
             labelCustomer.Name = "labelCustomer";
             labelCustomer.Size = new Size(32, 31);
             labelCustomer.TabIndex = 16;
@@ -179,12 +179,13 @@
             // 
             buttonDashboardTotalStaff.BackColor = Color.FromArgb(255, 192, 128);
             buttonDashboardTotalStaff.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            buttonDashboardTotalStaff.Location = new Point(623, 118);
+            buttonDashboardTotalStaff.Image = Properties.Resources.laundry__2_;
+            buttonDashboardTotalStaff.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonDashboardTotalStaff.Location = new Point(613, 118);
             buttonDashboardTotalStaff.Name = "buttonDashboardTotalStaff";
-            buttonDashboardTotalStaff.Size = new Size(203, 100);
+            buttonDashboardTotalStaff.Size = new Size(213, 100);
             buttonDashboardTotalStaff.TabIndex = 8;
             buttonDashboardTotalStaff.Text = "Staff";
-            buttonDashboardTotalStaff.TextAlign = ContentAlignment.MiddleLeft;
             buttonDashboardTotalStaff.UseVisualStyleBackColor = false;
             buttonDashboardTotalStaff.Click += buttonDashboardTotalStaff_Click;
             // 
@@ -192,12 +193,13 @@
             // 
             buttonDashboardTotalCustomer.BackColor = Color.FromArgb(255, 192, 128);
             buttonDashboardTotalCustomer.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            buttonDashboardTotalCustomer.Location = new Point(414, 117);
+            buttonDashboardTotalCustomer.Image = Properties.Resources.clothes_hanger__1_;
+            buttonDashboardTotalCustomer.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonDashboardTotalCustomer.Location = new Point(398, 118);
             buttonDashboardTotalCustomer.Name = "buttonDashboardTotalCustomer";
-            buttonDashboardTotalCustomer.Size = new Size(203, 101);
+            buttonDashboardTotalCustomer.Size = new Size(209, 101);
             buttonDashboardTotalCustomer.TabIndex = 7;
             buttonDashboardTotalCustomer.Text = "Customer";
-            buttonDashboardTotalCustomer.TextAlign = ContentAlignment.MiddleLeft;
             buttonDashboardTotalCustomer.UseVisualStyleBackColor = false;
             buttonDashboardTotalCustomer.Click += buttonDashboardTotalCustomer_Click;
             // 

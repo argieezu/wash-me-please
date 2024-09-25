@@ -143,6 +143,36 @@ namespace LaundrySystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap clothes_hanger {
+            get {
+                object obj = ResourceManager.GetObject("clothes-hanger", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap clothes_hanger__1_ {
+            get {
+                object obj = ResourceManager.GetObject("clothes-hanger (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap customer__2_ {
+            get {
+                object obj = ResourceManager.GetObject("customer (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap edit {
             get {
                 object obj = ResourceManager.GetObject("edit", resourceCulture);
@@ -156,6 +186,36 @@ namespace LaundrySystem.Properties {
         internal static System.Drawing.Bitmap job_description {
             get {
                 object obj = ResourceManager.GetObject("job-description", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap laundry {
+            get {
+                object obj = ResourceManager.GetObject("laundry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap laundry__1_ {
+            get {
+                object obj = ResourceManager.GetObject("laundry (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap laundry__2_ {
+            get {
+                object obj = ResourceManager.GetObject("laundry (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
