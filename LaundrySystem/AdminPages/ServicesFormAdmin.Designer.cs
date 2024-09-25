@@ -30,8 +30,11 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServicesFormAdmin));
             panel1 = new Panel();
+            button1 = new Button();
+            dataGridViewServiceManagement = new DataGridView();
             buttonAddServices = new Button();
             panel4 = new Panel();
+            pictureBox4 = new PictureBox();
             label4 = new Label();
             textBoxDescription = new TextBox();
             panel2 = new Panel();
@@ -44,23 +47,24 @@
             pictureBox2 = new PictureBox();
             label3 = new Label();
             textBoxPrice = new TextBox();
-            pictureBox4 = new PictureBox();
-            dataGridView1 = new DataGridView();
+            button2 = new Button();
             panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewServiceManagement).BeginInit();
             panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(255, 224, 192);
-            panel1.Controls.Add(dataGridView1);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(button1);
+            panel1.Controls.Add(dataGridViewServiceManagement);
             panel1.Controls.Add(buttonAddServices);
             panel1.Controls.Add(panel4);
             panel1.Controls.Add(panel2);
@@ -72,19 +76,42 @@
             panel1.Size = new Size(852, 398);
             panel1.TabIndex = 0;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(192, 255, 255);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Image = Properties.Resources.edit;
+            button1.ImageAlign = ContentAlignment.MiddleLeft;
+            button1.Location = new Point(422, 351);
+            button1.Name = "button1";
+            button1.Size = new Size(95, 35);
+            button1.TabIndex = 8;
+            button1.Text = "Edit";
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // dataGridViewServiceManagement
+            // 
+            dataGridViewServiceManagement.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewServiceManagement.Location = new Point(321, 107);
+            dataGridViewServiceManagement.Name = "dataGridViewServiceManagement";
+            dataGridViewServiceManagement.Size = new Size(519, 229);
+            dataGridViewServiceManagement.TabIndex = 7;
+            // 
             // buttonAddServices
             // 
-            buttonAddServices.BackColor = Color.FromArgb(192, 255, 192);
+            buttonAddServices.BackColor = Color.PaleGreen;
             buttonAddServices.FlatAppearance.BorderSize = 0;
             buttonAddServices.FlatStyle = FlatStyle.Flat;
             buttonAddServices.Image = Properties.Resources.add;
             buttonAddServices.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonAddServices.Location = new Point(728, 351);
+            buttonAddServices.Location = new Point(321, 351);
             buttonAddServices.Name = "buttonAddServices";
             buttonAddServices.Size = new Size(95, 35);
             buttonAddServices.TabIndex = 6;
             buttonAddServices.Text = "Add";
             buttonAddServices.UseVisualStyleBackColor = false;
+            buttonAddServices.Click += buttonAddServices_Click;
             // 
             // panel4
             // 
@@ -93,10 +120,19 @@
             panel4.Controls.Add(pictureBox4);
             panel4.Controls.Add(label4);
             panel4.Controls.Add(textBoxDescription);
-            panel4.Location = new Point(12, 296);
+            panel4.Location = new Point(25, 296);
             panel4.Name = "panel4";
             panel4.Size = new Size(267, 90);
             panel4.TabIndex = 5;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.Image = Properties.Resources.job_description;
+            pictureBox4.Location = new Point(3, 4);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(71, 77);
+            pictureBox4.TabIndex = 3;
+            pictureBox4.TabStop = false;
             // 
             // label4
             // 
@@ -116,6 +152,7 @@
             textBoxDescription.PlaceholderText = "description";
             textBoxDescription.Size = new Size(175, 29);
             textBoxDescription.TabIndex = 1;
+            textBoxDescription.TextChanged += textBoxDescription_TextChanged;
             // 
             // panel2
             // 
@@ -125,7 +162,7 @@
             panel2.Controls.Add(pictureBox1);
             panel2.Controls.Add(label2);
             panel2.Controls.Add(textBoxServiceType);
-            panel2.Location = new Point(12, 107);
+            panel2.Location = new Point(25, 107);
             panel2.Name = "panel2";
             panel2.Size = new Size(267, 74);
             panel2.TabIndex = 3;
@@ -167,6 +204,7 @@
             textBoxServiceType.PlaceholderText = "Service type";
             textBoxServiceType.Size = new Size(177, 29);
             textBoxServiceType.TabIndex = 1;
+            textBoxServiceType.TextChanged += textBoxServiceType_TextChanged;
             // 
             // label1
             // 
@@ -185,7 +223,7 @@
             panel3.Controls.Add(pictureBox2);
             panel3.Controls.Add(label3);
             panel3.Controls.Add(textBoxPrice);
-            panel3.Location = new Point(12, 198);
+            panel3.Location = new Point(25, 198);
             panel3.Name = "panel3";
             panel3.Size = new Size(267, 81);
             panel3.TabIndex = 4;
@@ -217,23 +255,21 @@
             textBoxPrice.PlaceholderText = "0";
             textBoxPrice.Size = new Size(175, 29);
             textBoxPrice.TabIndex = 1;
+            textBoxPrice.TextChanged += textBoxPrice_TextChanged;
             // 
-            // pictureBox4
+            // button2
             // 
-            pictureBox4.Image = Properties.Resources.job_description;
-            pictureBox4.Location = new Point(3, 4);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(71, 77);
-            pictureBox4.TabIndex = 3;
-            pictureBox4.TabStop = false;
-            // 
-            // dataGridView1
-            // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(321, 107);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.Size = new Size(502, 172);
-            dataGridView1.TabIndex = 7;
+            button2.BackColor = Color.FromArgb(255, 192, 192);
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.Image = Properties.Resources.bin;
+            button2.ImageAlign = ContentAlignment.MiddleLeft;
+            button2.Location = new Point(745, 351);
+            button2.Name = "button2";
+            button2.Size = new Size(95, 35);
+            button2.TabIndex = 9;
+            button2.Text = "Delete";
+            button2.UseVisualStyleBackColor = false;
             // 
             // ServicesFormAdmin
             // 
@@ -245,8 +281,10 @@
             Text = "ServicesFormAdmin";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewServiceManagement).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
@@ -254,8 +292,6 @@
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
         }
 
@@ -277,6 +313,8 @@
         private Button buttonAddServices;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
-        private DataGridView dataGridView1;
+        private DataGridView dataGridViewServiceManagement;
+        private Button button1;
+        private Button button2;
     }
 }

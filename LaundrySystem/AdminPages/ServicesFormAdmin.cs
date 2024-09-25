@@ -16,5 +16,25 @@ namespace LaundrySystem.AdminPages
         {
             InitializeComponent();
         }
+
+        private void textBoxServiceType_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxPrice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxDescription_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonAddServices_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
