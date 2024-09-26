@@ -61,8 +61,7 @@ namespace LaundrySystem.AdminPages
         {
 
         }
-
-        private void btnAddNewCustomer_Click(object sender, EventArgs e)
+        private void AddNewCustomer()
         {
             try
             {
@@ -86,6 +85,13 @@ namespace LaundrySystem.AdminPages
                 MessageBox.Show("Failed to add customer: " + err.Message);
             }
             this.Close();
+
+        }
+
+
+        private void btnAddNewCustomer_Click(object sender, EventArgs e)
+        {
+            AddNewCustomer();
         }
 
 

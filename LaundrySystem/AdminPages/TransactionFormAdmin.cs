@@ -17,6 +17,9 @@ namespace LaundrySystem.AdminPages
             InitializeComponent();
         }
 
-       
+        private void label49_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

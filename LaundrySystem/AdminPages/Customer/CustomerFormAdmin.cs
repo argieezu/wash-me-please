@@ -20,7 +20,7 @@ namespace LaundrySystem.AdminPages
         private void InitializeTimer()
         {
             refreshTimer = new System.Windows.Forms.Timer();
-            refreshTimer.Interval = 3000;
+            refreshTimer.Interval = 10000;
             refreshTimer.Tick += new EventHandler(OnTimerTick);
             refreshTimer.Start();
         }

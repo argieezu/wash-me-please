@@ -18,6 +18,28 @@ namespace LaundrySystem.AdminPages
             InitializeComponent();
         }
 
+        private void LoadGarments()
+        {
+            try
+            {
+                GetAllGarments getAllGarments = new GetAllGarments();
+                DataTable dataTable = getAllGarments.GetAllGarment();
+
+                if (dataTable.Rows.Count > 0)
+                {
+                    dataGridViewDisplayGarmentsType.DataSource = dataTable;
+                }
+                else
+                {
+                    MessageBox.Show("No garments available to display.");
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Error loading garments: " + e.Message);
+            }
+        }
+
         private void button3_Click(object sender, EventArgs e)
         {
 
@@ -34,9 +56,19 @@ namespace LaundrySystem.AdminPages
             {
                 string garment_type = textBoxAddGarmentType.Text;
 
+                if (string.IsNullOrEmpty(garment_type))
+                {
+                    MessageBox.Show("Please enter a garment type.");
+                    return;
+                }
+
                 AddGarments addGarments = new AddGarments();
                 addGarments.AddGarmentsToDatabase(garment_type);
-                MessageBox.Show("Garment added successfully! ");
+
+                MessageBox.Show("Garment added successfully!");
+
+                textBoxAddGarmentType.Clear();
+                LoadGarments();
             }
             catch (Exception err)
             {
@@ -51,23 +83,12 @@ namespace LaundrySystem.AdminPages
 
         private void GarmentsFormAdmin_Load(object sender, EventArgs e)
         {
-            try
-            {
-                GetAllGarments getAllGarments = new GetAllGarments();
-                DataTable dataTable = getAllGarments.GetAllGarment();
+            LoadGarments();
+        }
 
-                if (dataTable.Rows.Count > 0)
-                {
-                    dataGridViewDisplayGarmentsType.DataSource = dataTable;
-                }
-                else
-                {
-                    MessageBox.Show("No garments available to display.");
-                }
-            }catch (Exception ee)
-            {
-                MessageBox.Show("Error loading garments: " + ee.Message);
-            }
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

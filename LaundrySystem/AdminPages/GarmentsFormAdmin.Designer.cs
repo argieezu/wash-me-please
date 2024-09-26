@@ -93,6 +93,7 @@
             panel3.Name = "panel3";
             panel3.Size = new Size(838, 437);
             panel3.TabIndex = 5;
+            panel3.Paint += panel3_Paint;
             // 
             // buttonAddGarmentsType
             // 
@@ -113,9 +114,9 @@
             // 
             dataGridViewDisplayGarmentsType.BackgroundColor = Color.FromArgb(255, 192, 128);
             dataGridViewDisplayGarmentsType.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewDisplayGarmentsType.Location = new Point(575, 78);
+            dataGridViewDisplayGarmentsType.Location = new Point(575, 31);
             dataGridViewDisplayGarmentsType.Name = "dataGridViewDisplayGarmentsType";
-            dataGridViewDisplayGarmentsType.Size = new Size(240, 347);
+            dataGridViewDisplayGarmentsType.Size = new Size(251, 394);
             dataGridViewDisplayGarmentsType.TabIndex = 14;
             dataGridViewDisplayGarmentsType.CellContentClick += dataGridViewDisplayGarmentsType_CellContentClick;
             // 
