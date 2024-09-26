@@ -30,16 +30,17 @@
         {
             panel1 = new Panel();
             panel3 = new Panel();
+            buttonAddGarmentsType = new Button();
+            dataGridViewDisplayGarmentsType = new DataGridView();
+            label5 = new Label();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
             buttonDeleteGarment = new Button();
             button1 = new Button();
-            this.buttonAddGarment = new Button();
             pictureBox1 = new PictureBox();
-            this.dataGridViewGarments = new DataGridView();
             panel4 = new Panel();
+            textBox4 = new TextBox();
             pictureBox2 = new PictureBox();
-            this.textBoxAddGarments = new TextBox();
             label4 = new Label();
             panel2 = new Panel();
             textBox2 = new TextBox();
@@ -50,13 +51,12 @@
             buttonEditGarments = new Button();
             buttonAddGarments = new Button();
             label1 = new Label();
-            label5 = new Label();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDisplayGarmentsType).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)this.dataGridViewGarments).BeginInit();
             panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel2.SuspendLayout();
@@ -79,20 +79,53 @@
             // panel3
             // 
             panel3.BackColor = Color.White;
+            panel3.Controls.Add(buttonAddGarmentsType);
+            panel3.Controls.Add(dataGridViewDisplayGarmentsType);
             panel3.Controls.Add(label5);
             panel3.Controls.Add(pictureBox4);
             panel3.Controls.Add(pictureBox3);
             panel3.Controls.Add(buttonDeleteGarment);
             panel3.Controls.Add(button1);
-            panel3.Controls.Add(this.buttonAddGarment);
             panel3.Controls.Add(pictureBox1);
-            panel3.Controls.Add(this.dataGridViewGarments);
             panel3.Controls.Add(panel4);
             panel3.Dock = DockStyle.Fill;
             panel3.Location = new Point(0, 0);
             panel3.Name = "panel3";
             panel3.Size = new Size(838, 437);
             panel3.TabIndex = 5;
+            // 
+            // buttonAddGarmentsType
+            // 
+            buttonAddGarmentsType.BackColor = Color.FromArgb(192, 255, 192);
+            buttonAddGarmentsType.FlatAppearance.BorderSize = 0;
+            buttonAddGarmentsType.FlatStyle = FlatStyle.Flat;
+            buttonAddGarmentsType.Image = Properties.Resources.add;
+            buttonAddGarmentsType.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonAddGarmentsType.Location = new Point(28, 390);
+            buttonAddGarmentsType.Name = "buttonAddGarmentsType";
+            buttonAddGarmentsType.Size = new Size(95, 35);
+            buttonAddGarmentsType.TabIndex = 15;
+            buttonAddGarmentsType.Text = "Add";
+            buttonAddGarmentsType.UseVisualStyleBackColor = false;
+            // 
+            // dataGridViewDisplayGarmentsType
+            // 
+            dataGridViewDisplayGarmentsType.BackgroundColor = Color.FromArgb(255, 192, 128);
+            dataGridViewDisplayGarmentsType.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewDisplayGarmentsType.Location = new Point(575, 78);
+            dataGridViewDisplayGarmentsType.Name = "dataGridViewDisplayGarmentsType";
+            dataGridViewDisplayGarmentsType.Size = new Size(240, 347);
+            dataGridViewDisplayGarmentsType.TabIndex = 14;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(23, 16);
+            label5.Name = "label5";
+            label5.Size = new Size(355, 45);
+            label5.TabIndex = 13;
+            label5.Text = "Garments Management";
             // 
             // pictureBox4
             // 
@@ -119,7 +152,7 @@
             buttonDeleteGarment.FlatStyle = FlatStyle.Flat;
             buttonDeleteGarment.Image = Properties.Resources.bin;
             buttonDeleteGarment.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonDeleteGarment.Location = new Point(399, 390);
+            buttonDeleteGarment.Location = new Point(474, 390);
             buttonDeleteGarment.Name = "buttonDeleteGarment";
             buttonDeleteGarment.Size = new Size(95, 35);
             buttonDeleteGarment.TabIndex = 10;
@@ -140,20 +173,6 @@
             button1.Text = "Edit";
             button1.UseVisualStyleBackColor = false;
             // 
-            // buttonAddGarment
-            // 
-            this.buttonAddGarment.BackColor = Color.PaleGreen;
-            this.buttonAddGarment.FlatAppearance.BorderSize = 0;
-            this.buttonAddGarment.FlatStyle = FlatStyle.Flat;
-            this.buttonAddGarment.Image = Properties.Resources.add;
-            this.buttonAddGarment.ImageAlign = ContentAlignment.MiddleLeft;
-            this.buttonAddGarment.Location = new Point(28, 390);
-            this.buttonAddGarment.Name = "buttonAddGarment";
-            this.buttonAddGarment.Size = new Size(95, 35);
-            this.buttonAddGarment.TabIndex = 8;
-            this.buttonAddGarment.Text = "Add";
-            this.buttonAddGarment.UseVisualStyleBackColor = false;
-            // 
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.wardrobe__1_;
@@ -163,25 +182,25 @@
             pictureBox1.TabIndex = 5;
             pictureBox1.TabStop = false;
             // 
-            // dataGridViewGarments
-            // 
-            this.dataGridViewGarments.BackgroundColor = Color.FromArgb(255, 192, 128);
-            this.dataGridViewGarments.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewGarments.Location = new Point(523, 54);
-            this.dataGridViewGarments.Name = "dataGridViewGarments";
-            this.dataGridViewGarments.Size = new Size(303, 371);
-            this.dataGridViewGarments.TabIndex = 4;
-            // 
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(255, 192, 128);
+            panel4.Controls.Add(textBox4);
             panel4.Controls.Add(pictureBox2);
-            panel4.Controls.Add(this.textBoxAddGarments);
             panel4.Controls.Add(label4);
             panel4.Location = new Point(28, 228);
             panel4.Name = "panel4";
             panel4.Size = new Size(291, 100);
             panel4.TabIndex = 7;
+            // 
+            // textBox4
+            // 
+            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox4.Location = new Point(116, 50);
+            textBox4.Name = "textBox4";
+            textBox4.PlaceholderText = "Garment type";
+            textBox4.Size = new Size(142, 29);
+            textBox4.TabIndex = 9;
             // 
             // pictureBox2
             // 
@@ -191,15 +210,6 @@
             pictureBox2.Size = new Size(75, 67);
             pictureBox2.TabIndex = 8;
             pictureBox2.TabStop = false;
-            // 
-            // textBoxAddGarments
-            // 
-            this.textBoxAddGarments.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            this.textBoxAddGarments.Location = new Point(119, 48);
-            this.textBoxAddGarments.Name = "textBoxAddGarments";
-            this.textBoxAddGarments.PlaceholderText = "Garment type";
-            this.textBoxAddGarments.Size = new Size(154, 29);
-            this.textBoxAddGarments.TabIndex = 7;
             // 
             // label4
             // 
@@ -300,16 +310,6 @@
             label1.TabIndex = 0;
             label1.Text = "Garments Management";
             // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(23, 16);
-            label5.Name = "label5";
-            label5.Size = new Size(355, 45);
-            label5.TabIndex = 13;
-            label5.Text = "Garments Management";
-            // 
             // GarmentsFormAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -322,10 +322,10 @@
             panel1.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewDisplayGarmentsType).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)this.dataGridViewGarments).EndInit();
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
@@ -360,5 +360,8 @@
         private PictureBox pictureBox4;
         private PictureBox pictureBox3;
         private Label label5;
+        private Button buttonAddGarmentsType;
+        private DataGridView dataGridViewDisplayGarmentsType;
+        private TextBox textBox4;
     }
 }
