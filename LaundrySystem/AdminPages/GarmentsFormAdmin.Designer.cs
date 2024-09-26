@@ -321,6 +321,7 @@
             Controls.Add(panel1);
             Name = "GarmentsFormAdmin";
             Text = "GarmentsFormAdmin";
+            Load += GarmentsFormAdmin_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel3.ResumeLayout(false);

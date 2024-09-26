@@ -48,5 +48,26 @@ namespace LaundrySystem.AdminPages
         {
 
         }
+
+        private void GarmentsFormAdmin_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                GetAllGarments getAllGarments = new GetAllGarments();
+                DataTable dataTable = getAllGarments.GetAllGarment();
+
+                if (dataTable.Rows.Count > 0)
+                {
+                    dataGridViewDisplayGarmentsType.DataSource = dataTable;
+                }
+                else
+                {
+                    MessageBox.Show("No garments available to display.");
+                }
+            }catch (Exception ee)
+            {
+                MessageBox.Show("Error loading garments: " + ee.Message);
+            }
+        }
     }
 }
