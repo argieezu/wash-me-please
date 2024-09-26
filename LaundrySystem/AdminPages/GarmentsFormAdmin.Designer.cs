@@ -39,7 +39,7 @@
             button1 = new Button();
             pictureBox1 = new PictureBox();
             panel4 = new Panel();
-            textBox4 = new TextBox();
+            textBoxAddGarmentType = new TextBox();
             pictureBox2 = new PictureBox();
             label4 = new Label();
             panel2 = new Panel();
@@ -107,6 +107,7 @@
             buttonAddGarmentsType.TabIndex = 15;
             buttonAddGarmentsType.Text = "Add";
             buttonAddGarmentsType.UseVisualStyleBackColor = false;
+            buttonAddGarmentsType.Click += buttonAddGarmentsType_Click;
             // 
             // dataGridViewDisplayGarmentsType
             // 
@@ -116,6 +117,7 @@
             dataGridViewDisplayGarmentsType.Name = "dataGridViewDisplayGarmentsType";
             dataGridViewDisplayGarmentsType.Size = new Size(240, 347);
             dataGridViewDisplayGarmentsType.TabIndex = 14;
+            dataGridViewDisplayGarmentsType.CellContentClick += dataGridViewDisplayGarmentsType_CellContentClick;
             // 
             // label5
             // 
@@ -185,7 +187,7 @@
             // panel4
             // 
             panel4.BackColor = Color.FromArgb(255, 192, 128);
-            panel4.Controls.Add(textBox4);
+            panel4.Controls.Add(textBoxAddGarmentType);
             panel4.Controls.Add(pictureBox2);
             panel4.Controls.Add(label4);
             panel4.Location = new Point(28, 228);
@@ -193,14 +195,15 @@
             panel4.Size = new Size(291, 100);
             panel4.TabIndex = 7;
             // 
-            // textBox4
+            // textBoxAddGarmentType
             // 
-            textBox4.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(116, 50);
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "Garment type";
-            textBox4.Size = new Size(142, 29);
-            textBox4.TabIndex = 9;
+            textBoxAddGarmentType.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxAddGarmentType.Location = new Point(116, 50);
+            textBoxAddGarmentType.Name = "textBoxAddGarmentType";
+            textBoxAddGarmentType.PlaceholderText = "Garment type";
+            textBoxAddGarmentType.Size = new Size(142, 29);
+            textBoxAddGarmentType.TabIndex = 9;
+            textBoxAddGarmentType.TextChanged += textBoxAddGarmentType_TextChanged;
             // 
             // pictureBox2
             // 
@@ -362,6 +365,6 @@
         private Label label5;
         private Button buttonAddGarmentsType;
         private DataGridView dataGridViewDisplayGarmentsType;
-        private TextBox textBox4;
+        private TextBox textBoxAddGarmentType;
     }
 }
