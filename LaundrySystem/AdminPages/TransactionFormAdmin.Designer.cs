@@ -328,9 +328,9 @@
             label41.AutoSize = true;
             label41.Location = new Point(25, 244);
             label41.Name = "label41";
-            label41.Size = new Size(33, 15);
+            label41.Size = new Size(51, 15);
             label41.TabIndex = 42;
-            label41.Text = "Price";
+            label41.Text = "Amount";
             // 
             // textBox23
             // 
@@ -416,7 +416,7 @@
             // textBox22
             // 
             textBox22.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox22.Location = new Point(140, 59);
+            textBox22.Location = new Point(136, 59);
             textBox22.Name = "textBox22";
             textBox22.Size = new Size(167, 25);
             textBox22.TabIndex = 29;
@@ -487,9 +487,9 @@
             panel7.Controls.Add(label49);
             panel7.Controls.Add(label46);
             panel7.Controls.Add(dateTimePicker7);
-            panel7.Location = new Point(436, 56);
+            panel7.Location = new Point(422, 56);
             panel7.Name = "panel7";
-            panel7.Size = new Size(378, 252);
+            panel7.Size = new Size(392, 252);
             panel7.TabIndex = 45;
             // 
             // dateTimePicker6
@@ -505,7 +505,7 @@
             // 
             label49.AutoSize = true;
             label49.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label49.Location = new Point(23, 101);
+            label49.Location = new Point(26, 101);
             label49.Name = "label49";
             label49.Size = new Size(93, 17);
             label49.TabIndex = 44;
@@ -515,11 +515,11 @@
             // 
             label46.AutoSize = true;
             label46.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label46.Location = new Point(27, 54);
+            label46.Location = new Point(27, 53);
             label46.Name = "label46";
-            label46.Size = new Size(89, 17);
+            label46.Size = new Size(94, 17);
             label46.TabIndex = 26;
-            label46.Text = "Current Date :";
+            label46.Text = "Data Delivered";
             // 
             // dateTimePicker7
             // 
