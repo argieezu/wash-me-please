@@ -277,9 +277,11 @@
             buttonTrasactionHistory.FlatAppearance.BorderSize = 0;
             buttonTrasactionHistory.FlatStyle = FlatStyle.Flat;
             buttonTrasactionHistory.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonTrasactionHistory.Location = new Point(664, 378);
+            buttonTrasactionHistory.Image = Properties.Resources.history__2_;
+            buttonTrasactionHistory.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonTrasactionHistory.Location = new Point(682, 376);
             buttonTrasactionHistory.Name = "buttonTrasactionHistory";
-            buttonTrasactionHistory.Size = new Size(150, 34);
+            buttonTrasactionHistory.Size = new Size(132, 34);
             buttonTrasactionHistory.TabIndex = 49;
             buttonTrasactionHistory.Text = "History";
             buttonTrasactionHistory.UseVisualStyleBackColor = false;
@@ -291,9 +293,11 @@
             buttonAddTransaction.FlatAppearance.BorderSize = 0;
             buttonAddTransaction.FlatStyle = FlatStyle.Flat;
             buttonAddTransaction.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonAddTransaction.Location = new Point(498, 378);
+            buttonAddTransaction.Image = Properties.Resources.add;
+            buttonAddTransaction.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonAddTransaction.Location = new Point(421, 376);
             buttonAddTransaction.Name = "buttonAddTransaction";
-            buttonAddTransaction.Size = new Size(150, 34);
+            buttonAddTransaction.Size = new Size(125, 34);
             buttonAddTransaction.TabIndex = 23;
             buttonAddTransaction.Text = "Add";
             buttonAddTransaction.UseVisualStyleBackColor = false;
@@ -319,9 +323,9 @@
             panel9.Controls.Add(label33);
             panel9.Controls.Add(textBoxWeight);
             panel9.Controls.Add(label32);
-            panel9.Location = new Point(17, 209);
+            panel9.Location = new Point(17, 191);
             panel9.Name = "panel9";
-            panel9.Size = new Size(373, 203);
+            panel9.Size = new Size(373, 221);
             panel9.TabIndex = 47;
             // 
             // comboBoxServicesType
@@ -409,7 +413,7 @@
             panel8.Controls.Add(label40);
             panel8.Location = new Point(17, 92);
             panel8.Name = "panel8";
-            panel8.Size = new Size(373, 98);
+            panel8.Size = new Size(373, 119);
             panel8.TabIndex = 46;
             // 
             // comboBoxStaff
@@ -480,7 +484,6 @@
             label49.Size = new Size(111, 21);
             label49.TabIndex = 44;
             label49.Text = "Date Claimed ";
-            label49.Click += label49_Click;
             // 
             // label46
             // 

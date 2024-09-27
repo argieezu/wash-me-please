@@ -18,11 +18,6 @@ namespace LaundrySystem.AdminPages
             InitializeComponent();
         }
 
-        private void label49_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void buttonTrasactionHistory_Click(object sender, EventArgs e)
         {
             TransactionHistory transactionHistory = new TransactionHistory();
