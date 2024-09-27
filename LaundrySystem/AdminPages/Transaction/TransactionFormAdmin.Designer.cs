@@ -33,6 +33,29 @@
             panel3 = new Panel();
             panel4 = new Panel();
             panel5 = new Panel();
+            panel6 = new Panel();
+            buttonTrasactionHistory = new Button();
+            buttonAddTransaction = new Button();
+            label31 = new Label();
+            panel9 = new Panel();
+            comboBoxServicesType = new ComboBox();
+            label35 = new Label();
+            comboBoxGarmentsType = new ComboBox();
+            label34 = new Label();
+            textBoxAmount = new TextBox();
+            label33 = new Label();
+            textBoxWeight = new TextBox();
+            label32 = new Label();
+            panel8 = new Panel();
+            comboBoxStaff = new ComboBox();
+            comboBoxCustomer = new ComboBox();
+            label50 = new Label();
+            label40 = new Label();
+            panel7 = new Panel();
+            dateTimePickerDateDelivered = new DateTimePicker();
+            label49 = new Label();
+            label46 = new Label();
+            dateTimePickerDateClaimed = new DateTimePicker();
             label24 = new Label();
             comboBox11 = new ComboBox();
             label25 = new Label();
@@ -105,32 +128,19 @@
             groupBoxRemarks = new GroupBox();
             textBox1 = new TextBox();
             label2 = new Label();
-            panel7 = new Panel();
-            dateTimePicker7 = new DateTimePicker();
-            label46 = new Label();
-            label49 = new Label();
-            dateTimePicker6 = new DateTimePicker();
-            button6 = new Button();
-            panel8 = new Panel();
-            label40 = new Label();
-            label50 = new Label();
-            comboBox15 = new ComboBox();
-            comboBox16 = new ComboBox();
-            panel9 = new Panel();
-            panel6 = new Panel();
-            label31 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
             panel4.SuspendLayout();
             panel5.SuspendLayout();
+            panel6.SuspendLayout();
+            panel9.SuspendLayout();
+            panel8.SuspendLayout();
+            panel7.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
             groupBoxRemarks.SuspendLayout();
-            panel7.SuspendLayout();
-            panel8.SuspendLayout();
-            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -245,6 +255,250 @@
             panel5.Name = "panel5";
             panel5.Size = new Size(838, 437);
             panel5.TabIndex = 42;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = Color.White;
+            panel6.Controls.Add(buttonTrasactionHistory);
+            panel6.Controls.Add(buttonAddTransaction);
+            panel6.Controls.Add(label31);
+            panel6.Controls.Add(panel9);
+            panel6.Controls.Add(panel8);
+            panel6.Controls.Add(panel7);
+            panel6.Dock = DockStyle.Fill;
+            panel6.Location = new Point(0, 0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(838, 437);
+            panel6.TabIndex = 43;
+            // 
+            // buttonTrasactionHistory
+            // 
+            buttonTrasactionHistory.BackColor = Color.FromArgb(255, 192, 255);
+            buttonTrasactionHistory.FlatAppearance.BorderSize = 0;
+            buttonTrasactionHistory.FlatStyle = FlatStyle.Flat;
+            buttonTrasactionHistory.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonTrasactionHistory.Location = new Point(664, 378);
+            buttonTrasactionHistory.Name = "buttonTrasactionHistory";
+            buttonTrasactionHistory.Size = new Size(150, 34);
+            buttonTrasactionHistory.TabIndex = 49;
+            buttonTrasactionHistory.Text = "History";
+            buttonTrasactionHistory.UseVisualStyleBackColor = false;
+            buttonTrasactionHistory.Click += buttonTrasactionHistory_Click;
+            // 
+            // buttonAddTransaction
+            // 
+            buttonAddTransaction.BackColor = Color.FromArgb(128, 255, 128);
+            buttonAddTransaction.FlatAppearance.BorderSize = 0;
+            buttonAddTransaction.FlatStyle = FlatStyle.Flat;
+            buttonAddTransaction.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonAddTransaction.Location = new Point(498, 378);
+            buttonAddTransaction.Name = "buttonAddTransaction";
+            buttonAddTransaction.Size = new Size(150, 34);
+            buttonAddTransaction.TabIndex = 23;
+            buttonAddTransaction.Text = "Add";
+            buttonAddTransaction.UseVisualStyleBackColor = false;
+            // 
+            // label31
+            // 
+            label31.AutoSize = true;
+            label31.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label31.Location = new Point(17, 22);
+            label31.Name = "label31";
+            label31.Size = new Size(350, 40);
+            label31.TabIndex = 48;
+            label31.Text = "Transaction Management";
+            // 
+            // panel9
+            // 
+            panel9.BackColor = Color.FromArgb(255, 192, 128);
+            panel9.Controls.Add(comboBoxServicesType);
+            panel9.Controls.Add(label35);
+            panel9.Controls.Add(comboBoxGarmentsType);
+            panel9.Controls.Add(label34);
+            panel9.Controls.Add(textBoxAmount);
+            panel9.Controls.Add(label33);
+            panel9.Controls.Add(textBoxWeight);
+            panel9.Controls.Add(label32);
+            panel9.Location = new Point(17, 209);
+            panel9.Name = "panel9";
+            panel9.Size = new Size(373, 203);
+            panel9.TabIndex = 47;
+            // 
+            // comboBoxServicesType
+            // 
+            comboBoxServicesType.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBoxServicesType.FormattingEnabled = true;
+            comboBoxServicesType.Location = new Point(218, 131);
+            comboBoxServicesType.Name = "comboBoxServicesType";
+            comboBoxServicesType.Size = new Size(139, 29);
+            comboBoxServicesType.TabIndex = 7;
+            // 
+            // label35
+            // 
+            label35.AutoSize = true;
+            label35.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label35.Location = new Point(218, 103);
+            label35.Name = "label35";
+            label35.Size = new Size(119, 25);
+            label35.TabIndex = 6;
+            label35.Text = "Service Type";
+            // 
+            // comboBoxGarmentsType
+            // 
+            comboBoxGarmentsType.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBoxGarmentsType.FormattingEnabled = true;
+            comboBoxGarmentsType.Location = new Point(218, 53);
+            comboBoxGarmentsType.Name = "comboBoxGarmentsType";
+            comboBoxGarmentsType.Size = new Size(139, 29);
+            comboBoxGarmentsType.TabIndex = 5;
+            // 
+            // label34
+            // 
+            label34.AutoSize = true;
+            label34.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label34.Location = new Point(218, 20);
+            label34.Name = "label34";
+            label34.Size = new Size(132, 25);
+            label34.TabIndex = 4;
+            label34.Text = "Garment Type";
+            // 
+            // textBoxAmount
+            // 
+            textBoxAmount.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxAmount.Location = new Point(13, 131);
+            textBoxAmount.Name = "textBoxAmount";
+            textBoxAmount.PlaceholderText = "0";
+            textBoxAmount.Size = new Size(123, 29);
+            textBoxAmount.TabIndex = 3;
+            // 
+            // label33
+            // 
+            label33.AutoSize = true;
+            label33.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label33.Location = new Point(13, 103);
+            label33.Name = "label33";
+            label33.Size = new Size(82, 25);
+            label33.TabIndex = 2;
+            label33.Text = "Amount";
+            // 
+            // textBoxWeight
+            // 
+            textBoxWeight.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBoxWeight.Location = new Point(13, 53);
+            textBoxWeight.Name = "textBoxWeight";
+            textBoxWeight.PlaceholderText = "0";
+            textBoxWeight.Size = new Size(123, 29);
+            textBoxWeight.TabIndex = 1;
+            // 
+            // label32
+            // 
+            label32.AutoSize = true;
+            label32.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label32.Location = new Point(8, 20);
+            label32.Name = "label32";
+            label32.Size = new Size(74, 25);
+            label32.TabIndex = 0;
+            label32.Text = "Weight";
+            // 
+            // panel8
+            // 
+            panel8.BackColor = Color.FromArgb(255, 192, 128);
+            panel8.Controls.Add(comboBoxStaff);
+            panel8.Controls.Add(comboBoxCustomer);
+            panel8.Controls.Add(label50);
+            panel8.Controls.Add(label40);
+            panel8.Location = new Point(17, 92);
+            panel8.Name = "panel8";
+            panel8.Size = new Size(373, 98);
+            panel8.TabIndex = 46;
+            // 
+            // comboBoxStaff
+            // 
+            comboBoxStaff.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBoxStaff.FormattingEnabled = true;
+            comboBoxStaff.Location = new Point(189, 47);
+            comboBoxStaff.Name = "comboBoxStaff";
+            comboBoxStaff.Size = new Size(168, 28);
+            comboBoxStaff.TabIndex = 21;
+            // 
+            // comboBoxCustomer
+            // 
+            comboBoxCustomer.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBoxCustomer.FormattingEnabled = true;
+            comboBoxCustomer.Location = new Point(13, 47);
+            comboBoxCustomer.Name = "comboBoxCustomer";
+            comboBoxCustomer.Size = new Size(155, 28);
+            comboBoxCustomer.TabIndex = 20;
+            // 
+            // label50
+            // 
+            label50.AutoSize = true;
+            label50.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label50.Location = new Point(189, 16);
+            label50.Name = "label50";
+            label50.Size = new Size(116, 21);
+            label50.TabIndex = 19;
+            label50.Text = "Staff  In Charge";
+            // 
+            // label40
+            // 
+            label40.AutoSize = true;
+            label40.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label40.Location = new Point(11, 15);
+            label40.Name = "label40";
+            label40.Size = new Size(128, 21);
+            label40.TabIndex = 18;
+            label40.Text = "Customer Name ";
+            // 
+            // panel7
+            // 
+            panel7.BackColor = Color.FromArgb(255, 192, 128);
+            panel7.Controls.Add(dateTimePickerDateDelivered);
+            panel7.Controls.Add(label49);
+            panel7.Controls.Add(label46);
+            panel7.Controls.Add(dateTimePickerDateClaimed);
+            panel7.Location = new Point(422, 92);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(392, 98);
+            panel7.TabIndex = 45;
+            // 
+            // dateTimePickerDateDelivered
+            // 
+            dateTimePickerDateDelivered.Enabled = false;
+            dateTimePickerDateDelivered.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateTimePickerDateDelivered.Location = new Point(128, 16);
+            dateTimePickerDateDelivered.Name = "dateTimePickerDateDelivered";
+            dateTimePickerDateDelivered.Size = new Size(237, 25);
+            dateTimePickerDateDelivered.TabIndex = 30;
+            // 
+            // label49
+            // 
+            label49.AutoSize = true;
+            label49.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label49.Location = new Point(13, 57);
+            label49.Name = "label49";
+            label49.Size = new Size(111, 21);
+            label49.TabIndex = 44;
+            label49.Text = "Date Claimed ";
+            label49.Click += label49_Click;
+            // 
+            // label46
+            // 
+            label46.AutoSize = true;
+            label46.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label46.Location = new Point(3, 19);
+            label46.Name = "label46";
+            label46.Size = new Size(117, 21);
+            label46.TabIndex = 26;
+            label46.Text = "Data Delivered";
+            // 
+            // dateTimePickerDateClaimed
+            // 
+            dateTimePickerDateClaimed.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dateTimePickerDateClaimed.Location = new Point(128, 57);
+            dateTimePickerDateClaimed.Name = "dateTimePickerDateClaimed";
+            dateTimePickerDateClaimed.Size = new Size(237, 25);
+            dateTimePickerDateClaimed.TabIndex = 43;
             // 
             // label24
             // 
@@ -930,150 +1184,6 @@
             label2.TabIndex = 18;
             label2.Text = "Customer Name :";
             // 
-            // panel7
-            // 
-            panel7.BackColor = Color.FromArgb(255, 192, 128);
-            panel7.Controls.Add(dateTimePicker6);
-            panel7.Controls.Add(label49);
-            panel7.Controls.Add(label46);
-            panel7.Controls.Add(dateTimePicker7);
-            panel7.Location = new Point(422, 92);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(392, 98);
-            panel7.TabIndex = 45;
-            // 
-            // dateTimePicker7
-            // 
-            dateTimePicker7.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker7.Location = new Point(128, 57);
-            dateTimePicker7.Name = "dateTimePicker7";
-            dateTimePicker7.Size = new Size(237, 25);
-            dateTimePicker7.TabIndex = 43;
-            // 
-            // label46
-            // 
-            label46.AutoSize = true;
-            label46.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label46.Location = new Point(3, 19);
-            label46.Name = "label46";
-            label46.Size = new Size(117, 21);
-            label46.TabIndex = 26;
-            label46.Text = "Data Delivered";
-            // 
-            // label49
-            // 
-            label49.AutoSize = true;
-            label49.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label49.Location = new Point(13, 57);
-            label49.Name = "label49";
-            label49.Size = new Size(111, 21);
-            label49.TabIndex = 44;
-            label49.Text = "Date Claimed ";
-            label49.Click += label49_Click;
-            // 
-            // dateTimePicker6
-            // 
-            dateTimePicker6.Enabled = false;
-            dateTimePicker6.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dateTimePicker6.Location = new Point(128, 16);
-            dateTimePicker6.Name = "dateTimePicker6";
-            dateTimePicker6.Size = new Size(237, 25);
-            dateTimePicker6.TabIndex = 30;
-            // 
-            // button6
-            // 
-            button6.BackColor = Color.FromArgb(128, 255, 128);
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            button6.Location = new Point(664, 378);
-            button6.Name = "button6";
-            button6.Size = new Size(150, 34);
-            button6.TabIndex = 23;
-            button6.Text = "Add to list";
-            button6.UseVisualStyleBackColor = false;
-            // 
-            // panel8
-            // 
-            panel8.BackColor = Color.FromArgb(255, 192, 128);
-            panel8.Controls.Add(comboBox16);
-            panel8.Controls.Add(comboBox15);
-            panel8.Controls.Add(label50);
-            panel8.Controls.Add(label40);
-            panel8.Location = new Point(17, 92);
-            panel8.Name = "panel8";
-            panel8.Size = new Size(373, 98);
-            panel8.TabIndex = 46;
-            // 
-            // label40
-            // 
-            label40.AutoSize = true;
-            label40.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label40.Location = new Point(11, 15);
-            label40.Name = "label40";
-            label40.Size = new Size(128, 21);
-            label40.TabIndex = 18;
-            label40.Text = "Customer Name ";
-            // 
-            // label50
-            // 
-            label50.AutoSize = true;
-            label50.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label50.Location = new Point(189, 16);
-            label50.Name = "label50";
-            label50.Size = new Size(116, 21);
-            label50.TabIndex = 19;
-            label50.Text = "Staff  In Charge";
-            // 
-            // comboBox15
-            // 
-            comboBox15.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox15.FormattingEnabled = true;
-            comboBox15.Location = new Point(13, 47);
-            comboBox15.Name = "comboBox15";
-            comboBox15.Size = new Size(155, 28);
-            comboBox15.TabIndex = 20;
-            // 
-            // comboBox16
-            // 
-            comboBox16.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox16.FormattingEnabled = true;
-            comboBox16.Location = new Point(189, 47);
-            comboBox16.Name = "comboBox16";
-            comboBox16.Size = new Size(168, 28);
-            comboBox16.TabIndex = 21;
-            // 
-            // panel9
-            // 
-            panel9.Location = new Point(17, 209);
-            panel9.Name = "panel9";
-            panel9.Size = new Size(373, 203);
-            panel9.TabIndex = 47;
-            // 
-            // panel6
-            // 
-            panel6.BackColor = Color.White;
-            panel6.Controls.Add(label31);
-            panel6.Controls.Add(panel9);
-            panel6.Controls.Add(panel8);
-            panel6.Controls.Add(button6);
-            panel6.Controls.Add(panel7);
-            panel6.Dock = DockStyle.Fill;
-            panel6.Location = new Point(0, 0);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(838, 437);
-            panel6.TabIndex = 43;
-            // 
-            // label31
-            // 
-            label31.AutoSize = true;
-            label31.Font = new Font("Segoe UI Semibold", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label31.Location = new Point(17, 22);
-            label31.Name = "label31";
-            label31.Size = new Size(350, 40);
-            label31.TabIndex = 48;
-            label31.Text = "Transaction Management";
-            // 
             // TransactionFormAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1091,6 +1201,14 @@
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             panel5.ResumeLayout(false);
+            panel6.ResumeLayout(false);
+            panel6.PerformLayout();
+            panel9.ResumeLayout(false);
+            panel9.PerformLayout();
+            panel8.ResumeLayout(false);
+            panel8.PerformLayout();
+            panel7.ResumeLayout(false);
+            panel7.PerformLayout();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -1099,12 +1217,6 @@
             groupBox1.PerformLayout();
             groupBoxRemarks.ResumeLayout(false);
             groupBoxRemarks.PerformLayout();
-            panel7.ResumeLayout(false);
-            panel7.PerformLayout();
-            panel8.ResumeLayout(false);
-            panel8.PerformLayout();
-            panel6.ResumeLayout(false);
-            panel6.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -1191,15 +1303,24 @@
         private Label label31;
         private Panel panel9;
         private Panel panel8;
-        private ComboBox comboBox16;
-        private ComboBox comboBox15;
+        private ComboBox comboBoxStaff;
+        private ComboBox comboBoxCustomer;
         private Label label50;
         private Label label40;
-        private Button button6;
+        private Button buttonAddTransaction;
         private Panel panel7;
-        private DateTimePicker dateTimePicker6;
+        private DateTimePicker dateTimePickerDateDelivered;
         private Label label49;
         private Label label46;
-        private DateTimePicker dateTimePicker7;
+        private DateTimePicker dateTimePickerDateClaimed;
+        private Button buttonTrasactionHistory;
+        private ComboBox comboBoxServicesType;
+        private Label label35;
+        private ComboBox comboBoxGarmentsType;
+        private Label label34;
+        private TextBox textBoxAmount;
+        private Label label33;
+        private TextBox textBoxWeight;
+        private Label label32;
     }
 }

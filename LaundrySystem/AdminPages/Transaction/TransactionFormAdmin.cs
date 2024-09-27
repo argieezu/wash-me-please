@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LaundrySystem.AdminPages.Trasaction;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,13 @@ namespace LaundrySystem.AdminPages
         private void label49_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonTrasactionHistory_Click(object sender, EventArgs e)
+        {
+            TransactionHistory transactionHistory = new TransactionHistory();
+            this.Hide();
+            transactionHistory.ShowDialog();
         }
     }
 }
