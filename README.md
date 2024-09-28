@@ -18,9 +18,4 @@ This **Laundry Management System** is a school project developed using **C# Wind
 - **MySQL Database**
 - **MySQL.Data** library for database connectivity
 
-## Prerequisites
-Before running this project, ensure that you have installed:
-- [.NET Framework](https://dotnet.microsoft.com/download/dotnet-framework)
-- [MySQL Server](https://dev.mysql.com/downloads/mysql/)
-
 
