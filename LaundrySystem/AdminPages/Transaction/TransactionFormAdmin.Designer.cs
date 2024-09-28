@@ -302,6 +302,7 @@
             buttonAddTransaction.TabIndex = 23;
             buttonAddTransaction.Text = "Add";
             buttonAddTransaction.UseVisualStyleBackColor = false;
+            buttonAddTransaction.Click += buttonAddTransaction_Click;
             // 
             // label31
             // 
@@ -337,6 +338,7 @@
             comboBoxServicesType.Name = "comboBoxServicesType";
             comboBoxServicesType.Size = new Size(139, 29);
             comboBoxServicesType.TabIndex = 7;
+            comboBoxServicesType.SelectedIndexChanged += comboBoxServicesType_SelectedIndexChanged;
             // 
             // label35
             // 
@@ -356,6 +358,7 @@
             comboBoxGarmentsType.Name = "comboBoxGarmentsType";
             comboBoxGarmentsType.Size = new Size(139, 29);
             comboBoxGarmentsType.TabIndex = 5;
+            comboBoxGarmentsType.SelectedIndexChanged += comboBoxGarmentsType_SelectedIndexChanged;
             // 
             // label34
             // 
@@ -375,6 +378,7 @@
             textBoxAmount.PlaceholderText = "0";
             textBoxAmount.Size = new Size(123, 29);
             textBoxAmount.TabIndex = 3;
+            textBoxAmount.TextChanged += textBoxAmount_TextChanged;
             // 
             // label33
             // 
@@ -394,6 +398,7 @@
             textBoxWeight.PlaceholderText = "0";
             textBoxWeight.Size = new Size(123, 29);
             textBoxWeight.TabIndex = 1;
+            textBoxWeight.TextChanged += textBoxWeight_TextChanged;
             // 
             // label32
             // 
@@ -425,6 +430,7 @@
             comboBoxStaff.Name = "comboBoxStaff";
             comboBoxStaff.Size = new Size(168, 28);
             comboBoxStaff.TabIndex = 21;
+            comboBoxStaff.SelectedIndexChanged += comboBoxStaff_SelectedIndexChanged;
             // 
             // comboBoxCustomer
             // 
@@ -434,6 +440,7 @@
             comboBoxCustomer.Name = "comboBoxCustomer";
             comboBoxCustomer.Size = new Size(155, 28);
             comboBoxCustomer.TabIndex = 20;
+            comboBoxCustomer.SelectedIndexChanged += comboBoxCustomer_SelectedIndexChanged;
             // 
             // label50
             // 
@@ -475,6 +482,7 @@
             dateTimePickerDateDelivered.Name = "dateTimePickerDateDelivered";
             dateTimePickerDateDelivered.Size = new Size(237, 25);
             dateTimePickerDateDelivered.TabIndex = 30;
+            dateTimePickerDateDelivered.ValueChanged += dateTimePickerDateDelivered_ValueChanged;
             // 
             // label49
             // 
@@ -503,6 +511,7 @@
             dateTimePickerDateClaimed.Name = "dateTimePickerDateClaimed";
             dateTimePickerDateClaimed.Size = new Size(237, 25);
             dateTimePickerDateClaimed.TabIndex = 43;
+            dateTimePickerDateClaimed.ValueChanged += dateTimePickerDateClaimed_ValueChanged;
             // 
             // label24
             // 
