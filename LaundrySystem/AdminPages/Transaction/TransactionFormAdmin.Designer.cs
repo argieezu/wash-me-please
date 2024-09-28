@@ -34,7 +34,7 @@
             panel4 = new Panel();
             panel5 = new Panel();
             panel6 = new Panel();
-            buttonTrasactionHistory = new Button();
+            buttonViewTransaction = new Button();
             buttonAddTransaction = new Button();
             label31 = new Label();
             panel9 = new Panel();
@@ -259,7 +259,7 @@
             // panel6
             // 
             panel6.BackColor = Color.White;
-            panel6.Controls.Add(buttonTrasactionHistory);
+            panel6.Controls.Add(buttonViewTransaction);
             panel6.Controls.Add(buttonAddTransaction);
             panel6.Controls.Add(label31);
             panel6.Controls.Add(panel9);
@@ -271,21 +271,22 @@
             panel6.Size = new Size(838, 437);
             panel6.TabIndex = 43;
             // 
-            // buttonTrasactionHistory
+            // buttonViewTransaction
             // 
-            buttonTrasactionHistory.BackColor = Color.FromArgb(255, 192, 255);
-            buttonTrasactionHistory.FlatAppearance.BorderSize = 0;
-            buttonTrasactionHistory.FlatStyle = FlatStyle.Flat;
-            buttonTrasactionHistory.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            buttonTrasactionHistory.Image = Properties.Resources.history__2_;
-            buttonTrasactionHistory.ImageAlign = ContentAlignment.MiddleLeft;
-            buttonTrasactionHistory.Location = new Point(682, 376);
-            buttonTrasactionHistory.Name = "buttonTrasactionHistory";
-            buttonTrasactionHistory.Size = new Size(132, 34);
-            buttonTrasactionHistory.TabIndex = 49;
-            buttonTrasactionHistory.Text = "History";
-            buttonTrasactionHistory.UseVisualStyleBackColor = false;
-            buttonTrasactionHistory.Click += buttonTrasactionHistory_Click;
+            buttonViewTransaction.BackColor = Color.FromArgb(255, 192, 255);
+            buttonViewTransaction.FlatAppearance.BorderSize = 0;
+            buttonViewTransaction.FlatStyle = FlatStyle.Flat;
+            buttonViewTransaction.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            buttonViewTransaction.Image = Properties.Resources.transaction_history;
+            buttonViewTransaction.ImageAlign = ContentAlignment.MiddleLeft;
+            buttonViewTransaction.Location = new Point(664, 376);
+            buttonViewTransaction.Name = "buttonViewTransaction";
+            buttonViewTransaction.Size = new Size(150, 36);
+            buttonViewTransaction.TabIndex = 49;
+            buttonViewTransaction.Text = "View Transaction";
+            buttonViewTransaction.TextAlign = ContentAlignment.MiddleRight;
+            buttonViewTransaction.UseVisualStyleBackColor = false;
+            buttonViewTransaction.Click += buttonTrasactionHistory_Click;
             // 
             // buttonAddTransaction
             // 
@@ -1316,7 +1317,7 @@
         private Label label49;
         private Label label46;
         private DateTimePicker dateTimePickerDateClaimed;
-        private Button buttonTrasactionHistory;
+        private Button buttonViewTransaction;
         private ComboBox comboBoxServicesType;
         private Label label35;
         private ComboBox comboBoxGarmentsType;
