@@ -38,6 +38,8 @@
             buttonAddTransaction = new Button();
             label31 = new Label();
             panel9 = new Panel();
+            label36 = new Label();
+            comboBoxTransactionStatus = new ComboBox();
             comboBoxServicesType = new ComboBox();
             label35 = new Label();
             comboBoxGarmentsType = new ComboBox();
@@ -128,8 +130,6 @@
             groupBoxRemarks = new GroupBox();
             textBox1 = new TextBox();
             label2 = new Label();
-            comboBoxTransactionStatus = new ComboBox();
-            label36 = new Label();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
@@ -333,6 +333,25 @@
             panel9.Name = "panel9";
             panel9.Size = new Size(373, 221);
             panel9.TabIndex = 47;
+            // 
+            // label36
+            // 
+            label36.AutoSize = true;
+            label36.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label36.Location = new Point(15, 153);
+            label36.Name = "label36";
+            label36.Size = new Size(64, 25);
+            label36.TabIndex = 51;
+            label36.Text = "Status";
+            // 
+            // comboBoxTransactionStatus
+            // 
+            comboBoxTransactionStatus.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBoxTransactionStatus.FormattingEnabled = true;
+            comboBoxTransactionStatus.Location = new Point(11, 181);
+            comboBoxTransactionStatus.Name = "comboBoxTransactionStatus";
+            comboBoxTransactionStatus.Size = new Size(139, 29);
+            comboBoxTransactionStatus.TabIndex = 50;
             // 
             // comboBoxServicesType
             // 
@@ -1201,25 +1220,6 @@
             label2.TabIndex = 18;
             label2.Text = "Customer Name :";
             // 
-            // comboBoxTransactionStatus
-            // 
-            comboBoxTransactionStatus.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBoxTransactionStatus.FormattingEnabled = true;
-            comboBoxTransactionStatus.Location = new Point(11, 181);
-            comboBoxTransactionStatus.Name = "comboBoxTransactionStatus";
-            comboBoxTransactionStatus.Size = new Size(139, 29);
-            comboBoxTransactionStatus.TabIndex = 50;
-            // 
-            // label36
-            // 
-            label36.AutoSize = true;
-            label36.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label36.Location = new Point(15, 153);
-            label36.Name = "label36";
-            label36.Size = new Size(64, 25);
-            label36.TabIndex = 51;
-            label36.Text = "Status";
-            // 
             // TransactionFormAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -1228,6 +1228,7 @@
             Controls.Add(panel1);
             Name = "TransactionFormAdmin";
             Text = "TransactionFormAdmin";
+            Load += TransactionFormAdmin_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);

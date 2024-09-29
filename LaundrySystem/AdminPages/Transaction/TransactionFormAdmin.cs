@@ -22,33 +22,43 @@ namespace LaundrySystem.AdminPages
         private void PopulateComboBoxCustomer()
         {
             GetAllCustomer getAllCustomer = new GetAllCustomer();
-            comboBoxCustomer.DataSource = getAllCustomer;
-            comboBoxCustomer.DisplayMember = "p_fullname";  
-            comboBoxCustomer.SelectedIndex = -1;              
+            DataTable customerDataTable = getAllCustomer.GetAllCustomers();
+
+            if (customerDataTable != null && customerDataTable.Rows.Count > 0)
+            {
+                comboBoxCustomer.DataSource = customerDataTable;
+                comboBoxCustomer.DisplayMember = "fullname";          
+                comboBoxCustomer.SelectedIndex = -1;         
+            }
+            else
+            {
+                MessageBox.Show("No customer data found or table is empty.");
+            }
         }
+
 
         private void PopulateComboBoxStaff()
         {
             GetAllStaff getAllStaff = new GetAllStaff();
             comboBoxStaff.DataSource = getAllStaff;
-            comboBoxStaff.DisplayMember = "p_fullname";  
-            comboBoxStaff.SelectedIndex = -1;          
+            comboBoxStaff.DisplayMember = "p_fullname";
+            comboBoxStaff.SelectedIndex = -1;
         }
 
         private void PopulateComboBoxGarments()
         {
             GetAllGarments getAllGarments = new GetAllGarments();
             comboBoxGarmentsType.DataSource = getAllGarments;
-            comboBoxGarmentsType.DisplayMember = "p_garmenttype";  
-            comboBoxGarmentsType.SelectedIndex = -1;             
+            comboBoxGarmentsType.DisplayMember = "p_garmenttype";
+            comboBoxGarmentsType.SelectedIndex = -1;
         }
 
         private void PopulateComboBoxServices()
         {
             GetAllServices getAllServices = new GetAllServices();
             comboBoxServicesType.DataSource = getAllServices;
-            comboBoxServicesType.DisplayMember = "p_servicetype";  
-            comboBoxServicesType.SelectedIndex = -1;            
+            comboBoxServicesType.DisplayMember = "p_servicetype";
+            comboBoxServicesType.SelectedIndex = -1;
         }
 
         private void buttonTrasactionHistory_Click(object sender, EventArgs e)
@@ -60,7 +70,11 @@ namespace LaundrySystem.AdminPages
 
         private void comboBoxCustomer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PopulateComboBoxCustomer();
+  
+            if (comboBoxCustomer.SelectedIndex != -1)
+            {
+                string selectedCustomerName = comboBoxCustomer.Text;    
+            }
         }
 
         private void comboBoxStaff_SelectedIndexChanged(object sender, EventArgs e)
@@ -132,6 +146,11 @@ namespace LaundrySystem.AdminPages
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
+        }
+
+        private void TransactionFormAdmin_Load(object sender, EventArgs e)
+        {
+            PopulateComboBoxCustomer();
         }
     }
 }
