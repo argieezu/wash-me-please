@@ -14,7 +14,6 @@ namespace LaundrySystem.AdminPages
 {
     public partial class TransactionFormAdmin : Form
     {
-        FetchData fetchData;
         public TransactionFormAdmin()
         {
             InitializeComponent();
@@ -24,32 +23,32 @@ namespace LaundrySystem.AdminPages
         {
             GetAllCustomer getAllCustomer = new GetAllCustomer();
             comboBoxCustomer.DataSource = getAllCustomer;
-            comboBoxCustomer.DisplayMember = "p_fullname";  // Assuming there is a CustomerName column
-            comboBoxCustomer.SelectedIndex = -1;              // Ensure no selection on load
+            comboBoxCustomer.DisplayMember = "p_fullname";  
+            comboBoxCustomer.SelectedIndex = -1;              
         }
 
         private void PopulateComboBoxStaff()
         {
             GetAllStaff getAllStaff = new GetAllStaff();
             comboBoxStaff.DataSource = getAllStaff;
-            comboBoxStaff.DisplayMember = "p_fullname";  // Assuming there is a StaffName column
-            comboBoxStaff.SelectedIndex = -1;           // Ensure no selection on load
+            comboBoxStaff.DisplayMember = "p_fullname";  
+            comboBoxStaff.SelectedIndex = -1;          
         }
 
         private void PopulateComboBoxGarments()
         {
             GetAllGarments getAllGarments = new GetAllGarments();
             comboBoxGarmentsType.DataSource = getAllGarments;
-            comboBoxGarmentsType.DisplayMember = "p_garmenttype";  // Assuming there is a GarmentType column
-            comboBoxGarmentsType.SelectedIndex = -1;             // Ensure no selection on load
+            comboBoxGarmentsType.DisplayMember = "p_garmenttype";  
+            comboBoxGarmentsType.SelectedIndex = -1;             
         }
 
         private void PopulateComboBoxServices()
         {
             GetAllServices getAllServices = new GetAllServices();
             comboBoxServicesType.DataSource = getAllServices;
-            comboBoxServicesType.DisplayMember = "p_servicetype";  // Assuming there is a ServiceType column
-            comboBoxServicesType.SelectedIndex = -1;             // Ensure no selection on load
+            comboBoxServicesType.DisplayMember = "p_servicetype";  
+            comboBoxServicesType.SelectedIndex = -1;            
         }
 
         private void buttonTrasactionHistory_Click(object sender, EventArgs e)
@@ -61,12 +60,12 @@ namespace LaundrySystem.AdminPages
 
         private void comboBoxCustomer_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            PopulateComboBoxCustomer();
         }
 
         private void comboBoxStaff_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            PopulateComboBoxStaff();
         }
 
         private void textBoxWeight_TextChanged(object sender, EventArgs e)
@@ -76,7 +75,7 @@ namespace LaundrySystem.AdminPages
 
         private void comboBoxGarmentsType_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            PopulateComboBoxGarments();
         }
 
         private void textBoxAmount_TextChanged(object sender, EventArgs e)
@@ -86,7 +85,7 @@ namespace LaundrySystem.AdminPages
 
         private void comboBoxServicesType_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            PopulateComboBoxServices();
         }
 
         private void dateTimePickerDateDelivered_ValueChanged(object sender, EventArgs e)
@@ -111,7 +110,6 @@ namespace LaundrySystem.AdminPages
             DateTime dateDelivered = dateTimePickerDateDelivered.Value;
             DateTime dateClaimed = dateTimePickerDateClaimed.Value;
 
-            // Validate inputs and add transaction
             if (customerId == 0 || staffId == 0 || string.IsNullOrEmpty(serviceType) || string.IsNullOrEmpty(garmentType) || weight <= 0 || amount <= 0)
             {
                 MessageBox.Show("Please fill in all fields correctly.");
@@ -123,7 +121,6 @@ namespace LaundrySystem.AdminPages
                 AddTransaction addTransaction = new AddTransaction();
                 addTransaction.AddTransactionsToDatabase(customerId, staffId, serviceType, weight, garmentType, amount, dateDelivered, dateClaimed);
 
-                // Optionally, clear input fields after adding transaction
                 comboBoxCustomer.SelectedIndex = -1;
                 comboBoxStaff.SelectedIndex = -1;
                 comboBoxServicesType.SelectedIndex = -1;
