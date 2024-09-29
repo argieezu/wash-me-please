@@ -14,9 +14,42 @@ namespace LaundrySystem.AdminPages
 {
     public partial class TransactionFormAdmin : Form
     {
+        FetchData fetchData;
         public TransactionFormAdmin()
         {
             InitializeComponent();
+        }
+
+        private void PopulateComboBoxCustomer()
+        {
+            GetAllCustomer getAllCustomer = new GetAllCustomer();
+            comboBoxCustomer.DataSource = getAllCustomer;
+            comboBoxCustomer.DisplayMember = "p_fullname";  // Assuming there is a CustomerName column
+            comboBoxCustomer.SelectedIndex = -1;              // Ensure no selection on load
+        }
+
+        private void PopulateComboBoxStaff()
+        {
+            GetAllStaff getAllStaff = new GetAllStaff();
+            comboBoxStaff.DataSource = getAllStaff;
+            comboBoxStaff.DisplayMember = "p_fullname";  // Assuming there is a StaffName column
+            comboBoxStaff.SelectedIndex = -1;           // Ensure no selection on load
+        }
+
+        private void PopulateComboBoxGarments()
+        {
+            GetAllGarments getAllGarments = new GetAllGarments();
+            comboBoxGarmentsType.DataSource = getAllGarments;
+            comboBoxGarmentsType.DisplayMember = "p_garmenttype";  // Assuming there is a GarmentType column
+            comboBoxGarmentsType.SelectedIndex = -1;             // Ensure no selection on load
+        }
+
+        private void PopulateComboBoxServices()
+        {
+            GetAllServices getAllServices = new GetAllServices();
+            comboBoxServicesType.DataSource = getAllServices;
+            comboBoxServicesType.DisplayMember = "p_servicetype";  // Assuming there is a ServiceType column
+            comboBoxServicesType.SelectedIndex = -1;             // Ensure no selection on load
         }
 
         private void buttonTrasactionHistory_Click(object sender, EventArgs e)
@@ -68,9 +101,9 @@ namespace LaundrySystem.AdminPages
 
         private void buttonAddTransaction_Click(object sender, EventArgs e)
         {
-            // Gather input data from form controls
-            int customerId = Convert.ToInt32(comboBoxCustomer.SelectedValue);  
-            int staffId = Convert.ToInt32(comboBoxStaff.SelectedValue);       
+            // Get selected values
+            int customerId = Convert.ToInt32(comboBoxCustomer.SelectedValue);
+            int staffId = Convert.ToInt32(comboBoxStaff.SelectedValue);
             string serviceType = comboBoxServicesType.Text.Trim();
             string garmentType = comboBoxGarmentsType.Text.Trim();
             decimal weight = Convert.ToDecimal(textBoxWeight.Text.Trim());
@@ -78,7 +111,7 @@ namespace LaundrySystem.AdminPages
             DateTime dateDelivered = dateTimePickerDateDelivered.Value;
             DateTime dateClaimed = dateTimePickerDateClaimed.Value;
 
-            // Validate inputs
+            // Validate inputs and add transaction
             if (customerId == 0 || staffId == 0 || string.IsNullOrEmpty(serviceType) || string.IsNullOrEmpty(garmentType) || weight <= 0 || amount <= 0)
             {
                 MessageBox.Show("Please fill in all fields correctly.");
@@ -90,6 +123,7 @@ namespace LaundrySystem.AdminPages
                 AddTransaction addTransaction = new AddTransaction();
                 addTransaction.AddTransactionsToDatabase(customerId, staffId, serviceType, weight, garmentType, amount, dateDelivered, dateClaimed);
 
+                // Optionally, clear input fields after adding transaction
                 comboBoxCustomer.SelectedIndex = -1;
                 comboBoxStaff.SelectedIndex = -1;
                 comboBoxServicesType.SelectedIndex = -1;
@@ -101,7 +135,6 @@ namespace LaundrySystem.AdminPages
             {
                 MessageBox.Show("Error: " + ex.Message);
             }
-
         }
     }
 }

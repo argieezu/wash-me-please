@@ -1205,6 +1205,7 @@
             Controls.Add(panel1);
             Name = "TransactionFormAdmin";
             Text = "TransactionFormAdmin";
+
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
