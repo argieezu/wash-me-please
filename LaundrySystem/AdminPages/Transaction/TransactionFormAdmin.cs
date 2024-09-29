@@ -19,6 +19,14 @@ namespace LaundrySystem.AdminPages
             InitializeComponent();
         }
 
+        private void TransactionFormAdmin_Load(object sender, EventArgs e)
+        {
+            PopulateComboBoxCustomer();
+            PopulateComboBoxStaff();
+            PopulateComboBoxGarments();
+            PopulateComboBoxServices();
+        }
+
         private void PopulateComboBoxCustomer()
         {
             GetAllCustomer getAllCustomer = new GetAllCustomer();
@@ -27,7 +35,8 @@ namespace LaundrySystem.AdminPages
             if (customerDataTable != null && customerDataTable.Rows.Count > 0)
             {
                 comboBoxCustomer.DataSource = customerDataTable;
-                comboBoxCustomer.DisplayMember = "fullname";          
+                comboBoxCustomer.DisplayMember = "fullname";  
+        
                 comboBoxCustomer.SelectedIndex = -1;         
             }
             else
@@ -36,29 +45,56 @@ namespace LaundrySystem.AdminPages
             }
         }
 
-
         private void PopulateComboBoxStaff()
         {
             GetAllStaff getAllStaff = new GetAllStaff();
-            comboBoxStaff.DataSource = getAllStaff;
-            comboBoxStaff.DisplayMember = "p_fullname";
-            comboBoxStaff.SelectedIndex = -1;
+            DataTable staffDataTable = getAllStaff.GetAllStaffs();
+
+            if (staffDataTable != null && staffDataTable.Rows.Count > 0)
+            {
+                comboBoxStaff.DataSource = staffDataTable;
+                comboBoxStaff.DisplayMember = "fullname";  
+                comboBoxStaff.SelectedIndex = -1;         
+            }
+            else
+            {
+                MessageBox.Show("No staff data found or table is empty.");
+            }
+
         }
 
         private void PopulateComboBoxGarments()
         {
-            GetAllGarments getAllGarments = new GetAllGarments();
-            comboBoxGarmentsType.DataSource = getAllGarments;
-            comboBoxGarmentsType.DisplayMember = "p_garmenttype";
-            comboBoxGarmentsType.SelectedIndex = -1;
+            GetAllGarments  getAllGarments = new GetAllGarments();
+            DataTable garmentsDataTable = getAllGarments.GetAllGarment();
+
+            if (garmentsDataTable != null && garmentsDataTable.Rows.Count > 0)
+            {
+                comboBoxGarmentsType.DataSource = garmentsDataTable;
+                comboBoxGarmentsType.DisplayMember = "garment_type";
+                comboBoxGarmentsType.SelectedIndex = -1;
+            }
+            else
+            {
+                MessageBox.Show("No garment data found or table is empty.");
+            }
         }
 
         private void PopulateComboBoxServices()
         {
             GetAllServices getAllServices = new GetAllServices();
-            comboBoxServicesType.DataSource = getAllServices;
-            comboBoxServicesType.DisplayMember = "p_servicetype";
-            comboBoxServicesType.SelectedIndex = -1;
+            DataTable servicesDataTable = getAllServices.GetAllService();
+
+            if (servicesDataTable != null && servicesDataTable.Rows.Count > 0)
+            {
+                comboBoxServicesType.DataSource = servicesDataTable;
+                comboBoxServicesType.DisplayMember = "service_type";
+                comboBoxServicesType.SelectedIndex = -1;
+            }
+            else
+            {
+                MessageBox.Show("No services data found or table is empty.");
+            }
         }
 
         private void buttonTrasactionHistory_Click(object sender, EventArgs e)
@@ -79,37 +115,25 @@ namespace LaundrySystem.AdminPages
 
         private void comboBoxStaff_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PopulateComboBoxStaff();
+            if(comboBoxStaff.SelectedIndex != -1)
+            {
+                string selectedStaffName = comboBoxStaff.Text;
+            }
         }
-
-        private void textBoxWeight_TextChanged(object sender, EventArgs e)
+        private void comboBoxServicesType_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            if (comboBoxServicesType.SelectedIndex != -1)
+            {
+                string selectedServicesType = comboBoxServicesType.Text;
+            }
         }
 
         private void comboBoxGarmentsType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            PopulateComboBoxGarments();
-        }
-
-        private void textBoxAmount_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBoxServicesType_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            PopulateComboBoxServices();
-        }
-
-        private void dateTimePickerDateDelivered_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dateTimePickerDateClaimed_ValueChanged(object sender, EventArgs e)
-        {
-
+            if (comboBoxGarmentsType.SelectedIndex != -1)
+            {
+                string selectedGarmentsType = comboBoxGarmentsType.Text;
+            }
         }
 
         private void buttonAddTransaction_Click(object sender, EventArgs e)
@@ -148,9 +172,25 @@ namespace LaundrySystem.AdminPages
             }
         }
 
-        private void TransactionFormAdmin_Load(object sender, EventArgs e)
+
+
+        private void textBoxWeight_TextChanged(object sender, EventArgs e)
         {
-            PopulateComboBoxCustomer();
+
+        }
+        private void textBoxAmount_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePickerDateDelivered_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePickerDateClaimed_ValueChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

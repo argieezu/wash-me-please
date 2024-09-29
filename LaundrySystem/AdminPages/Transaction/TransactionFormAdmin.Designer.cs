@@ -348,7 +348,7 @@
             // 
             comboBoxTransactionStatus.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBoxTransactionStatus.FormattingEnabled = true;
-            comboBoxTransactionStatus.Location = new Point(11, 181);
+            comboBoxTransactionStatus.Location = new Point(16, 181);
             comboBoxTransactionStatus.Name = "comboBoxTransactionStatus";
             comboBoxTransactionStatus.Size = new Size(139, 29);
             comboBoxTransactionStatus.TabIndex = 50;
