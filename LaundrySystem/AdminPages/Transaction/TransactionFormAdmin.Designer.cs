@@ -325,10 +325,10 @@
             panel9.Controls.Add(label35);
             panel9.Controls.Add(comboBoxGarmentsType);
             panel9.Controls.Add(label34);
+            panel9.Controls.Add(label32);
             panel9.Controls.Add(textBoxAmount);
             panel9.Controls.Add(label33);
             panel9.Controls.Add(textBoxWeight);
-            panel9.Controls.Add(label32);
             panel9.Location = new Point(17, 191);
             panel9.Name = "panel9";
             panel9.Size = new Size(373, 221);
@@ -338,7 +338,7 @@
             // 
             label36.AutoSize = true;
             label36.Font = new Font("Segoe UI Semibold", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label36.Location = new Point(15, 153);
+            label36.Location = new Point(13, 144);
             label36.Name = "label36";
             label36.Size = new Size(64, 25);
             label36.TabIndex = 51;
@@ -348,10 +348,12 @@
             // 
             comboBoxTransactionStatus.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBoxTransactionStatus.FormattingEnabled = true;
-            comboBoxTransactionStatus.Location = new Point(16, 181);
+            comboBoxTransactionStatus.Items.AddRange(new object[] { "Pending", "In Progress", "Washed", "Drying", "Delivered", "Completed", "Cancelled", "Ready for Pickup" });
+            comboBoxTransactionStatus.Location = new Point(16, 169);
             comboBoxTransactionStatus.Name = "comboBoxTransactionStatus";
-            comboBoxTransactionStatus.Size = new Size(139, 29);
+            comboBoxTransactionStatus.Size = new Size(123, 29);
             comboBoxTransactionStatus.TabIndex = 50;
+            comboBoxTransactionStatus.SelectedIndexChanged += comboBoxTransactionStatus_SelectedIndexChanged;
             // 
             // comboBoxServicesType
             // 

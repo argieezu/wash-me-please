@@ -35,9 +35,9 @@ namespace LaundrySystem.AdminPages
             if (customerDataTable != null && customerDataTable.Rows.Count > 0)
             {
                 comboBoxCustomer.DataSource = customerDataTable;
-                comboBoxCustomer.DisplayMember = "fullname";  
-        
-                comboBoxCustomer.SelectedIndex = -1;         
+                comboBoxCustomer.DisplayMember = "fullname";
+
+                comboBoxCustomer.SelectedIndex = -1;
             }
             else
             {
@@ -53,8 +53,8 @@ namespace LaundrySystem.AdminPages
             if (staffDataTable != null && staffDataTable.Rows.Count > 0)
             {
                 comboBoxStaff.DataSource = staffDataTable;
-                comboBoxStaff.DisplayMember = "fullname";  
-                comboBoxStaff.SelectedIndex = -1;         
+                comboBoxStaff.DisplayMember = "fullname";
+                comboBoxStaff.SelectedIndex = -1;
             }
             else
             {
@@ -65,7 +65,7 @@ namespace LaundrySystem.AdminPages
 
         private void PopulateComboBoxGarments()
         {
-            GetAllGarments  getAllGarments = new GetAllGarments();
+            GetAllGarments getAllGarments = new GetAllGarments();
             DataTable garmentsDataTable = getAllGarments.GetAllGarment();
 
             if (garmentsDataTable != null && garmentsDataTable.Rows.Count > 0)
@@ -106,16 +106,16 @@ namespace LaundrySystem.AdminPages
 
         private void comboBoxCustomer_SelectedIndexChanged(object sender, EventArgs e)
         {
-  
+
             if (comboBoxCustomer.SelectedIndex != -1)
             {
-                string selectedCustomerName = comboBoxCustomer.Text;    
+                string selectedCustomerName = comboBoxCustomer.Text;
             }
         }
 
         private void comboBoxStaff_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(comboBoxStaff.SelectedIndex != -1)
+            if (comboBoxStaff.SelectedIndex != -1)
             {
                 string selectedStaffName = comboBoxStaff.Text;
             }
@@ -139,16 +139,17 @@ namespace LaundrySystem.AdminPages
         private void buttonAddTransaction_Click(object sender, EventArgs e)
         {
             // Get selected values
-            int customerId = Convert.ToInt32(comboBoxCustomer.SelectedValue);
-            int staffId = Convert.ToInt32(comboBoxStaff.SelectedValue);
+            string customerfullname = comboBoxCustomer.Text.Trim();
+            string stafffullname = comboBoxStaff.Text.Trim();
             string serviceType = comboBoxServicesType.Text.Trim();
             string garmentType = comboBoxGarmentsType.Text.Trim();
+            string status = comboBoxTransactionStatus.Text.Trim();
             decimal weight = Convert.ToDecimal(textBoxWeight.Text.Trim());
             decimal amount = Convert.ToDecimal(textBoxAmount.Text.Trim());
             DateTime dateDelivered = dateTimePickerDateDelivered.Value;
             DateTime dateClaimed = dateTimePickerDateClaimed.Value;
 
-            if (customerId == 0 || staffId == 0 || string.IsNullOrEmpty(serviceType) || string.IsNullOrEmpty(garmentType) || weight <= 0 || amount <= 0)
+            if (string.IsNullOrEmpty(customerfullname) || string.IsNullOrEmpty(stafffullname) || string.IsNullOrEmpty(serviceType) || string.IsNullOrEmpty(garmentType) || string.IsNullOrEmpty(status) || weight <= 0 || amount <= 0)
             {
                 MessageBox.Show("Please fill in all fields correctly.");
                 return;
@@ -157,7 +158,15 @@ namespace LaundrySystem.AdminPages
             try
             {
                 AddTransaction addTransaction = new AddTransaction();
-                addTransaction.AddTransactionsToDatabase(customerId, staffId, serviceType, weight, garmentType, amount, dateDelivered, dateClaimed);
+                addTransaction.AddTransactionsToDatabase(customerfullname,
+                                                         stafffullname,
+                                                         serviceType,
+                                                         weight,
+                                                         garmentType,
+                                                         amount,
+                                                         status,
+                                                         dateDelivered,
+                                                         dateClaimed);
 
                 comboBoxCustomer.SelectedIndex = -1;
                 comboBoxStaff.SelectedIndex = -1;
@@ -189,6 +198,11 @@ namespace LaundrySystem.AdminPages
         }
 
         private void dateTimePickerDateClaimed_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBoxTransactionStatus_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
