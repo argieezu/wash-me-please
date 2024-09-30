@@ -14,7 +14,7 @@ namespace LaundrySystem.BackEnd
             sqlProcedure = new MySqlProcedure();
         }
 
-        public void AddTransactionsToDatabase(string customerfullname, string stafffullname, string serviceType, decimal weight, string garmentType, decimal amount, string status, DateTime dateDelivered, DateTime dateClaimed)
+        public void AddTransactionsToDatabase(string cid, string stffid, string sid, decimal weight, string cgid, decimal amount, string status, DateTime dateDelivered, DateTime dateClaimed)
         {
             try
             {
@@ -24,11 +24,11 @@ namespace LaundrySystem.BackEnd
                     using (MySqlCommand sqlCommand = new MySqlCommand("prcAddTransaction", sqlProcedure.conLaundry, transaction))
                     {
                         sqlCommand.CommandType = CommandType.StoredProcedure;
-                        sqlCommand.Parameters.AddWithValue("p_customerfullname", customerfullname);
-                        sqlCommand.Parameters.AddWithValue("p_stafffullname", stafffullname);
-                        sqlCommand.Parameters.AddWithValue("p_service_type", serviceType);
+                        sqlCommand.Parameters.AddWithValue("p_customer_id", cid);
+                        sqlCommand.Parameters.AddWithValue("p_staff_id", stffid);
+                        sqlCommand.Parameters.AddWithValue("p_service_type", sid);
                         sqlCommand.Parameters.AddWithValue("p_weight", weight);
-                        sqlCommand.Parameters.AddWithValue("p_garment_type", garmentType);
+                        sqlCommand.Parameters.AddWithValue("p_garment_type", cgid);
                         sqlCommand.Parameters.AddWithValue("p_amount", amount);
                         sqlCommand.Parameters.AddWithValue("p_status", status);
                         sqlCommand.Parameters.AddWithValue("p_date_delivered", dateDelivered);

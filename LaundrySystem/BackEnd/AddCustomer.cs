@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using MySqlConnector;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -20,23 +21,23 @@ namespace LaundrySystem.BackEnd
             {
                 if (mySqlProcedure.fncConnectToDatabase())
                 {
-                    using (MySqlTransaction transaction = mySqlProcedure.conLaundry.BeginTransaction())
-                    using (MySqlCommand sqlCommand = new MySqlCommand("procAddCustomer", mySqlProcedure.conLaundry, transaction))
-                    {
-                        sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                    mySqlProcedure.transaction = mySqlProcedure.conLaundry.BeginTransaction();
+                    mySqlProcedure.sqlCommand = new MySql.Data.MySqlClient.MySqlCommand("procAddCustomer", mySqlProcedure.conLaundry, mySqlProcedure.transaction);
 
-                        sqlCommand.Parameters.AddWithValue("p_fullname", fullname);
-                        sqlCommand.Parameters.AddWithValue("p_birthdate", birthdate);
-                        sqlCommand.Parameters.AddWithValue("p_gender", gender);
-                        sqlCommand.Parameters.AddWithValue("p_address", address);
-                        sqlCommand.Parameters.AddWithValue("p_contactno", contactNo);
-                        sqlCommand.Parameters.AddWithValue("p_emailadd", email);
-                        sqlCommand.Parameters.AddWithValue("p_cust_photo", photo);
+                    mySqlProcedure.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
 
-                        sqlCommand.ExecuteNonQuery();
-                        transaction.Commit();
+                    mySqlProcedure.sqlCommand.Parameters.AddWithValue("p_fullname", fullname);
+                    mySqlProcedure.sqlCommand.Parameters.AddWithValue("p_birthdate", birthdate);
+                    mySqlProcedure.sqlCommand.Parameters.AddWithValue("p_gender", gender);
+                    mySqlProcedure.sqlCommand.Parameters.AddWithValue("p_address", address);
+                    mySqlProcedure.sqlCommand.Parameters.AddWithValue("p_contactno", contactNo);
+                    mySqlProcedure.sqlCommand.Parameters.AddWithValue("p_emailadd", email);
+                    mySqlProcedure.sqlCommand.Parameters.AddWithValue("p_cust_photo", photo);
+
+                            mySqlProcedure.sqlCommand.ExecuteNonQuery();
+                        mySqlProcedure.transaction.Commit();
                         MessageBox.Show("Customer Successfully Added!");
-                    }
+                    
                 }
             }
             catch (Exception err)
