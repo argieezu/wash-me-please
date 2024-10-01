@@ -18,33 +18,32 @@ namespace LaundrySystem.BackEnd
         // Method to get all customers
         public DataTable GetAllCustomers()
         {
-            DataTable dataTable = new DataTable();
+            mySqlProcedure.dataTable = new DataTable();     
 
             try
             {
                 if (mySqlProcedure.fncConnectToDatabase())
                 {
-                    using (MySqlCommand sqlCommand = new MySqlCommand("prcDisplayAllCustomer", mySqlProcedure.conLaundry))
-                    {
-                        sqlCommand.CommandType = CommandType.StoredProcedure;
+                    mySqlProcedure.sqlCommand = new MySqlCommand("prcDisplayAllCustomer", mySqlProcedure.conLaundry);
+                    mySqlProcedure.adapter = new MySqlDataAdapter(mySqlProcedure.sqlCommand);
+                    mySqlProcedure.sqlCommand.CommandType = CommandType.StoredProcedure;                
 
-                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(sqlCommand))
                         {
-                            adapter.Fill(dataTable);
+                            mySqlProcedure.adapter.Fill(mySqlProcedure.dataTable);
                         }
-                    }
+                    
                 }
             }
             catch (Exception e)
             {
-                MessageBox.Show("Failed to retrieve customer data: " + e.Message);
+                MessageBox.Show("Failed to retrieve customer data: " + e.Message);  
             }
             finally
             {
                 mySqlProcedure.checkDatabaseConnection();
             }
 
-            return dataTable;
+            return mySqlProcedure.dataTable;
         }
     }
 }

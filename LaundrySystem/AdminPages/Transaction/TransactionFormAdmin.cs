@@ -172,6 +172,7 @@ namespace LaundrySystem.AdminPages
                 comboBoxStaff.SelectedIndex = -1;
                 comboBoxServicesType.SelectedIndex = -1;
                 comboBoxGarmentsType.SelectedIndex = -1;
+                comboBoxTransactionStatus.SelectedIndex = -1;
                 textBoxWeight.Clear();
                 textBoxAmount.Clear();
             }

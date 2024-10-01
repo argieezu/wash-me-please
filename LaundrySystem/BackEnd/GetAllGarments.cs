@@ -19,21 +19,20 @@ namespace LaundrySystem.BackEnd
 
         public DataTable GetAllGarment()
         {
-            DataTable dataTable = new DataTable();
+            sqlProcedure.dataTable = new DataTable(); 
 
             try
             {
                 if (sqlProcedure.fncConnectToDatabase())
                 {
-                    using (MySqlCommand sqlCommand = new MySqlCommand("prcDisplayAllGarment", sqlProcedure.conLaundry))
-                    {
-                        sqlCommand.CommandType = CommandType.StoredProcedure;
+                    sqlProcedure.sqlCommand = new MySqlCommand("prcDisplayAllGarment", sqlProcedure.conLaundry);
+                    sqlProcedure.adapter = new MySqlDataAdapter(sqlProcedure.sqlCommand);
+                    sqlProcedure.sqlCommand.CommandType = CommandType.StoredProcedure;
 
-                        using (MySqlDataAdapter adapter = new MySqlDataAdapter(sqlCommand))
                         {
-                            adapter.Fill(dataTable);
+                            sqlProcedure.adapter.Fill(sqlProcedure.dataTable);
                         }
-                    }
+                    
                 }
             }catch (Exception e)
             {
@@ -43,7 +42,7 @@ namespace LaundrySystem.BackEnd
             {
                 sqlProcedure.checkDatabaseConnection();
             }
-            return dataTable;
+            return sqlProcedure.dataTable;
         }
     }
 }

@@ -20,6 +20,8 @@ namespace LaundrySystem.BackEnd
         public string port;
         public MySqlConnection conLaundry;
         public MySqlCommand sqlCommand;
+        public DataTable dataTable;
+        public MySqlDataAdapter adapter;
         public string strConnection;
 
 
