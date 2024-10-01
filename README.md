@@ -14,7 +14,7 @@ This **Laundry Management System** is a school project developed using **C# Wind
 - Transaction management including price calculation and service history
 
 ## Technologies Used
-- **C# Windows Forms** (.NET)
+- **C# Windows Forms**
 - **MySQL Database**
 - **MySQL.Data** library for database connectivity
 
