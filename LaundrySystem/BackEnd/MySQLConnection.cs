@@ -22,6 +22,7 @@ namespace LaundrySystem.BackEnd
         public MySqlCommand sqlCommand;
         public DataTable dataTable;
         public MySqlDataAdapter adapter;
+        public MySqlTransaction transaction;
         public string strConnection;
 
 

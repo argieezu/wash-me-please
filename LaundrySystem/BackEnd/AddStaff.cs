@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Transactions;
 using System.Windows.Forms;
 
 namespace LaundrySystem.BackEnd
@@ -21,24 +22,24 @@ namespace LaundrySystem.BackEnd
                 if (mySqlProcedure.fncConnectToDatabase())
                 {
                     // Use a transaction to ensure atomicity
-                    using (MySqlTransaction transaction = mySqlProcedure.conLaundry.BeginTransaction())
-                    using (MySqlCommand sqlCommand = new MySqlCommand("procAddStaff", mySqlProcedure.conLaundry, transaction))
-                    {
-                        sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                    mySqlProcedure.transaction = mySqlProcedure.conLaundry.BeginTransaction();
+                    mySqlProcedure.sqlCommand = new MySqlCommand("procAddStaff", mySqlProcedure.conLaundry, mySqlProcedure.transaction);
+                    
+                        mySqlProcedure.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
 
-                        sqlCommand.Parameters.AddWithValue("p_fullname", fullname);
-                        sqlCommand.Parameters.AddWithValue("p_birthdate", birthdate);
-                        sqlCommand.Parameters.AddWithValue("p_gender", gender);
-                        sqlCommand.Parameters.AddWithValue("p_address", address);
-                        sqlCommand.Parameters.AddWithValue("p_contactno", contactNo);
-                        sqlCommand.Parameters.AddWithValue("p_emailadd", emailadd);
-                        sqlCommand.Parameters.AddWithValue("p_username", username);
-                        sqlCommand.Parameters.AddWithValue("p_password", PASSWORD);
+                        mySqlProcedure.sqlCommand.Parameters.AddWithValue("p_fullname", fullname);
+                        mySqlProcedure.sqlCommand.Parameters.AddWithValue("p_birthdate", birthdate);
+                        mySqlProcedure.sqlCommand.Parameters.AddWithValue("p_gender", gender);
+                        mySqlProcedure.sqlCommand.Parameters.AddWithValue("p_address", address);
+                        mySqlProcedure.sqlCommand.Parameters.AddWithValue("p_contactno", contactNo);
+                        mySqlProcedure.sqlCommand.Parameters.AddWithValue("p_emailadd", emailadd);
+                        mySqlProcedure.sqlCommand.Parameters.AddWithValue("p_username", username);
+                        mySqlProcedure.sqlCommand.Parameters.AddWithValue("p_password", PASSWORD);
 
-                        sqlCommand.ExecuteNonQuery();
-                        transaction.Commit();
+                        mySqlProcedure.sqlCommand.ExecuteNonQuery();
+                        mySqlProcedure.transaction.Commit();
                         MessageBox.Show("Staff added successfully!");
-                    }
+                    
                 }
             }
             catch (Exception err)

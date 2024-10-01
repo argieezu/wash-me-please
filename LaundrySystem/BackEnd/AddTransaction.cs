@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Data;
+using System.Transactions;
 using System.Windows.Forms;
 
 namespace LaundrySystem.BackEnd
@@ -20,24 +21,25 @@ namespace LaundrySystem.BackEnd
             {
                 if (sqlProcedure.fncConnectToDatabase())
                 {
-                    using (MySqlTransaction transaction = sqlProcedure.conLaundry.BeginTransaction())
-                    using (MySqlCommand sqlCommand = new MySqlCommand("prcAddTransaction", sqlProcedure.conLaundry, transaction))
-                    {
-                        sqlCommand.CommandType = CommandType.StoredProcedure;
-                        sqlCommand.Parameters.AddWithValue("p_customer_id", cid);
-                        sqlCommand.Parameters.AddWithValue("p_staff_id", stffid);
-                        sqlCommand.Parameters.AddWithValue("p_service_type", sid);
-                        sqlCommand.Parameters.AddWithValue("p_weight", weight);
-                        sqlCommand.Parameters.AddWithValue("p_garment_type", cgid);
-                        sqlCommand.Parameters.AddWithValue("p_amount", amount);
-                        sqlCommand.Parameters.AddWithValue("p_status", status);
-                        sqlCommand.Parameters.AddWithValue("p_date_delivered", dateDelivered);
-                        sqlCommand.Parameters.AddWithValue("p_date_claimed", dateClaimed);
+                    sqlProcedure.transaction = sqlProcedure.conLaundry.BeginTransaction();
+                    sqlProcedure.sqlCommand = new MySqlCommand("prcAddTransaction", sqlProcedure.conLaundry, sqlProcedure.transaction);
+             
+                    
+                        sqlProcedure.sqlCommand.CommandType = CommandType.StoredProcedure;
+                        sqlProcedure.sqlCommand.Parameters.AddWithValue("p_customer_id", cid);
+                        sqlProcedure.sqlCommand.Parameters.AddWithValue("p_staff_id", stffid);
+                        sqlProcedure.sqlCommand.Parameters.AddWithValue("p_service_type", sid);
+                        sqlProcedure.sqlCommand.Parameters.AddWithValue("p_weight", weight);
+                        sqlProcedure.sqlCommand.Parameters.AddWithValue("p_garment_type", cgid);
+                        sqlProcedure.sqlCommand.Parameters.AddWithValue("p_amount", amount);
+                        sqlProcedure.sqlCommand.Parameters.AddWithValue("p_status", status);
+                        sqlProcedure.sqlCommand.Parameters.AddWithValue("p_date_delivered", dateDelivered);
+                        sqlProcedure.sqlCommand.Parameters.AddWithValue("p_date_claimed", dateClaimed);
 
-                        sqlCommand.ExecuteNonQuery();
-                        transaction.Commit();
+                        sqlProcedure.sqlCommand.ExecuteNonQuery();
+                        sqlProcedure.transaction.Commit();
                         MessageBox.Show("Transaction successfully added!");
-                    }
+                    
                 }
             }
             catch (Exception e)

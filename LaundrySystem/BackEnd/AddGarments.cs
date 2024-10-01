@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Transactions;
 
 namespace LaundrySystem.BackEnd
 {
@@ -22,18 +23,18 @@ namespace LaundrySystem.BackEnd
             {
                 if (sqlProcedure.fncConnectToDatabase())
                 {
-                    using (MySqlTransaction transaction = sqlProcedure.conLaundry.BeginTransaction()) 
-                    using (MySqlCommand sqlCommand = new MySqlCommand("procAddGarmentsType", sqlProcedure.conLaundry, transaction))
-                    {
-                        sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-                        sqlCommand.Parameters.Clear();
+                    sqlProcedure.transaction = sqlProcedure.conLaundry.BeginTransaction();
+                    sqlProcedure.sqlCommand = new MySqlCommand("procAddGarmentsType", sqlProcedure.conLaundry, sqlProcedure.transaction);
+                    
+                        sqlProcedure.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                        sqlProcedure.sqlCommand.Parameters.Clear();
 
-                        sqlCommand.Parameters.AddWithValue("p_garmenttype", garment_type);
+                        sqlProcedure.sqlCommand.Parameters.AddWithValue("p_garmenttype", garment_type);
 
-                        sqlCommand.ExecuteNonQuery();
-                        transaction.Commit();
+                        sqlProcedure.sqlCommand.ExecuteNonQuery();
+                        sqlProcedure.transaction.Commit();
                         MessageBox.Show("New garment successfully added! ");
-                    }
+                    
                 }
             } catch (Exception e)
             {

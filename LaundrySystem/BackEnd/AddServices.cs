@@ -1,5 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
+using System.Transactions;
 using System.Windows.Forms;
 
 namespace LaundrySystem.BackEnd
@@ -19,20 +20,21 @@ namespace LaundrySystem.BackEnd
             {
                 if (sqlProcedure.fncConnectToDatabase())
                 {
-                    using (MySqlTransaction transaction = sqlProcedure.conLaundry.BeginTransaction())
-                    using (MySqlCommand sqlCommand = new MySqlCommand("prcAddServices", sqlProcedure.conLaundry, transaction))
-                    {
-                        sqlCommand.CommandType = System.Data.CommandType.StoredProcedure; 
-                        sqlCommand.Parameters.Clear();
+                    sqlProcedure.transaction = sqlProcedure.conLaundry.BeginTransaction();
+                    sqlProcedure.sqlCommand = new MySqlCommand("prcAddServices", sqlProcedure.conLaundry, sqlProcedure.transaction);
 
-                        sqlCommand.Parameters.AddWithValue("p_servicetype", service_type);
-                        sqlCommand.Parameters.AddWithValue("p_description", description);
-                        sqlCommand.Parameters.AddWithValue("p_price", price);
+                    
+                        sqlProcedure.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure; 
+                        sqlProcedure.sqlCommand.Parameters.Clear();
 
-                        sqlCommand.ExecuteNonQuery();
-                        transaction.Commit();
+                        sqlProcedure.sqlCommand.Parameters.AddWithValue("p_servicetype", service_type);
+                        sqlProcedure.sqlCommand.Parameters.AddWithValue("p_description", description);
+                        sqlProcedure.sqlCommand.Parameters.AddWithValue("p_price", price);
+
+                        sqlProcedure.sqlCommand.ExecuteNonQuery();
+                        sqlProcedure.transaction.Commit();
                         MessageBox.Show("New service successfully added!");
-                    }
+                    
                 }
             }
             catch (Exception e)
