@@ -12,7 +12,7 @@ namespace LaundrySystem
 
         public DataTable getCustomerList(string fullname)
         {
-            DataTable dataTable = new DataTable();
+            sqlProcedure.dataTable = new DataTable();
             try
             {
                 if (sqlProcedure.fncConnectToDatabase())
@@ -22,8 +22,8 @@ namespace LaundrySystem
                     sqlProcedure.sqlCommand.Parameters.Clear();
                     sqlProcedure.sqlCommand.Parameters.AddWithValue("p_fullname", fullname); 
 
-                    MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter(sqlProcedure.sqlCommand);
-                    sqlDataAdapter.Fill(dataTable);
+                    sqlProcedure.adapter = new MySqlDataAdapter(sqlProcedure.sqlCommand);
+                    sqlProcedure.adapter.Fill(sqlProcedure.dataTable);
                 }
             }
             catch (Exception e)
@@ -38,7 +38,7 @@ namespace LaundrySystem
                 }
             }
 
-            return dataTable;
+            return sqlProcedure.dataTable;
         }
 
     }

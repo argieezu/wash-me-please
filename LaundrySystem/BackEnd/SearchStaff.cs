@@ -14,7 +14,7 @@ namespace LaundrySystem.BackEnd
 
         public DataTable getStaffList(string fullname)
         {
-            DataTable dataTable = new DataTable();
+            sqlProcedure.dataTable = new DataTable();
 
             try
             {
@@ -25,8 +25,8 @@ namespace LaundrySystem.BackEnd
                     sqlProcedure.sqlCommand.Parameters.Clear();
                     sqlProcedure.sqlCommand.Parameters.AddWithValue("p_fullname", fullname);
 
-                    MySqlDataAdapter sqlDataAdapter = new MySqlDataAdapter(sqlProcedure.sqlCommand);
-                    sqlDataAdapter.Fill(dataTable);
+                    sqlProcedure.adapter = new MySqlDataAdapter(sqlProcedure.sqlCommand);
+                    sqlProcedure.adapter.Fill(sqlProcedure.dataTable);
                 }
             }
             catch (Exception e) 
@@ -41,7 +41,7 @@ namespace LaundrySystem.BackEnd
                 }
             }
 
-            return dataTable;
+            return sqlProcedure.dataTable;
         }
     }
 }

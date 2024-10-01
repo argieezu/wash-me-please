@@ -21,12 +21,11 @@ namespace LaundrySystem.BackEnd
             {
                 if (mySqlProcedure.fncConnectToDatabase())
                 {
-                    using (MySqlCommand sqlCommand = new MySqlCommand("prcDeleteCustomer", mySqlProcedure.conLaundry))
-                    {
-                        sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
-                        sqlCommand.Parameters.AddWithValue("customerId", customerId);
+                    mySqlProcedure.sqlCommand = new MySqlCommand("prcDeleteCustomer", mySqlProcedure.conLaundry);
+                    mySqlProcedure.sqlCommand.CommandType = System.Data.CommandType.StoredProcedure;
+                    mySqlProcedure.sqlCommand.Parameters.AddWithValue("customerId", customerId);
 
-                        int rowsAffected = sqlCommand.ExecuteNonQuery();
+                        int rowsAffected = mySqlProcedure.sqlCommand.ExecuteNonQuery();
 
                         if (rowsAffected > 0)
                         {
@@ -36,7 +35,7 @@ namespace LaundrySystem.BackEnd
                         {
                             MessageBox.Show("No customer found with the given ID.");
                         }
-                    }
+                    
                 }
             }
             catch (Exception ex)
